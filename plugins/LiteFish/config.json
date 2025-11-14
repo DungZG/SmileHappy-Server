@@ -1,0 +1,30 @@
+{
+  "version": "4.23.2",
+  "settings": {
+    "success_minigame_rod_damage": 1,
+    "daily_money_limit": 0,
+    "switch_fishing": false,
+    "auto_update_customization": true,
+    "drop_entity_from_egg": true,
+    "delta_time": 100,
+    "simple_weight": false,
+    "mini_game": true,
+    "price_based_weight": true,
+    "game_length": 10,
+    "disable_default_category": false,
+    "time_format": "%days_d %%hours_h %%minutes_min %%seconds_sec %",
+    "failed_minigame_rod_damage": 1,
+    "attack_side_switch": false,
+    "barrel_despawn_time": 30,
+    "max_bait_to_rod": 10,
+    "plugin_prefix": "{#b0b7ff}[LiteFish]§7 %msg%",
+    "move_drop_to_inventory": false,
+    "notification_new_items": true,
+    "base_speed": 500,
+    "realistic_fishing": false,
+    "additional_drop": true,
+    "player_health": 2,
+    "custom_drop": true,
+    "switch_fishing_permission": ""
+  }
+}

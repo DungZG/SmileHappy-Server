@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 26.238.148.250
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1761659219573
+  login: 1761657604587
+money: '0'
+last-account-name: LeZiNil_
+logoutlocation:
+  world: 9c2afb52-d7b8-410c-aef9-995758e9d85d
+  world-name: world_the_end
+  x: -47.001732361439515
+  y: 59.0
+  z: -2.6502781933234405
+  yaw: 170.049072265625
+  pitch: 17.40001678466797
+lastlocation:
+  world: 9c2afb52-d7b8-410c-aef9-995758e9d85d
+  world-name: world_the_end
+  x: -38.25068716199081
+  y: 63.184159040507076
+  z: -27.49638627665916
+  yaw: -21.501953125
+  pitch: 70.04993438720703

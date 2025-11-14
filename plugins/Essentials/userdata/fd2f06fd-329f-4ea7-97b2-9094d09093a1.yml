@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 127.0.0.1
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 1761659037963
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1763156562348
+  login: 1763156061240
+money: '0'
+last-account-name: PopCatUnion
+logoutlocation:
+  world: 258a27da-f383-49d7-8d9b-5a27b5c09739
+  world-name: world
+  x: -236.8216834395775
+  y: 89.0
+  z: 160.87525003203388
+  yaw: -57.29730224609375
+  pitch: 19.302515029907227
+lastlocation:
+  world: 9c2afb52-d7b8-410c-aef9-995758e9d85d
+  world-name: world_the_end
+  x: -127.40893365826695
+  y: 57.0
+  z: -44.70482370039427
+  yaw: 94.44400024414062
+  pitch: 22.950084686279297
