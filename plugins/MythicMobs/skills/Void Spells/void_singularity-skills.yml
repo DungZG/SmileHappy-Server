@@ -1,0 +1,40 @@
+void_singularity-test_summon:
+  Skills:
+  - skill{s=void_singularity-summon;scale=3} @targetlocation
+
+void_singularity-test_cast:
+  Skills:
+  - skill{s=void_singularity-fire;origin=@selfeyelocation;scale=3} @targetlocation
+
+void_singularity-fire:
+  Skills:
+  - projectile{fo=true;ti=1;syo=0;sfo=0;
+    onEnd=void_singularity-summon;
+    bulletType=ME;model=vfx_void_singularity;
+    hitconditions=[ - isLiving true - samefaction false ];
+    ham=true;v=20;mr=128;i=1;g=0;se=false;hR=0.25;vR=0.25;hnp=true}
+    
+void_singularity-summon:
+  Skills:
+  - sound{s=minecraft:umbraeus_singularity_explosion_sfx;v=10} @self
+  - summon{t=generic_marker;sip=true;os=false;
+    then=[
+    - sudoskill{s=[
+      - model{mid=vfx_void_singularity;usm=true} @self
+      - brightness{s=15;b=15;em=false} @self
+      - scale{s=<skill.scale|1>}
+      - delay 0.75*20
+      - state{mid=vfx_void_singularity;s=idle;priority=0;ow=true} @self
+      - aura{d=9*20;i=3;ot=void_singularity-hit_entity}
+      - remove{delay=10*20} @self
+      ]} @targeted
+    ]} @targetedlocation{yo="<skill.scale|1>/8"}
+
+void_singularity-hit_entity:
+  Skills:
+  - pull{to=true;v=0.5} @ENO{r=7}
+  - pull{to=true;v=1} @ENO{r=3}
+  - aura{name=singularitied;type=iframe;d=4;ma=true;
+    os=[
+    - damage{a="<caster.damage>/4";pi=true;pkb=true;tags=VOID;cause=CUSTOM} @ENO{r=1;sudoparent=true}
+    ]}

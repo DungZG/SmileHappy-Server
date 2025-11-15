@@ -1,0 +1,38 @@
+void_blast-test_cast:
+  Skills:
+  - skill{s=void_blast-fire;origin=@selfeyelocation} @targetlocation
+
+void_blast-fire:
+  Skills:
+  - projectile{fo=true;ti=2;syo=0;sfo=0;
+    onStart=void_blast-start;
+    onHit=void_blast-hit_entity;
+    onEnd=void_blast-end;
+    bulletType=ME;model=vfx_void_blast;
+    hitconditions=[ - isLiving true - samefaction false ];
+    ham=true;v=20;mr=128;i=1;g=0;hR=0.25;vR=0.25;hnp=true}
+
+void_blast-start:
+  Skills:
+  - modifyprojectile{t=VELOCITY;action=SET;value=10}
+  - delay 5
+  - modifyprojectile{t=VELOCITY;action=SET;value=30}
+
+void_blast-hit_entity:
+  TargetConditions:
+  - hasaura{aura=immune} false
+  Skills:
+  - damage{d=<caster.damage>;pi=true;pkb=true;type=VOID}
+  - aura{name=immune;d=1;ma=true}
+
+void_blast-end:
+  Skills:
+  - summon{t=generic_marker;os=false;then=[
+    - sudoskill{s=[
+      - model{mid=vfx_void_blast;usm=true} @self
+      - brightness{s=15;b=15;em=false} @self
+      - state{mid=vfx_void_blast;s=explode;priority=0;ow=true} @self
+      - remove{delay=20} @self
+      ]} @targeted
+    ]} @targetedlocation{yo=0.1}
+  - skill{s=void_blast-hit_entity} @ENO{r=4}

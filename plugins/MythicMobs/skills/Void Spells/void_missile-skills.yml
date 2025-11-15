@@ -1,0 +1,56 @@
+void_missile-test_cast2:
+  Skills:
+  - setvarloc{var=skill.startdir;val=@forward{f=-3;yo=2}} 
+  - skill{s=void_missile-fire;origin=@selfeyelocation;repeat=3} @ENO{r=20;targetconditions=[ - isLiving true ]}
+
+void_missile-test_cast:
+  Skills:
+  - setvarloc{var=skill.startdir;val=@forward{f=-3;yo=2}} 
+  - skill{s=void_missile-fire;origin=@selfeyelocation} @targetlocation
+
+void_missile-fire:
+  Skills:
+  - missile{fo=true;
+    startingdirection=@VariableLocation{var=skill.startdir};
+    ti=2;syo=0;sfo=0;inertia=30;
+    onStart=void_missile-plan;
+    onTick=void_missile-tick;
+    onHit=void_missile-hit_entity;
+    onEnd=void_missile-end;
+    bulletType=ME;model=vfx_void_missile;
+    hitconditions=[ - isLiving true - samefaction false ];
+    ham=true;v=30;mr=128;i=1;hR=0.25;vR=0.25;hnp=true}
+
+void_missile-plan:
+  Skills:
+  - delay "3*<random.float.1to3>"
+  - modifyProjectile{trait=inertia;action=SET;value=20}
+  - delay 6
+  - modifyProjectile{trait=inertia;action=SET;value=5}
+  - delay 3
+  - modifyProjectile{trait=inertia;action=SET;value=2}
+  - delay 3
+  - modifyProjectile{trait=inertia;action=SET;value=50}
+
+void_missile-tick:
+  Skills:
+  - modifyProjectile{trait=velocity;action=MULTIPLY;value=1.01}
+
+void_missile-hit_entity:
+  TargetConditions:
+  - hasaura{aura=immune} false
+  Skills:
+  - damage{d=<caster.damage>;pi=true;pkb=true;type=VOID}
+  - aura{name=immune;d=1;ma=true}
+
+void_missile-end:
+  Skills:
+  - summon{t=generic_marker;os=false;then=[
+    - sudoskill{s=[
+      - model{mid=vfx_void_missile;usm=true} @self
+      - brightness{s=15;b=15;em=false} @self
+      - state{mid=vfx_void_missile;s=explode;priority=0;ow=true} @self
+      - remove{delay=20} @self
+      ]} @targeted
+    ]} @targetedlocation{yo=0.1}
+  - skill{s=void_missile-hit_entity} @ENO{r=4}

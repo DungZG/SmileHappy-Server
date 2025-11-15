@@ -1,0 +1,67 @@
+void_hydra:
+  Type: GHAST
+  Display: '𝔙'
+  Health: 500
+  Damage: 16
+  Faction: Void
+  BossBar:
+    Enabled: true
+    Title: '<caster.name>'
+    Range: 256
+    Color: PURPLE
+    Style: SEGMENTED_20
+    CreateFog: false
+    DarkenSky: true
+    PlayMusic: true
+  Options:
+    Despawn: persistent
+ #   NoAI: true
+    HasGravity: true
+    Silent: true
+    DigOutOfGround: true
+    AlwaysShowName: true
+    PreventOtherDrops: true
+    PreventSunburn: true
+    MovementSpeed: 0.4
+    AttackSpeed: 4
+    KnockbackResistance: 1
+    FollowRange: 256
+    HealOnReload: true
+  Modules:
+    ImmunityTable: true
+    ThreatTable: true
+  AIGoalSelectors: 
+  - clear
+ # - gotospawn
+  KillMessages:
+  - '<target.name> was obliterated from existence by the <caster.name>'
+  - "<target.name> could not stand before the <caster.name>"
+  Variables:
+    debug: false
+  Skills:
+  - skill{s=void_hydra-init} @self ~onSpawn
+  - skill{s=void_hydra-init} @self ~onLoad 
+  - CancelEvent{sync=true} @self ~onShoot
+  - skill{s=void_hydra-tick} @self ~onTimer:1
+  - skill{s=void_hydra-command_voidlings} ~onChangeTarget ?inCombat
+  - skill{s=void_hydra-select_action} @self ~onTimer:10 ?inCombat
+  - skill{s=void_hydra-death} @self ~onDeath
+
+  - skill{s=void_hydra-right_atomic_cross} @self ~onSignal:test_1
+  - skill{s=void_hydra-right_vacuum} @self ~onSignal:test_2 
+  - skill{s=void_hydra-right_summon} @self ~onSignal:test_3 
+
+  - skill{s=void_hydra-mid_atomic} @self ~onSignal:test_4
+  - skill{s=void_hydra-mid_singularity} @self ~onSignal:test_5 
+  - skill{s=void_hydra-mid_meteor} @self ~onSignal:test_6
+
+  - skill{s=void_hydra-left_atomic_cross} @self ~onSignal:test_7
+  - skill{s=void_hydra-left_missile} @self ~onSignal:test_8 
+  - skill{s=void_hydra-left_shout} @self ~onSignal:test_9
+ 
+  # sounds
+  - sound{s=minecraft:umbraeus_idle_sfx;v=20} @self ~onTimer:490
+  - sound{s=minecraft:umbraeus_idle_sfx;v=20} @self ~onSpawnOrLoad
+  - sound{s=minecraft:umbraeus_spawn_sfx;v=20} @self ~onSpawnOrLoad
+  - sound{s=minecraft:umbraeus_death_sfx;v=20} @self ~onDeath
+  

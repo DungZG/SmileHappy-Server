@@ -1,0 +1,38 @@
+voidjet-init:
+  Skills:
+#  - bodyclamp{player=true;rdelay=4;rduration=1;head=false}
+#  - syncyaw{target=yaw;body=false} #Sync entity yaw to Head yaw
+  - model{m=voidjet;init=false}
+  - segment{m=voidjet;p=root1;bounded=true}
+  - brightness{p=bhole_centre;b=15;s=5}
+  - brightness{p=bhole_ring;b=15;s=5}
+  - brightness{p=arm;em=false;b=15;s=5}
+  - brightness{p=teil1;b=15;s=5}
+  - brightness{p=teil2;b=15;s=5}
+  - brightness{p=teil3;b=15;s=5}
+  - renderinit{m=voidjet}
+
+voidjet-tick:
+  Skills:
+
+voidjet-attack:
+  Skills:
+  - CancelEvent{sync=true}
+  - skill{s=mob_model-attack;mid=voidjet;pid=arm;state=attack;duration=1;start=0.2;end=0.7;priority=1;
+    v=0.4;vy=0;hitboxsize=0.5;
+    onAttackHit=voidjet-grab} @self
+    
+voidjet-grab:
+  Skills:
+  - skill{s=mob_model-attack-hit_entity}
+  - aura{name=grabbed;d=70;i=1;ma=true;
+    os=[
+    - am{m="<#C0C0C0>[<reset><dark_purple><bold>!<reset><#C0C0C0>] <reset>Grabbed by a <caster.name>!"}
+    ];
+    ot=[
+    - pull{to=true;origin=@forward{f=2};v=8}
+    ];
+    oe=[
+    - velocity{mode=SET;x=0;y=0;z=0}
+    ]}
+

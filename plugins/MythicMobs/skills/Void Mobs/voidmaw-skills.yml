@@ -1,0 +1,38 @@
+voidmaw-init:
+  Skills:
+#  - bodyclamp{player=true;rdelay=4;rduration=1;head=false}
+#  - syncyaw{target=yaw;body=false} #Sync entity yaw to Head yaw
+  - setStance{s=idle}
+  - model{m=voidmaw;init=false}
+  - segment{m=voidmaw;p=root1;bounded=true}
+  - brightness{p=bhole_centre;b=15;s=5}
+  - brightness{p=bhole_ring;b=15;s=5}
+  - brightness{p=teil1;b=15;s=5}
+  - brightness{p=teil2;b=15;s=5}
+  - brightness{p=teil3;b=15;s=5}
+  - brightness{p=head;b=15;s=5}
+  - brightness{p=jaw;b=15;s=5}
+  - renderinit{m=voidmaw}
+
+voidmaw-tick:
+  Skills:
+
+voidmaw-select_action:
+  Cooldown: 3
+  Skills:
+  - randomskill{s=
+    [ - skill{s=voidmaw-attack_right} ],
+    [ - skill{s=voidmaw-attack_left} ]} 
+
+voidmaw-attack_right:
+  Skills:
+  - skill{s=mob_model-attack;mid=voidmaw;pid=jaw;state=attack_right;duration=1;start=0.15;end=0.75;priority=1;
+    v=0.4;vy=0;hitboxsize=1} @self
+
+voidmaw-attack_left:
+  Skills:
+  - skill{s=mob_model-attack;mid=voidmaw;pid=jaw;state=attack_left;duration=1;start=0.15;end=0.75;priority=1;
+    v=0.4;vy=0;hitboxsize=1} @self
+
+
+

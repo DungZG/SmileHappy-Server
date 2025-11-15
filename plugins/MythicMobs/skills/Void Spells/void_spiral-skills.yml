@@ -1,0 +1,25 @@
+void_spiral-test_cast:
+  Skills:
+  - skill{s=void_spiral-fire;origin=@selfeyelocation} @targetlocation
+
+void_spiral-fire:
+  Skills:
+  - projectile{fo=true;ti=2;syo=0;sfo=0;
+    onHit=void_spiral-hit_entity;
+    onEnd=void_spiral-end;
+    bulletType=ME;model=vfx_void_spiral;
+    hitconditions=[ - isLiving true - samefaction false ];
+    ham=true;v=20;mr=128;i=1;g=0;hR=0.25;vR=0.25;hnp=true}
+
+void_spiral-hit_entity:
+  TargetConditions:
+  - hasaura{aura=immune} false
+  Skills:
+  - damage{d=<caster.damage>;pi=true;pkb=true;type=VOID}
+  - aura{name=immune;d=1;ma=true}
+
+void_spiral-end:
+  Skills:
+  - skill{s=void_explosion-summon;scale=1}
+  - skill{s=void_spiral-hit_entity} @ENO{r=2}
+

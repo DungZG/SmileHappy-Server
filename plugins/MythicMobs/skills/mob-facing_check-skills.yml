@@ -1,0 +1,162 @@
+facing_check-test:
+  Skills:
+  - skill{s=facing_check;origin=@selflocation} @self
+
+facing_check:
+  Conditions:
+  - targetinlineofsight
+  - inCombat
+  Skills:
+  - skill{s=facing_check-origin-setloc} @selflocation
+  - skill{s=facing_check-target-setloc} @targetlocation
+  - skill{s=facing_check-facing-setloc} @forward{f=10}
+  - skill{s=facing_check-origin_to_target-vec} @self
+  - skill{s=facing_check-facing_to_target-vec} @self
+  - skill{s=facing_check-dot_product} @self
+  
+facing_check-origin-setloc:
+  Skills:
+  - setvarloc{var=origin_loc;val=@targetedlocation}
+  - skill{s=facing_check-vector-x;name=origin;vec=<skill.var.origin_loc>}
+  - skill{s=facing_check-vector-z;name=origin;vec=<skill.var.origin_loc>}
+#  - message{m="Origin <skill.var.origin_x> <skill.var.origin_z>"} @server
+
+facing_check-target-setloc:
+  Skills:
+  - setvarloc{var=target_loc;val=@targetedlocation}
+  - skill{s=facing_check-vector-x;name=target;vec=<skill.var.target_loc>}
+  - skill{s=facing_check-vector-z;name=target;vec=<skill.var.target_loc>}
+#  - message{m="Target <skill.var.target_x> <skill.var.target_z>"}  @server
+
+facing_check-facing-setloc:
+  Skills:
+  - setvarloc{var=facing_loc;val=@targetedlocation}
+  - skill{s=facing_check-vector-x;name=facing;vec=<skill.var.facing_loc>}
+  - skill{s=facing_check-vector-z;name=facing;vec=<skill.var.facing_loc>}
+ # - message{m=Facing <skill.var.facing_x> <skill.var.facing_z>} @server
+
+facing_check-vector-x:
+  Skills:
+  - setvar{var=string;val="<skill.vec>";type=STRING}
+  - setvar{var=firstindex;val="%math_0_{string_indexOf_<skill.var.string>_<&cm>}+1%"}
+  - setvar{var=lastindex;val="%string_lastIndexOf_<skill.var.string>_<&cm>%"}
+  - setvar{var=string;val="%string_substring_<skill.var.firstindex>,<skill.var.lastindex>_<skill.var.string>%";type=STRING}
+ # - message{m="first <skill.var.firstindex> last <skill.var.lastindex> <skill.var.string> <skill.vec>"} @server
+  - setvar{var=lastindex;val="%string_lastIndexOf_<skill.var.string>_<&cm>%"}
+  - setvar{var=<skill.name>_x;val="%string_substring_0,<skill.var.lastindex>_<skill.var.string>%";type=FLOAT}
+ # - message{m="first <skill.var.firstindex> last <skill.var.lastindex> <skill.var.string>"} @server
+  
+facing_check-vector-z:
+  Skills:
+  - setvar{var=string;val="<skill.vec>";type=STRING}
+  - setvar{var=lastindex;val="%math_0_{string_lastIndexOf_<skill.var.string>_<&cm>}+1%"}
+  - setvar{var=<skill.name>_z;val="%string_substring_<skill.var.lastindex>_<skill.var.string>%";type=FLOAT}
+# - message{m="last <skill.var.lastindex> <skill.var.facing_z>"} @server
+
+facing_check-origin_to_target-vec:
+  Skills:
+  - setvar{var=vector_x;val="<skill.var.target_x>-<skill.var.origin_x>";type=FLOAT}
+  - setvar{var=vector_z;val="<skill.var.target_z>-<skill.var.origin_z>";type=FLOAT}
+ # - message{m=<skill.var.vector_x>,<skill.var.vector_z>} @trigger
+
+  - setvar{var=vector_len;val="sqrt(abs(<skill.var.vector_x>)^2+abs(<skill.var.vector_z>)^2)";type=FLOAT}
+#  - message{m=<skill.var.vector_len>} @trigger
+
+  - setvar{var=vector_x_normal;val="<skill.var.vector_x>/<skill.var.vector_len>";type=FLOAT}
+  - setvar{var=vector_z_normal;val="<skill.var.vector_z>/<skill.var.vector_len>";type=FLOAT}
+ # - message{m="
+   # Vector <skill.var.vector_x>,<skill.var.vector_z> 
+   # Length <skill.var.vector_len> 
+   # Normalized <skill.var.vector_x_normal>,<skill.var.vector_z_normal>"} @pir{r=120}
+
+facing_check-facing_to_target-vec:
+  Skills:
+  - setvar{var=facing_vector_x;val="<skill.var.facing_x>-<skill.var.origin_x>";type=FLOAT}
+  - setvar{var=facing_vector_z;val="<skill.var.facing_z>-<skill.var.origin_z>";type=FLOAT}
+ # - message{m="Facing Vector <skill.var.vector_x>,<skill.var.vector_z>"} @trigger
+  
+  - setvar{var=facing_vector_len;val="sqrt(abs(<skill.var.facing_vector_x>)^2+abs(<skill.var.facing_vector_z>)^2)";type=FLOAT}
+#  - message{m=<skill.var.facing_vector_len>} @trigger
+
+  - setvar{var=facing_vector_x_normal;val="<skill.var.facing_vector_x>/<skill.var.facing_vector_len>";type=FLOAT}
+  - setvar{var=facing_vector_z_normal;val="<skill.var.facing_vector_z>/<skill.var.facing_vector_len>";type=FLOAT}
+ # - message{m=Normalized <skill.var.facing_vector_x_normal>,<skill.var.facing_vector_z_normal>} @trigger
+  
+facing_check-dot_product:
+  Skills:
+  - setvar{var=vector_dotproduct;type=FLOAT;
+    val="max(min(<skill.var.vector_x_normal>*<skill.var.facing_vector_x_normal>+<skill.var.facing_vector_z_normal>*<skill.var.vector_z_normal>,1),-1)"}
+  - setvar{var=vector_crossproduct;type=FLOAT;
+    val="max(min((<skill.var.target_x>-<skill.var.origin_x>)*(<skill.var.facing_z>-<skill.var.origin_z>)-(<skill.var.target_z>-<skill.var.origin_z>)*(<skill.var.facing_x>-<skill.var.origin_x>),1),-1)"}    
+
+  - setvar{var=facing_angle;type=FLOAT;val="acos(<skill.var.vector_dotproduct>)*180/π"}
+  - setvar{var=cross_angle;type=FLOAT;val="acos(<skill.var.vector_crossproduct>)*180/π"}
+    
+  - skill{s=facing_check-facing}
+  - skill{s=facing_check-direction}
+  
+  #- return ?!varequals{var=caster.debug;val=true}
+  #- message{m="Dot Product <skill.var.vector_dotproduct> <skill.var.facing_angle><newline>Cross Product <skill.var.vector_crossproduct> <skill.var.cross_angle><newline>Facing Check <caster.var.facing_check>"} @PIR{r=100} 
+  #- e:pl{fo=true;origin=@selfeyelocation;p=spark;a=1;db=0.5} @forward{f=24;uel=true}
+  
+facing_check-facing:
+  Skills:
+  - switch{condition=varinrange{var=skill.facing_angle;val=<case>};
+    cases=
+      case <3=[ - setvar{var=caster.facing_check;val=1;duration=10} ]
+      case >3=[ - setvar{var=caster.facing_check;val=0;duration=10} ]
+      case DEFAULT=[ - message{m=UNSET} @server ] 
+    }
+
+facing_check-direction:
+  Skills:
+  - switch{condition=varinrange{var=skill.vector_crossproduct;val=<case>};
+    cases=
+      case >0=[ - skill{s=facing_check-rotate_left} ]
+      case <0=[ - skill{s=facing_check-rotate_right} ]
+      case DEFAULT=[ - message{m=UNSET} @server ] 
+    }
+
+facing_check-rotate_right:
+  Conditions:
+  - varequals{var=caster.facing_check;val=1} castinstead facing_check-look
+  - hasaura{aura=rotatelock} false
+  Skills:
+  #- message{m=<0 Right} @server ?varequals{var=caster.debug;val=true}
+  - setrotation{relative=true;yaw="<skill.speed|1>"}
+
+facing_check-rotate_left:
+  Conditions:
+  - varequals{var=caster.facing_check;val=1} castinstead facing_check-look
+  - hasaura{aura=rotatelock} false
+  Skills:
+  #- message{m=>0 Left} @server ?varequals{var=caster.debug;val=true} 
+  - setrotation{relative=true;yaw="-<skill.speed|1>"}
+
+facing_check-look:
+  Conditions:
+  - varequals{var=caster.facing_check;val=1}
+  Skills:
+  #- message{m=Look at facing} @server ?varequals{var=caster.debug;val=true}
+#  - look{fp=false;i=false;headonly=true} @target
+  - aura{name=rotatelock;d=2;i=1;ma=true;
+    os=[
+    - syncyaw{target=body}
+    - settrackedlocation @targetlocation
+    - look{fp=false;i=true;headonly=false;delay=2} @TrackedLocation
+    ];
+    ot=[
+    - look{fp=false;i=true;headonly=false;delay=2} @TrackedLocation 
+    <#>- e:p{p=reddust;a=1;delay=2} @TrackedLocation ?varequals{var=caster.debug;val=true}
+    <#>- e:pl{fo=true;origin=@selfeyelocation;p=reddust;a=1;db=0.5} @forward{f=24;uel=true} ?varequals{var=caster.debug;val=true}
+    ];
+    oe=[
+    - syncyaw{target=body;body=false}
+    ]} @self
+
+#  - setvar{var=right_check;type=INTEGER;  
+#    val="<skill.var.vector_crossproduct> > 0.001"}
+    
+#  - e:pl{fo=true;origin=@origin;p=reddust;a=1;color=#0000FF} @selfLocation{xo=<skill.var.vector_x>;zo=<skill.var.vector_z>} ?varequals{var=skill.facing_check;val=0}
+#  - e:pl{fo=true;origin=@origin;p=reddust;a=1;color=#008000} @selfLocation{xo=<skill.var.vector_x>;zo=<skill.var.vector_z>} ?varequals{var=skill.facing_check;val=1}
+#  - e:pl{fo=true;origin=@origin;p=reddust;a=1} @selfLocation{xo=<skill.var.facing_vector_x>;zo=<skill.var.facing_vector_z>}

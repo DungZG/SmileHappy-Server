@@ -1,0 +1,70 @@
+voidling-base:
+  Type: VEX
+  Display: 'Base Voidling'
+  Faction: Void
+  Health: 20
+  Damage: 8
+  Options:
+    PreventSunburn: true
+    PreventOtherDrops: true
+    Silent: true
+    DigOutOfGround: true
+    MovementSpeed: 0.5
+    FollowRange: 256
+    AttackSpeed: 4
+    HealOnReload: true
+  Modules:
+    ImmunityTable: true
+    ThreatTable: true
+  AITargetSelectors:
+  - clear
+  - players
+  Skills:
+  - damage{a=1;delay=1} @self ~onSpawnOrLoad
+  #- e:p{p=reddust;a=1} @targetlocation ~onTimer:1
+
+voidjet:
+  Display: 'Voidjet'
+  Type: PHANTOM
+  Template: voidling-base
+  KillMessages:
+  - '<target.name> fell a great height from a <caster.name>'
+  Skills:
+  - skill{s=voidjet-init} @self ~onSpawn
+  - skill{s=voidjet-attack} @self ~onAttack
+#  - skill{s=voidjet-attack} @self ?inCombat ?targetwithin{d=3} ~onTimer:20
+
+#  - skill{s=voidjet-tick} @self ~onTimer:3
+
+voidmaw:
+  Display: 'Voidmaw'
+  Template: voidling-base
+  KillMessages:
+  - '<target.name> was bitten in half by a <caster.name>'
+  Skills:
+  - skill{s=voidmaw-init} @self ~onSpawn
+  - skill{s=voidmaw-select_action} @self ~onAttack
+ # - skill{s=voidjet-select_action} @self ?inCombat ?targetwithin{d=3} ~onTimer:20
+
+#  - skill{s=voidmaw-tick} @self ~onTimer:3
+
+voidsling:
+  Display: 'Voidsling'
+  Template: voidling-base
+  KillMessages:
+  - '<target.name> got blasted to bits by a <caster.name>'
+  Skills:
+  - skill{s=voidsling-init} @self ~onSpawn
+  - skill{s=voidsling-attack} @self ~onTimer:40
+
+#  - skill{s=voidsling-tick} @self ~onTimer:3
+  
+voidbang:
+  Display: 'Voidbang'
+  Template: voidling-base
+  KillMessages:
+  - '<target.name> was blown up by a <caster.name>'
+  Skills:
+  - skill{s=voidbang-init} @self ~onSpawn
+  - skill{s=voidbang-explode} @self ?inCombat ?targetwithin{d=2} ~onTimer:10
+#  - skill{s=voidbang-tick} @self ~onTimer:3

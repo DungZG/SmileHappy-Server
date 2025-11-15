@@ -1,0 +1,312 @@
+void_hydra-init:
+  Skills:
+  - model{mid=void_hydra;usm=true}
+  - bodyclamp{player=true;rdelay=4;rduration=1;head=false}
+  - cullconfig{vc=false;bkc=false;blc=false}
+  - tint{mid=void_hydra;damagetint=true;color=#FFFFFF}
+  - syncyaw{target=body}
+##NECK
+  - brightness{p=mid;em=false;b=15;s=5}
+  - brightness{p=neck;em=false;b=15;s=5}
+  - brightness{p=head;em=false;b=15;s=5}
+  - brightness{p=jaw;em=false;b=15;s=5}
+##RIGHT_NECK
+  - brightness{p=right;em=false;b=15;s=5}
+  - brightness{p=right_head;em=false;b=15;s=5}
+  - brightness{p=right_jaw;em=false;b=15;s=5}
+##LEFT_NECK
+  - brightness{p=left;em=false;b=15;s=5}
+  - brightness{p=left_head;em=false;b=15;s=5}
+  - brightness{p=left_jaw;em=false;b=15;s=5}
+##BLACKHOLE
+  - brightness{p=blackhole;em=false;b=15;s=5}
+  - brightness{p=black_hole_ring;em=false;b=15;s=5}
+  - brightness{p=black_hole;em=false;b=15;s=5}
+  - brightness{p=tail_hole;em=false;b=15;s=5}
+##TAIL
+  - brightness{p=tail;em=false;b=15;s=5}
+## VFX
+  - brightness{p=shout;em=false;b=15;s=5}
+## To prevent intro anim strangeness  
+  - setstance{s=transition}
+  - setAI{ai=false}
+  - setNoDamageTicks{ticks=300}
+  - delay 300
+  - setstance{s=idle}
+  - setAI{ai=true}
+
+void_hydra-tick:
+  Conditions:
+  - inCombat
+  Skills:
+ # - settrackedlocation @targetlocation ?targetinlineofsight
+#  - rotateTowards{maxYaw=1;maxPitch=4} @TrackedLocation 
+#  - look{fp=false;i=true;headonly=false} @TrackedLocation 
+  - skill{s=facing_check-test} @self
+  - skill{s=void_hydra-maintain_altitude}
+  - skill{s=void_hydra-maintain_distance}
+
+void_hydra-maintain_altitude:
+  Conditions:
+  - stance{s=transition} false
+  Skills:
+  - lunge{vy=0.3} @forward{y=12} ?altitude{a=<12} 
+  - lunge{vy=-0.3} @selflocation{y=-12} ?altitude{a=>16} 
+  
+void_hydra-maintain_distance:
+  Conditions:
+  - stance{s=transition} false
+  Skills:
+  - lunge{v=0.2} @trackedlocation ?distanceFromTL{d=>32}
+  - disengage{v=0.2} @trackedlocation ?distanceFromTL{d=<24} 
+
+# void_hydra-damaged:
+#   Skills:
+  
+# void_hydra-left_head-damaged:
+#   Skills:
+  
+# void_hydra-mid_head-damaged:
+#   Skills:
+  
+# void_hydra-right_head-damaged:
+#   Skills:
+  
+void_hydra-select_action:
+  Skills:
+  - skill{s=void_hydra-select_action-attack} @self
+  - skill{s=void_hydra-select_action-defense} @self
+  - skill{s=void_hydra-select_action-utility} @self
+
+void_hydra-select_action-attack:
+  Cooldown: 1
+  Skills:
+  - randomskill{s=
+    <#>[ - skill{s=void_hydra-right_atomic} ],
+    [ - skill{s=void_hydra-mid_atomic} ],
+    <#>[ - skill{s=void_hydra-left_atomic} ],
+    [ - skill{s=void_hydra-left_atomic_cross} ],
+    [ - skill{s=void_hydra-right_atomic_cross} ]
+    } 
+    
+void_hydra-select_action-defense:
+  Cooldown: 4
+  Skills:
+  - randomskill{s=
+    [ - skill{s=void_hydra-left_missile} ],
+    [ - skill{s=void_hydra-mid_singularity} ],
+    [ - skill{s=void_hydra-right_vacuum} ]
+    }
+
+void_hydra-select_action-utility:
+  Cooldown: 6
+  Skills:
+  - randomskill{s=
+    [ - skill{s=void_hydra-left_shout} ],
+    [ - skill{s=void_hydra-mid_meteor} ],
+    [ - skill{s=void_hydra-right_summon} ]
+    } 
+
+void_hydra-attack:
+  Conditions:
+  - stance{s=transition} false
+  Skills:
+  - skill{s=mob_model-attack;mid=void_hydra;v=<skill.v|0>;vy=<skill.vy|0>;lockmodel=false} @self
+
+void_hydra-beam_hitbox:
+  Skills:
+  - projectile{delay=1;fo=true;origin=@modelpart{mid=void_hydra;pid=<skill.head>_atomic_in};
+    ti=4;syo=0;sfo=0;ham=true;v=256;mr=256;i=1;g=0;hR=2;vR=2;hnp=true;
+    hitconditions=[ - isLiving true - samefaction false ];repeat=3;repeati=3;se=false;
+    onHit=void_hydra-beam_hit;
+    onEnd=void_hydra-beam_end} @modelpart{mid=void_hydra;pid=<skill.head>_atomic_in;offset=local;loc=0,0,-100}
+
+void_hydra-beam_hit:
+  Skills:
+  - damage{a=<caster.damage>;pi=true;pkb=true;tags=VOID;cause=CUSTOM}
+
+void_hydra-beam_end:
+  Skills:
+  - vskill{s=void_meteor-end}
+
+void_hydra-summon_minion:
+  Skills:
+  - randomskill{s=
+    [ - summon{type=voidsling;a=1;os=false} ],
+    [ - summon{type=voidjet;a=1;os=false} ],
+    [ - summon{type=voidmaw;a=1;os=false} ],
+    [ - summon{type=voidbang;a=1;os=false} ]}
+
+void_hydra-right_atomic:
+  Cooldown: 8
+  Conditions:
+  - hasaura{name=anim-1} false
+  Skills:
+  - sound{s=minecraft:umbraeus_right_atomic_sfx;v=20} @self
+  - skill{s=void_hydra-attack;pid=right_head;state=right_atomic;duration=3;start=0.8;end=1.6;priority=1;
+    onAttackHitbox=[
+    - vskill{s=void_hydra-beam_hitbox;head=right}
+    ]}
+
+void_hydra-right_atomic_cross:
+  Cooldown: 8
+  Conditions:
+  - hasaura{name=anim-1} false
+  Skills:
+  - sound{s=minecraft:umbraeus_left_atomic_cross_sfx;v=20} @self
+  - state{mid=void_hydra;pid=right_head;state=right_atomic_cross2;ow=true;priority=4}
+  - skill{s=void_hydra-attack;pid=right_head;state=right_atomic_cross;duration=3;start=0.55;end=2.25;priority=1;
+    onAttackHitbox=[
+    - vskill{s=void_hydra-beam_hitbox;head=right}
+    ]}
+
+void_hydra-right_vacuum:
+  Cooldown: 1
+  Conditions:
+  - hasaura{name=anim-1} false
+  Skills:
+  - sound{s=minecraft:umbraeus_right_vacuum_sfx;v=20} @self
+  - skill{s=void_hydra-attack;pid=right_head;state=right_vacuum;duration=5;start=1.5;end=4.2;priority=1;
+    onAttackHitbox=[
+    - vskill{s=void_hydra-right_vacuum-hitbox}
+    ];
+    onAttackEnd=[
+    - removeaura{aura=grabbed;origin=@modelpart{mid=void_hydra;pid=right_head};delay=1} @ENO{r=8}
+    ]} @self
+    
+void_hydra-right_vacuum-hitbox:
+  Skills:
+  - raytraceto{delay=1;fo=true;origin=@modelpart{mid=void_hydra;pid=right_shout};
+    rcond=[ - isLiving true ];
+    md=32;rw=12;
+    <#>LocationSkill=[  - e:p{p=spark;a=1} @Line{fo=true;r=0.5} ];
+    EntitySkill=[
+    - vskill{s=void_hydra-right_vacuum-pull}
+    ]} @modelpart{mid=void_hydra;pid=right_shout;offset=local;loc=0,-4,-10}
+    
+void_hydra-right_vacuum-pull:
+  Skills:
+  - aura{name=grabbed;ma=true;d=50;i=2;rd=false;
+    os=[
+    - am{m="<#C0C0C0>[<reset><dark_purple><bold>!<reset><#C0C0C0>] <reset>You are being pulled in by <dark_purple>Umbreaus"}
+    ];
+    ot=[
+    - pull{to=true;origin=@modelpart{mid=void_hydra;pid=right_head;offset=local;loc=0,3,-7};v=2} @targeted
+    ]}
+
+void_hydra-right_summon:
+  Cooldown: 2
+  Conditions:
+  - hasaura{name=anim-1} false
+  Skills:
+  - sound{s=minecraft:umbraeus_right_summon_sfx;v=20} @self
+  - skill{s=void_hydra-attack;pid=right_head;state=right_summon;duration=3.5;start=1.5;end=1.71;priority=1;
+    onAttackEnd=[
+    - delay 1
+    - vskill{origin=@modelpart{mid=void_hydra;pid=right_shout};s=[
+      - vskill{s=void_blast-fire} @RLNT{r=6;a=4;spacing=1} 
+      ]} @targetlocation
+    ]} @self
+
+# Middle Head
+
+void_hydra-mid_atomic:
+  Cooldown: 2
+  Conditions:
+  - hasaura{name=anim-2} false
+  Skills:
+  - sound{s=minecraft:umbraeus_mid_atomic_sfx;v=20} @self
+  - skill{s=void_hydra-attack;pid=head;state=mid_atomic;duration=3;start=0.65;end=2.1;priority=2;
+    onAttackHitbox=[
+    - vskill{s=void_hydra-beam_hitbox;head=mid}
+    ]} @self
+
+void_hydra-mid_meteor:
+  Cooldown: 60
+  Conditions:
+  - hasaura{name=anim-2} false
+  Skills:
+  - sound{s=minecraft:umbraeus_mid_meteor_sfx;v=20} @self
+  - skill{s=void_hydra-attack;pid=head;state=mid_meteor;duration=5;start=3.5;end=4.25;priority=2;
+    onAttackEnd=[
+    - vskill{s=void_meteor-storm-start} @targetlocation
+    ]} @self
+
+void_hydra-mid_singularity:
+  Cooldown: 30
+  Conditions:
+  - hasaura{name=anim-2} false
+  Skills:
+  - sound{s=minecraft:umbraeus_mid_singularity_sfx;v=20} @self
+  - skill{s=void_hydra-attack;pid=mid_blackhole;state=mid_singularity;duration=5.75;start=1.5;end=5;priority=2;
+    onAttackEnd=[
+    - vskill{delay=1;s=void_singularity-fire;origin=@origin;scale=5} @targetlocation
+    ]} @self
+
+# Left Head
+
+void_hydra-left_atomic:
+  Cooldown: 8
+  Conditions:
+  - hasaura{name=anim-3} false
+  Skills:
+  - sound{s=minecraft:umbraeus_right_atomic_sfx;v=20} @self
+  - skill{s=void_hydra-attack;pid=left_head;state=left_atomic;duration=3;start=0.8;end=1.6;priority=3;
+    onAttackHitbox=[
+    - vskill{s=void_hydra-beam_hitbox;head=left}
+    ]} @self
+
+void_hydra-left_atomic_cross:
+  Cooldown: 8
+  Conditions:
+  - hasaura{name=anim-3} false
+  Skills:
+  - sound{s=minecraft:umbraeus_left_atomic_cross_sfx;v=20} @self
+  - state{mid=void_hydra;pid=left_head;state=left_atomic_cross2;ow=true;priority=6}
+  - skill{s=void_hydra-attack;pid=left_head;state=left_atomic_cross;duration=3;start=0.55;end=2.25;priority=3;
+    onAttackHitbox=[
+    - vskill{s=void_hydra-beam_hitbox;head=left}
+    ]}
+
+void_hydra-left_missile:
+  Cooldown: 3
+  Conditions:
+  - hasaura{name=anim-3} false
+  Skills:
+  - sound{s=minecraft:umbraeus_left_missile_sfx;v=20} @self
+  - skill{s=void_hydra-attack;pid=left_atomic_in;state=left_missile;duration=3;start=1.25;end=1.5;priority=3} @self
+  - delay 1.25*20
+  - skill{repeat=5;repeati=1;s=[
+    - setvarloc{var=skill.startdir;val=@modelpart{mid=void_hydra;pid=left_atomic_in;offset=local;loc=<random.float.-12to12>,<random.float.-12to12>,-9}} 
+    - skill{s=void_missile-fire;origin=@modelpart{mid=void_hydra;pid=left_atomic_in};repeat=1;repeati=3} @targetlocation{xo=<random.float.-3to3>;zo=<random.float.-3to3>}
+    ]}
+
+void_hydra-left_shout:
+  Cooldown: 4
+  Conditions:
+  - hasaura{name=anim-3} false
+  Skills:
+  - sound{s=minecraft:umbraeus_left_shout_sfx;v=20} @self
+  - skill{s=void_hydra-attack;pid=left_head;state=left_shout;duration=5;start=1;end=4;priority=3;
+    onAttackStart=[
+    - vskill{s=void_hydra-summon_minion;repeat=6;repeati=10} @RLNO{a=1;r=24;minr=16;spacing=5}
+    ];
+    onFinish=void_hydra-command_voidlings} @self
+    
+void_hydra-command_voidlings:    
+  Skills:
+  - setvar{var=targetuuid;val=<target.uuid>;type=STRING;d=200} @self
+  - sudoskill{s=[ 
+    - setTarget @uuid{u=<skill.var.targetuuid>} 
+    <#>- message{m=<caster.name> targeting <target.uuid>} @server ?varequals{var=caster.debug;val=true}
+    ]} @children
+
+void_hydra-death:
+  Skills:
+  - setstance{s=transition}
+  - damage{d=100;pi=true} @children
+  - propel{v=0.2;repeat=12;repeati=1} @selflocation{yo=-100}
+  - setAI{ai=false;delay=20}
+  - remove @children
+  - delay 25*20
+  - remove

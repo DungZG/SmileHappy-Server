@@ -1,0 +1,6 @@
+bossbar-void_hydra:
+  File: bossbars/void_hydra_bossbar
+  Type: bitmap
+  Ascent: 10
+  Height: 43
+  Char: "\uE907"

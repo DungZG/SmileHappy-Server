@@ -1,0 +1,72 @@
+void_meteor-test_cast:
+  Skills:
+  - skill{s=void_meteor-fire;origin=@selfeyelocation{yo=12}} @targetlocation
+  
+void_meteor-storm-exec:
+  Skills:
+  - sound{s=mythic:arcane.castshort;pitch=1.2;volume=2} @self
+  - raytraceto{fo=true;origin=@selfeyelocation;md=<skill.range|64>;rw=0.25;
+    locationskill=[ - skill{s=void_meteor-storm-start} ]} @targetlocation
+
+void_meteor-storm-start:
+  Skills:
+  - aura{d=200;i=1;
+    ot=[ - skill{s=void_meteor-target} @RLNT{a=1;radius=36;spacing=4} ]}
+    
+void_meteor-target:
+  Skills:
+  - setvarloc{var=skill.originloc;v=@targetedlocation}
+  - projectile{fo=true;origin=@VariableLocation{var=skill.originloc};ti=1;ham=true;
+    v=200;mr=128;syo=0;sfo=0;i=1;g=0;hR=0.1;vR=0.1;sb=true;se=false;
+    onEnd=void_meteor-mark} @VariableLocation{var=skill.originloc;yo=-2}
+    
+void_meteor-mark:
+  Skills:
+  - delay 10
+  - skill{s=void_meteor-fire;origin=@origin{yo=48;xo=<random.-12to12>;zo=<random.-12to12>}}
+  
+void_meteor-fire:
+  Skills:
+  - projectile{fo=true;ti=2;syo=0;sfo=0;
+    onStart=void_meteor-start;
+    onHit=void_meteor-hit_entity;
+    onEnd=void_meteor-end;
+    bulletType=ME;model=vfx_void_meteor;
+    hitconditions=[ - isLiving true - samefaction false ];
+    ham=true;v=20;mr=128;i=1;g=0;hR=0.25;vR=0.25;hnp=true}
+    
+void_meteor-start:
+  Skills:
+  - modifyprojectile{t=VELOCITY;action=SET;value=10}
+  - delay 5
+  - modifyprojectile{t=VELOCITY;action=SET;value=30}
+  
+void_meteor-hit_entity:
+  TargetConditions:
+  - hasaura{aura=immune} false
+  Skills:
+  - randomskill{s=void_meteor-hit_sound1,void_meteor-hit_sound2,void_meteor-hit_sound3} @self
+  - damage{d=<caster.damage>;pi=true;pkb=true;type=VOID}
+  - aura{name=immune;d=1;ma=true}
+
+void_meteor-hit_sound1:
+  Skills:
+  - sound{s=minecraft:umbraeus_meteor_1_sfx;v=0.6;p=0.8} @origin
+void_meteor-hit_sound2:
+  Skills:
+  - sound{s=minecraft:umbraeus_meteor_2_sfx;v=0.6} @origin
+void_meteor-hit_sound3:
+  Skills:
+  - sound{s=minecraft:umbraeus_meteor_3_sfx;v=0.6;p=1.2} @origin
+  
+void_meteor-end:
+  Skills:
+  - summon{t=generic_marker;os=false;then=[
+    - sudoskill{s=[
+      - model{mid=vfx_void_meteor;usm=true} @self
+      - brightness{s=15;b=15;em=false} @self
+      - state{mid=vfx_void_meteor;s=explode;priority=0;ow=true} @self
+      - remove{delay=20} @self
+      ]} @targeted
+    ]} @targetedlocation{yo=0.1}
+  - skill{s=void_meteor-hit_entity} @ENO{r=4}

@@ -1,0 +1,27 @@
+voidbang-init:
+  Skills:
+#  - bodyclamp{player=true;rdelay=4;rduration=1;head=false}
+#  - syncyaw{target=yaw;body=false} #Sync entity yaw to Head yaw
+  - model{m=voidbang;init=false}
+  - segment{m=voidbang;p=lace;em=false;roll=true;angle=80;extend=0.1}
+  - brightness{p=bhole_centre;b=15;s=5}
+  - brightness{p=bhole_ring;b=15;s=5}
+  - brightness{p=teil;em=false;b=15;s=5}
+  - renderinit{m=voidbang}
+
+voidbang-tick:
+  Skills:
+  
+voidbang-explode:
+  Cooldown: 10
+  Skills:
+  - skill{s=void_explosion-summon;scale=2} @selflocation
+  - damage{a=<caster.damage>;pi=true;pkb=true} @EIR{r=3}
+  - throw{v=6;vy=4} @EIR{r=3}
+  - delay 1
+  - remove @self
+
+
+
+
+# 6zrFslUDInRkGmAspCcj7OZUABS813FDmKHXAXKQ43g6EJonFXHEE0YdmYo7bzFQbUbHaSAJVr7woUvXoSdMr1pttgtOFTdFVz058w2kHVs=

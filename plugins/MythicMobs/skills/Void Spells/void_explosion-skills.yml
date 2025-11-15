@@ -1,0 +1,15 @@
+void_explosion-test_cast:
+  Skills:
+  - skill{s=void_explosion-summon;scale=4} @targetlocation
+
+void_explosion-summon:
+  Skills:
+  - summon{t=generic_marker;os=false;then=[
+    - sudoskill{s=[
+      - model{mid=vfx_void_explosion;usm=true} @self
+      - brightness{s=15;b=15;em=false} @self
+      - scale{s=<skill.scale|1>}
+      - delay 0.75*20
+      - remove @self
+      ]} @targeted
+    ]} @targetedlocation{yo="<skill.scale|1>/8"}
