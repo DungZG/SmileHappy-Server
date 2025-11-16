@@ -1,1 +1,9 @@
-schedules: {}
+schedules:
+  world:
+    days: 5
+    chance: 80.0
+    broadcast: true
+    days-left-message: '&fin &e%days-left% &fngày nữa sẽ có khả năng xảy ra trăng máu!'
+    tonight-message: '&fCó &e%chance%% &fkhả năng đêm nay sẽ là trăng máu!'
+    random-days: true
+    repeating: true
