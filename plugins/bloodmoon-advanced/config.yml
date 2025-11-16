@@ -1,92 +1,92 @@
-# Download it here: https://black-minecraft.com/resources/8714/
-# This is the bloodmoon config file. Make sure you use the correct format for the correct properties
-# If at any moment, you believe you broke the config, remove it and reconfigure it.
-# Authors: MrGeneralQ, PandaCrafter1
-# For a detailed config version please check our wiki: https://bloodmoon.mrgeneralq.net/
+# Tải xuống tại đây: https://black-minecraft.com/resources/8714/
+# Đây là tệp cấu hình trăng máu. Hãy chắc chắn bạn sử dụng định dạng chính xác cho các thuộc tính chính xác
+# Nếu bất cứ lúc nào, bạn tin rằng mình đã phá vỡ cấu hình, hãy xóa nó và cấu hình lại.
+# Tác giả: MrGeneralQ, PandaCrafter1
+# Để xem phiên bản cấu hình chi tiết, vui lòng kiểm tra wiki của chúng tôi: https://bloodmoon.mrgeneralq.net/
 
-# DO NOT REMOVE OR TOUCH THIS VALUE. THIS IS THE CONFIG VERSION, NOT THE PLUGIN VERSION
+# KHÔNG XÓA HOẶC CHẠM VÀO GIÁ TRỊ NÀY. ĐÂY LÀ PHIÊN BẢN CẤU HÌNH, KHÔNG PHẢI PHIÊN BẢN PLUGIN
 version: "3.5"
 
-# set to false if you want to disable the update checker
-#IMPORTANT we only provide support for the latest version
+# đặt thành false nếu bạn muốn tắt trình kiểm tra cập nhật
+#QUAN TRỌNG chúng tôi chỉ cung cấp hỗ trợ cho phiên bản mới nhất
 update-checker-enabled: true
 
-# A list of all worlds that are enabled for the bloodmoon.
+# Danh sách tất cả các thế giới được bật cho trăng máu.
 enabled-worlds:
   - world
 
-# if set to true, players will not be able to use portals during the bloodmoon
+# nếu đặt thành true, người chơi sẽ không thể sử dụng cổng trong sự kiện trăng máu
 block-portal: true
 
-# if set to true, players cannot go to sleep during blood moon events
+# nếu đặt thành true, người chơi không thể đi ngủ trong sự kiện trăng máu
 block-sleeping: true
 
-# if change-difficulty is set to true, the difficulty will change when the bloodmoon runs
-# possible values easy|normal|hard|peaceful
+# nếu change-difficulty được đặt thành true, độ khó sẽ thay đổi khi trăng máu chạy
+# các giá trị có thể easy|normal|hard|peaceful
 change-difficulty: true
 difficulty: 'hard'
 
-# percentage when harvesting crops will result in a failure
+# tỷ lệ phần trăm khi thu hoạch cây sẽ dẫn đến thất bại
 harvest-failure-chance: 50.0
 
-# whenever there is a thunderstorm, the percentage specified will redirect the lightning to any player in the world
+# bất cứ khi nào có cơn bão sét, tỷ lệ phần trăm được chỉ định sẽ chuyển hướng sét đến bất kỳ người chơi nào trên thế giới
 lightning-strike-player-chance: 20.0
 
-# if the player does not get striked by a lightning, what is the chance that it strikes near the player
+# nếu người chơi không bị đánh bởi sét, xác suất nó sẽ đánh gần người chơi là bao nhiêu
 lightning-near-hit-percentage: 50.0
 
-# amount of mobs that can spawn in one chunk (Bukkit default is 70)
+# số lượng quái vật có thể sinh ra trong một khối (mặc định Bukkit là 70)
 monster-spawn-limit: 160
 
-# When paths is enabled you will be able to use an item to show the path to the bosses location.
-# If compass is on 'true', it will point to the location of the boss
+# Khi đường dẫn được bật, bạn sẽ có thể sử dụng một vật phẩm để hiển thị đường dẫn đến vị trí của các bồ chủ.
+# Nếu compass ở 'true', nó sẽ chỉ vào vị trí của bồ chủ
 paths:
   enabled: true
   compass: true
   delay: 5
   material: 'COMPASS'
 
-# Run a series of actions when the bloodmoon is started or begins
+# Chạy một loạt các hành động khi trăng máu bắt đầu hoặc bắt đầu
 start-actions:
   title:
     enabled: true
-    title: "&4Bloodmoon started"
-    subtitle: "Be aware!"
+    title: "&4Trăng máu bắt đầu"
+    subtitle: "Hãy cảnh báo!"
   commands:
     enabled: true
     commands:
-      - bloodmoon say The bloodmoon is rising!
+      - bloodmoon say Trăng máu đang mọc lên!
   sound:
     enabled: true
     start-sound: ENTITY_ENDER_DRAGON_DEATH
 
 
 
-# Run a series of actions when the bloodmoon is stopped or ends
+# Chạy một loạt các hành động khi trăng máu bị dừng hoặc kết thúc
 stop-actions:
   title:
     enabled: true
-    title: "&aBloodmoon stopped"
-    subtitle: "No more crazy stuff"
+    title: "&aTrăng máu đã dừng"
+    subtitle: "Không còn điều điên cuồng nữa"
   commands:
     enabled: true
     commands:
-      - bloodmoon say The sun is rising, the spirit of the moon is fading away ...
+      - bloodmoon say Mặt trời đang mọc lên, linh hồn của mặt trăng đang phai mờ...
   sound:
     enabled: true
     stop-sound: UI_TOAST_CHALLENGE_COMPLETE
 
 
-# choose to play a sound when the mobs are getting removed after the bloodmoon
-# make sure to use correct sound names and effects
-# spigot particles: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
-# spigot sounds: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+# chọn để phát âm thanh khi các quái vật bị loại bỏ sau trăng máu
+# hãy chắc chắn sử dụng tên âm thanh và hiệu ứng chính xác
+# hạt spigot: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+# âm thanh spigot: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
 
 
-# show a bossbar during the bloodmooon
+# hiển thị bossbar trong suốt sự kiện trăng máu
 bossbar:
   enabled: true
-  title: "Bloodmoon"
+  title: "Trăng Máu"
   fog: true
   dark: true
 
@@ -99,36 +99,36 @@ mob-despawn-effect:
     particle: "SPELL_MOB"
 
 
-#configure the amount of ticks when the plugin considers it night or day
+#cấu hình số tick khi plugin coi là đêm hoặc ngày
 time:
   night-start: 12500
   night-end: 23500
 
-#during the bloodmoon, play a series of scary sounds to make it even more scary
+#trong sự kiện trăng máu, phát một loạt các âm thanh đáng sợ để làm cho nó còn đáng sợ hơn
 scary-sounds:
   enabled: true
   sounds:
     - AMBIENT_CAVE
 
 
-# when a bloodmoon is scheduled either by command or automatically, if bell warning is enabled, you can make a bell
-# ring far away from the players, as if a churge is alerting the players for the upcoming bloodmoon
-# the count is representing how many times the bell should ring
-# NOTE: a headset might be required in order to experience the full effect
+# khi trăng máu được lên lịch bằng lệnh hoặc tự động, nếu cảnh báo chuông được bật, bạn có thể reo một chiếc chuông
+# reo xa khỏi những người chơi, như thể một chiếc thánh giá đang cảnh báo những người chơi cho sự kiện trăng máu sắp tới
+# số đếm đại diện cho có bao nhiêu lần chuông nên reo
+# LƯU Ý: tai nghe có thể được yêu cầu để trải nghiệm đầy đủ hiệu ứng
 bell-warning:
   enabled: true
   count: 6
   sound: BLOCK_BELL_USE
 
-# if you want you can apply a custom resource pack when the bloodmoon is rising
-# for the url-enabled, put the official bloodmoon zip file
-# for the url-disabled: put any empty zip file as this would force back to the old resource pack
+# nếu bạn muốn, bạn có thể áp dụng một gói tài nguyên tùy chỉnh khi trăng máu đang mọc lên
+# đối với url-enabled, hãy đặt tệp zip trăng máu chính thức
+# đối với url-disabled: đặt bất kỳ tệp zip trống nào vì điều này sẽ buộc phải quay lại gói tài nguyên cũ
 resource-pack:
   enabled: false
   url-enabled: "http://dl.dvrm.it/Uploads/Bloodmoon.zip"
   url-disabled: "http://dl.dvrm.it/Uploads/normal.zip"
 
-# specifiy for each block which mob will spawn and the percentage
+# chỉ định cho mỗi khối quái vật nào sẽ sinh ra và tỷ lệ phần trăm
 mob-in-block:
   enabled: true
   blocks:
@@ -139,16 +139,16 @@ mob-in-block:
       percentage: 100.0
       mob: "MAGMA_CUBE"
 
-# specify a list of all mobs that will not be replaced upon spawn by a random bloodmoon mob. This are typically mobs
-# used for farming
-# non hostile mobs are excluded by default
+# chỉ định một danh sách tất cả các quái vật sẽ không bị thay thế khi sinh ra bởi một quái vật trăng máu ngẫu nhiên. Đây thường là những quái vật
+# được sử dụng để nuôi trồng
+# quái vật không thù địch được loại trừ theo mặc định
 excluded-mobs:
   - GUARDIAN
   - ELDER_GUARDIAN
   - ENDER_DRAGON
   - ENDERMAN
 
-# You can disable some spawn types. When it's set to true it won't change the mob into a bloodmoon mob.
+# Bạn có thể tắt một số loại sinh ra. Khi nó được đặt thành true, nó sẽ không thay đổi quái vật thành quái vật trăng máu.
 excluded-spawn-methods:
   natural: false
   eggs: false
@@ -159,44 +159,44 @@ excluded-spawn-methods:
   breeding: true
   bees: true
 
-# Settings when and if a boss should spawn
+# Cài đặt khi và liệu bồ chủ có nên sinh ra
 boss:
   enabled: true
   chance: 50.0
   bossbar: true
 
 
-# Define a list of commands to be blocked during a bloodmoon
+# Xác định danh sách các lệnh bị chặn trong sự kiện trăng máu
 blocked-commands:
   - tpa
   - spawn
   - home
   - save-all
 
-# A list of actions that occur when a player dies during a bloodmoon
+# Danh sách các hành động xảy ra khi một người chơi chết trong sự kiện trăng máu
 death-actions:
   lose-xp:
     chance: 0.0
   clear-inventory:
     chance: 0.0
   commands:
-    - say %player% got killed during a bloodmoon!
+    - say %player% đã bị giết trong sự kiện trăng máu!
 
-# All settings regarding custom spawning
+# Tất cả các cài đặt liên quan đến sinh ra tùy chỉnh
 spawning:
   enabled: false
   min-radius: 20
   max-radius: 80
   mobs-per-chunk: 20
 
-# All settings related to lifecycles
-# mob-progress: when set to true, lifecycles will also progress when the target is getting damaged
+# Tất cả các cài đặt liên quan đến vòng đời
+# mob-progress: khi được đặt thành true, vòng đời cũng sẽ tiến triển khi mục tiêu bị tấn công
 lifecycles:
   mob-progress: true
 
-# All settings related to nights
-# longer: night will be longer based on the boost percentage
-# darker: players will get randomly a blindness effect
+# Tất cả các cài đặt liên quan đến các đêm
+# longer: đêm sẽ dài hơn dựa trên tỷ lệ phần trăm tăng
+# darker: người chơi sẽ ngẫu nhiên nhận được hiệu ứng mù lòa
 nights:
   longer: false
   boost-percentage: 20.0

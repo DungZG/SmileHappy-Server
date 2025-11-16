@@ -53,20 +53,35 @@ chunks:
   auto-save-interval: default
   delay-chunk-unloads-by: 10s
   entity-per-chunk-save-limit:
-    arrow: -1
-    ender_pearl: -1
-    experience_orb: -1
-    fireball: -1
-    small_fireball: -1
-    snowball: -1
+    area_effect_cloud: 8
+    arrow: 16
+    breeze_wind_charge: 8
+    dragon_fireball: 3
+    egg: 8
+    ender_pearl: 8
+    experience_bottle: 3
+    experience_orb: 16
+    eye_of_ender: 8
+    fireball: 8
+    firework_rocket: 8
+    lingering_potion: 8
+    llama_spit: 3
+    shulker_bullet: 8
+    small_fireball: 8
+    snowball: 8
+    spectral_arrow: 16
+    splash_potion: 8
+    trident: 16
+    wind_charge: 8
+    wither_skull: 4
   fixed-chunk-inhabited-time: -1
   flush-regions-on-save: false
   max-auto-save-chunks-per-tick: 24
-  prevent-moving-into-unloaded-chunks: false
+  prevent-moving-into-unloaded-chunks: true
 collisions:
   allow-player-cramming-damage: false
   allow-vehicle-collisions: true
-  fix-climbing-bypassing-cramming-rule: false
+  fix-climbing-bypassing-cramming-rule: true
   max-entity-collisions: 8
   only-players-collide: false
 command-blocks:
@@ -143,28 +158,28 @@ entities:
     despawn-range-shape: ELLIPSOID
     despawn-ranges:
       ambient:
-        hard: default
+        hard: 80
         soft: default
       axolotls:
-        hard: default
+        hard: 80
         soft: default
       creature:
-        hard: default
+        hard: 80
         soft: default
       misc:
-        hard: default
+        hard: 80
         soft: default
       monster:
-        hard: default
+        hard: 80
         soft: default
       underground_water_creature:
-        hard: default
+        hard: 80
         soft: default
       water_ambient:
-        hard: default
+        hard: 80
         soft: default
       water_creature:
-        hard: default
+        hard: 80
         soft: default
     despawn-time:
       llama_spit: disabled

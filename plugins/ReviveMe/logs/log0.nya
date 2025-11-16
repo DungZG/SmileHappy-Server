@@ -13,3 +13,88 @@ Nov 15,2025 17:23:50:-> =========REVIVEME DISABLED=========
 Nov 15,2025 17:25:34:-> =========REVIVEME ENABLED=========
 Nov 15,2025 17:29:33:-> =========REVIVEME ENABLED=========
 Nov 15,2025 17:49:25:-> =========REVIVEME DISABLED=========
+Nov 16,2025 10:48:47:-> =========REVIVEME ENABLED=========
+Nov 16,2025 10:48:57:-> =========REVIVEME DISABLED=========
+Nov 16,2025 10:55:26:-> =========REVIVEME ENABLED=========
+Nov 16,2025 11:00:32:-> =========REVIVEME DISABLED=========
+Nov 16,2025 11:13:03:-> =========REVIVEME ENABLED=========
+-------------------------[set downed]-----------------------
+Nov 16,2025 11:21:30:-> player:OriginoSky reason:2 0.185094213133827
+Nov 16,2025 11:21:30:-> healt:2.0 max_health:20.0 speed:0.2
+-------------------------[set stand]-----------------------
+Nov 16,2025 11:22:45:-> player:OriginoSky reason:Death. code: 004
+Nov 16,2025 11:22:45:-> current_speed:0.04 next_speed:0.2
+Nov 16,2025 11:22:45:-> speed_changed_to:0.2 edited:false
+-------------------------[set downed]-----------------------
+Nov 16,2025 11:23:25:-> player:OriginoSky reason:2 0.4488102652731104
+Nov 16,2025 11:23:25:-> healt:20.0 max_health:20.0 speed:0.2
+Nov 16,2025 11:24:40:-> current_speed:0.04 next_speed:0.2
+Nov 16,2025 11:24:40:-> speed_changed_to:0.2 edited:false
+-------------------------[set stand]-----------------------
+Nov 16,2025 11:24:40:-> player:OriginoSky reason:Death. code: 004
+Nov 16,2025 11:24:40:-> current_speed:0.2 next_speed:0.2
+Nov 16,2025 11:24:40:-> speed_changed_to:0.2 edited:false
+-------------------------[set downed]-----------------------
+Nov 16,2025 11:24:44:-> player:OriginoSky reason:2 0.8654884966054266
+Nov 16,2025 11:24:44:-> healt:20.0 max_health:20.0 speed:0.2
+-------------------------[set stand]-----------------------
+Nov 16,2025 11:24:56:-> player:OriginoSky reason:Death. code: 004
+Nov 16,2025 11:24:56:-> current_speed:0.04 next_speed:0.2
+Nov 16,2025 11:24:56:-> speed_changed_to:0.2 edited:false
+-------------------------[set downed]-----------------------
+Nov 16,2025 11:25:29:-> player:OriginoSky reason:2 0.7961845789408419
+Nov 16,2025 11:25:29:-> healt:1.833333969116211 max_health:20.0 speed:0.2
+-------------------------[set stand]-----------------------
+Nov 16,2025 11:26:48:-> player:OriginoSky reason:Death. code: 004
+Nov 16,2025 11:26:48:-> current_speed:0.04 next_speed:0.2
+Nov 16,2025 11:26:48:-> speed_changed_to:0.2 edited:false
+Nov 16,2025 11:34:58:-> =========REVIVEME DISABLED=========
+Nov 16,2025 11:35:49:-> =========REVIVEME ENABLED=========
+Nov 16,2025 11:37:33:-> =========REVIVEME DISABLED=========
+Nov 16,2025 11:57:32:-> =========REVIVEME ENABLED=========
+-------------------------[set downed]-----------------------
+Nov 16,2025 11:59:07:-> player:OriginoSky reason:2 0.651143099957754
+Nov 16,2025 11:59:07:-> healt:20.0 max_health:20.0 speed:0.2
+Nov 16,2025 12:00:22:-> current_speed:0.04 next_speed:0.2
+Nov 16,2025 12:00:22:-> speed_changed_to:0.2 edited:false
+-------------------------[set stand]-----------------------
+Nov 16,2025 12:00:22:-> player:OriginoSky reason:Death. code: 004
+Nov 16,2025 12:00:22:-> current_speed:0.2 next_speed:0.2
+Nov 16,2025 12:00:22:-> speed_changed_to:0.2 edited:false
+-------------------------[set downed]-----------------------
+Nov 16,2025 12:02:07:-> player:OriginoSky reason:2 0.7896171963725676
+Nov 16,2025 12:02:07:-> healt:1.9137550592422485 max_health:20.0 speed:0.2
+-------------------------[set stand]-----------------------
+Nov 16,2025 12:03:22:-> player:OriginoSky reason:Death. code: 004
+Nov 16,2025 12:03:22:-> current_speed:0.04 next_speed:0.2
+Nov 16,2025 12:03:22:-> speed_changed_to:0.2 edited:false
+-------------------------[set downed]-----------------------
+Nov 16,2025 12:07:11:-> player:OriginoSky reason:2 0.10603968097707939
+Nov 16,2025 12:07:11:-> healt:20.0 max_health:20.0 speed:0.2
+Nov 16,2025 12:08:26:-> current_speed:0.04 next_speed:0.2
+Nov 16,2025 12:08:26:-> speed_changed_to:0.2 edited:false
+-------------------------[set stand]-----------------------
+Nov 16,2025 12:08:26:-> player:OriginoSky reason:Death. code: 004
+Nov 16,2025 12:08:26:-> current_speed:0.2 next_speed:0.2
+Nov 16,2025 12:08:26:-> speed_changed_to:0.2 edited:false
+Nov 16,2025 12:21:48:-> =========REVIVEME DISABLED=========
+Nov 16,2025 12:24:28:-> =========REVIVEME ENABLED=========
+Nov 16,2025 12:39:54:-> =========REVIVEME DISABLED=========
+Nov 16,2025 12:41:34:-> =========REVIVEME ENABLED=========
+-------------------------[set downed]-----------------------
+Nov 16,2025 12:42:35:-> player:OriginoSky reason:2 0.010892715852704793
+Nov 16,2025 12:42:35:-> healt:1.3497271537780762 max_health:20.4 speed:0.2
+-------------------------[set stand]-----------------------
+Nov 16,2025 12:42:51:-> player:OriginoSky reason:Death. code: 004
+Nov 16,2025 12:42:51:-> current_speed:0.04 next_speed:0.2
+Nov 16,2025 12:42:51:-> speed_changed_to:0.2 edited:false
+-------------------------[set downed]-----------------------
+Nov 16,2025 12:42:54:-> player:OriginoSky reason:2 0.4864222618219549
+Nov 16,2025 12:42:54:-> healt:20.399999618530273 max_health:20.4 speed:0.2
+-------------------------[set stand]-----------------------
+Nov 16,2025 12:43:09:-> player:OriginoSky reason:Death. code: 004
+Nov 16,2025 12:43:09:-> current_speed:0.04 next_speed:0.2
+Nov 16,2025 12:43:09:-> speed_changed_to:0.2 edited:false
+Nov 16,2025 12:45:27:-> =========REVIVEME DISABLED=========
+Nov 16,2025 12:47:51:-> =========REVIVEME ENABLED=========
+Nov 16,2025 12:53:34:-> =========REVIVEME DISABLED=========

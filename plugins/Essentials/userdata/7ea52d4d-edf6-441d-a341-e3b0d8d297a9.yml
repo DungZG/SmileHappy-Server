@@ -1,0 +1,38 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 127.0.0.1
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1763272415245
+  login: 1763272109822
+money: '0'
+last-account-name: OriginoSky
+logoutlocation:
+  world: 4a3d7a9c-8f9b-4e09-8f5f-e23be1584c7e
+  world-name: world
+  x: 68.91536286940402
+  y: 74.0
+  z: 47.08971252146381
+  yaw: -69.30010986328125
+  pitch: 31.349987030029297
+lastlocation:
+  world: 4a3d7a9c-8f9b-4e09-8f5f-e23be1584c7e
+  world-name: world
+  x: 34.5
+  y: 70.0
+  z: -33.5
+  yaw: 168.59796142578125
+  pitch: 47.24990463256836

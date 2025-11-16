@@ -1,0 +1,946 @@
+# # This optional configuration is for the GUI that only Bedrock players will see.
+# # If you want Bedrock players to be able to join your server, you can install the Geyser and floodgate plugin: https://geysermc.org/download
+# # Please note that this is completely optional. If you don't allow Bedrock players on your server, you can ignore this file.
+# #
+# # Each button can have an icon. You can either provide a URL or path to the texture in the resource pack.
+# # More information: https://github.com/Angeschossen/PluginFrameworkAPI/wiki/Bedrock-Menus
+
+general:
+  wYes: '&2Có'
+  wNo: '&cKhông'
+  enabled: '&2Đã bật'
+  disabled: '&cĐã tắt'
+  value:
+    none: '&cKhông có'
+    unlimited: '&2Không giới hạn'
+
+common:
+  values:
+    failure_cost: '&cBạn không có đủ tiền. &rBạn cần&c {cost}&r.'
+    failure_permission: '&cMáy chủ này không cho phép bạn làm điều này.'
+    failure_noaccess_owner:
+      title: Không được phép
+      content: Chỉ có chủ sở hữu của {object}&r mới có thể thực hiện điều đó.
+    failure_message:
+      title: Thất bại
+      content: '{message}'
+    success_message:
+      title: Thành công
+      content: '{message}'
+    failure_noaccess:
+      content: |
+        &cBạn không được phép làm điều này. &rChủ sở hữu của {object}&r có thể cấp quyền cho vai trò của bạn thực hiện điều đó.
+            &8• &rCờ: {flag}
+      title: Không được phép
+    failure_access:
+      title: Không Được Phép
+      content: |
+        &cBạn không được phép làm điều này. &rChủ sở hữu của {object}&r có thể cấp quyền cho vai trò của bạn thực hiện điều đó.
+            &8• &rCờ: {flag}
+      failure_rented:
+        title: Đã Thuê hoặc Đã Bán
+        content: |
+          &cBạn không thể thiết lập thuế cho khu vực này khi nó đang được thuê hoặc đã bán.
+           &8• &rNgười thuê hiện tại:&3 {player}
+    role:
+      failure_priority:
+        title: Ưu Tiên Vai Trò
+        content: |
+          &cBạn không được phép chỉnh sửa cài đặt của vai trò này.
+           &8• &rNó có ưu tiên cao hơn vai trò của bạn hoặc bạn là thành viên của nó.
+      failure_nation:
+        title: Quản Lý Bởi Quốc Gia
+        content: |
+          &cVai trò này phần nào được quản lý bởi quốc gia của bạn.
+            &8• &rChỉ có thủ đô của quốc gia mới có thể thay đổi cài đặt này: &e/{cmd}
+      failure_max-roles:
+        title: Vai Trò Tối Đa
+        content: '&cKhu vực này đã đạt số lượng vai trò tối đa&4 {max}.'
+
+  items:
+    default:
+      back:
+        name: '&4Quay lại'
+      close:
+        name: '&4Đóng'
+      refresh_page_previous:
+        name: '&4&lTrang trước'
+      refresh_page_next:
+        name: '&2&lTrang tiếp theo'
+      enable:
+        name: '&2Bật'
+      disable:
+        name: '&cTắt'
+  entries: 25
+
+gui:
+  main:
+    title: Menu Chính
+    items:
+      default:
+        lands:
+          name: |-
+            Các Đất của Bạn
+            sở hữu: {own}, tin cậy: {trusted}
+          image: default
+        nations:
+          name: |-
+            Các Quốc Gia của Bạn
+            sở hữu: {own}, tin cậy: {trusted}
+          image: default
+        all-lands:
+          name: |-
+            Tất Cả Các Đất
+            {lands}
+          image: default
+        all-nations:
+          name: |-
+            Tất Cả Các Quốc Gia
+            {nations}
+          image: default
+        invites:
+          name: |-
+            Lời Mời Nhận Được
+            {invites}
+          image: default
+        flags:
+          name: Cài Đặt Cá Nhân
+          image: default
+        rentable:
+          name: Khu Vực Có Thể Thuê
+          image: default
+        limitations:
+          name: Hạn Chế Của Bạn
+          image: default
+        map:
+          name: Bản Đồ Các Địa Điểm
+          image: default
+  list_player_lands:
+    title: Các Đất Của Bạn
+    items:
+      default:
+        entry_land_own:
+          name: |-
+            Đất &2{land}&r
+            &8Bạn sở hữu đất này.
+          image: textures/blocks/grass_carried
+        entry_land:
+          name: |-
+            Đất &2{land}&r
+            &8Bạn được tin cậy trong đất này.
+          image: textures/blocks/grass_carried
+        entry_land_edit:
+          name: |-
+            Đất &2{land}&r
+            &8Đặt làm đất chỉnh sửa/lệnh.
+          image: textures/blocks/wool_colored_green
+        entry_camp_edit:
+          name: |-
+            Trại &2{land}&r
+            &8Đặt làm trại chỉnh sửa/lệnh.
+          image: textures/blocks/wool_colored_green
+        entry_camp_own:
+          name: |-
+            Trại &2{land}&r
+            &8Hết hạn vào:&5 ~{time}
+          image: textures/blocks/dirt
+        entry_camp:
+          name: "Trại &2{land}&r \n&8Hết hạn vào:&5 ~{time}"
+          image: textures/blocks/dirt
+  land_settings:
+    title: Tùy Chọn
+    items:
+      default:
+        roles:
+          name: |-
+            Vai Trò của Khu Vực
+            &6{area}
+          slot: 1
+        taxes:
+          name: |-
+            Thuế của Khu Vực
+            &6{area}
+          slot: 3
+        land-settings:
+          name: |-
+            Cờ Tự Nhiên Của Khu Vực
+            &6{area}
+          slot: 2
+        various:
+          name: |-
+            Cài Đặt Chung
+            Tên, tin nhắn vào v.v.
+          slot: 5
+        relations:
+          name: Quan Hệ
+          slot: 4
+        relations_camp:
+          name: |-
+            Quan Hệ
+            &cTrại không có quan hệ.
+          slot: 4
+  object_inbox-stats:
+    title: Hộp Thư và Thống Kê
+    items:
+      default:
+        inbox:
+          name: Sự Kiện và Thông Tin ({amount})
+        stats:
+          name: Thống Kê
+  
+land:
+  title: '{level} {land}'
+  items:
+    default:
+      settings:
+        name: Cài Đặt
+        image: default
+        slot: 3
+      areas:
+        name: Khu Vực
+        image: default
+        slot: 1
+      player-management:
+        name: Quản Lý Người Chơi
+        image: default
+        slot: 2
+      level:
+        name: Cấp Độ
+        image: default
+        slot: 4
+      level_camp:
+        name: |-
+          Cấp Độ
+          &cCác trại không có cấp độ.
+        image: default
+        slot: 4
+      spawn:
+        name: Di Chuyển Đến Điểm Spawn
+        image: default
+        slot: 5
+      inbox-stats:
+        name: Hộp Thư và Thống Kê
+        image: default
+        slot: 6
+      edit:
+        name: |-
+          Đặt làm Đất Lệnh
+          Hiện tại: {status}
+        image: default
+        slot: 7
+      mainblock:
+        name: Chỉnh Sửa Mainblock
+        image: default
+        slot: 8
+      mainblock_set:
+        name: |-
+          &2Đặt Mainblock
+          &8tại vị trí hiện tại của bạn.
+        image: default
+        slot: 8
+    patches:
+      basic:
+        members:
+          name: Thành Viên
+          image: ref:player-management
+          slot: 2
+
+land_mainblock:
+  title: Mainblock
+  items:
+    default:
+      hologram:
+        name: |-
+          Bật/Tắt hologram:
+          {status}
+        slot: 1
+      reposition:
+        name: |-
+          &cĐặt lại Mainblock
+          &8hoặc xóa nó.
+        slot: 2
+
+player_edit-land:
+  title: Chỉnh Sửa Đất
+  content: Nếu được đặt làm đất chỉnh sửa, khu vực này sẽ được sử dụng cho tất cả các lệnh tiếp theo.
+  items:
+    default:
+      set:
+        name: '&2Đặt làm Đất Chỉnh Sửa'
+
+land_stats:
+  title: Thống Kê
+  content: |
+    Điểm Spawn: {world}, x={x}, z={z}
+    Quốc Gia: {nation}
+    Yêu cầu: {chunks} / {chunks_max}
+    Thành Viên: {members} / {members_max}
+    &6Kinh Tế:
+    &8• &7Đất&r
+       Số dư: {balance}
+       Chi phí cho yêu cầu tiếp theo: {chunk_cost}
+       Chi phí duy trì&c {upkeep}&r trong:
+       {upkeep_next}
+    &8• &4Bạn&r
+       Số dư: {balance_player}
+       Thuế&c {taxes}&r trong:
+       {taxes_next}
+
+player_limitations:
+  title: Hạn Chế Của Bạn
+  content: |
+    &8• &rTạo&3 {ownlands} &rđất:
+      &e/lands create
+    &8• &rYêu cầu&3 {chunks} &rchunks mỗi đất:
+      &e/lands claim
+    &8• &rCó&3 {members} &rthành viên mỗi đất:
+      &e/lands trust
+    &8• &rTham gia&3 {lands} &rđất:
+      &e/lands accept
+    &8• &rHỗ trợ các đất mà bạn được tin cậy với &3{support-chunks} &rthêm yêu cầu.
+
+list_land_areas:
+  title: Khu Vực
+  items:
+    default:
+      create:
+        name: |-
+          Tạo Khu Vực
+          &8{areas} /&c {max}
+      entry_area:
+        name: |-
+          &6{area}
+          &8{description}
+      entry_area-setup:
+        name: |-
+          &c{area}
+          &8Thiết lập: &e/{cmd}
+
+area:
+  title: '{area}'
+  items:
+    default:
+      player-management:
+        name: Quản Lý Người Chơi
+        slot: 1
+      settings:
+        name: Cài Đặt
+        slot: 2
+      spawn:
+        name: Điểm Spawn
+      delete:
+        name: '&cXóa'
+      teleport:
+        slot: 3
+
+area_spawn:
+  title: Điểm Spawn
+  items:
+    default:
+      teleport:
+        name: Di Chuyển
+        slot: 1
+      set:
+        name: Đặt
+        slot: 2
+
+area_settings:
+  title: Cài Đặt
+  items:
+    default:
+      roles:
+        name: Vai Trò
+        slot: 1
+      land-settings:
+        name: Cờ Tự Nhiên
+        slot: 2
+      taxes:
+        name: Thuế
+        slot: 3
+      various:
+        name: |-
+          Cài Đặt Chung
+          Tên, mô tả, biểu tượng
+        slot: 4
+
+action-confirm:
+  title: Vui Lòng Xác Nhận Hành Động Này
+  items:
+    default:
+      confirm:
+        name: '&2Xác Nhận'
+        slot: 1
+        sound_click: ENTITY_PLAYER_LEVELUP
+      cancel:
+        name: '&cHủy'
+        slot: 2
+        sound_click: BLOCK_ANVIL_HIT
+
+list_area_roles:
+  title: Vai Trò
+  items:
+    default:
+      entry_role:
+        name: '{role}'
+      create:
+        name: |-
+          Tạo Vai Trò Mới
+          &8Có sẵn: {roles} / &c{max}
+
+role:
+  title: '{role}'
+  items:
+    default:
+      members:
+        name: Thành Viên
+        slot: 1
+      name:
+        name: |-
+          Tên
+          {name}
+        slot: 4
+      flags_action:
+        name: |-
+          Cờ Hành Động
+          Đặt block v.v.
+        slot: 2
+      flags_management:
+        name: |-
+          Cờ Quản Lý
+          Tin cậy người chơi v.v.
+        slot: 3
+      apply:
+        name: |-
+          Áp Dụng Cho Các Khu Vực Mới
+          {apply}
+        slot: 6
+      taxes:
+        name: |-
+          Thanh Toán Thuế
+          {current}
+        slot: 5
+      delete:
+        name: '&cXóa'
+        slot: end
+  
+list_flags:
+  title: Cờ
+  items:
+    default:
+      entry_general_admin:
+        name: |-
+          {flag}
+          {enabled}
+      entry_general_player:
+        name: |-
+          {flag}
+          {enabled}
+
+flag_state:
+  title: '{title}'
+  content: '{content}'
+  values:
+    flag:
+      setting_edit_various:
+        title: Chỉnh sửa Cài đặt Chung
+        content: |
+          Cho phép vai trò này chỉnh sửa các cài đặt chung như tên, v.v.?
+             &8• &rMở khóa: {unlocked}
+      plant:
+        title: Trồng Cây
+        content: |
+          Cho phép vai trò này trồng cây, cây giống, quả mọng, mía, v.v.?
+             &8• &rMở khóa: {unlocked}
+      balance_withdraw:
+        title: Rút Số Dư
+        content: |
+          Cho phép vai trò này rút tiền từ ngân hàng đất?
+             &8• &rLệnh: &e/lands withdraw
+             &8• &rMở khóa: {unlocked}
+      player_untrust:
+        title: Hủy Tin Cậy Người Chơi
+        content: |
+          Cho phép vai trò này hủy tin cậy người chơi?
+             &8• Họ sẽ không thể hủy tin cậy những người chơi có vai trò cao hơn hoặc thuộc cùng một vai trò.
+             &8• &rMở khóa: {unlocked}
+      land_enter:
+        title: Vào Khu Vực
+        content: |
+          Cho phép vai trò này vào khu vực này?
+             &8• Bất chấp cờ này, người chơi vẫn có thể vào yêu cầu của bạn nếu gán chiến đang hoạt động và bạn đang trong cuộc chiến.
+             &8• &rMở khóa: {unlocked}
+      land_claim:
+        title: Đánh Dấu và Bỏ Dấu
+        content: |
+          Cho phép vai trò này đánh dấu và bỏ dấu các khu vực cho đất này?
+             &8• &rMở khóa: {unlocked}
+      ender_pearl:
+        title: Ngọc Ender
+        content: |
+          Cho phép vai trò này dịch chuyển vào khu vực này bằng cách sử dụng ngọc ender và trái cây Chorus?
+             &8• &rMở khóa: {unlocked}
+      shear:
+        title: Cạo Lông Sinh Vật
+        content: |
+          Cho phép vai trò này cạo lông cừu, bò nấm, v.v.?
+             &8• &rMở khóa: {unlocked}
+      attack_monster:
+        title: Tấn Công Quái Vật
+        content: |
+          Cho phép vai trò này tấn công quái vật?
+             &8• &rNếu bị vô hiệu hóa: Quái vật cũng sẽ không thể tấn công họ.
+             &8• &rMở khóa: {unlocked}
+      harvest:
+        title: Thu Hoạch
+        content: |
+          Cho phép vai trò này thu hoạch cây trồng, cây giống, quả mọng, mía, v.v.?
+             &8• &rMở khóa: {unlocked}
+      fly:
+        title: Bay
+        content: |
+          Cho phép vai trò này sử dụng &e/fly trong khu vực này?
+             &8• &rMở khóa: {unlocked}
+      general_admin:
+        title: '{flag}'
+        content: |
+          Đây là một cờ quản trị viên. Nó chỉ áp dụng cho các đất của quản trị viên và &e/lands admin wilderness&r.
+             &8• Mô tả:&r
+               {desc}
+             &8• &rMở khóa: {unlocked}
+      player_trust:
+        title: Tin Cậy Người Chơi
+        content: |
+          Cho phép vai trò này tin cậy các người chơi khác?
+             &8• &rMở khóa: {unlocked}
+      block_ignite:
+        title: Kích Hoạt Khối
+        content: |
+          Cho phép vai trò này kích hoạt các khối?
+             &8• &rMở khóa: {unlocked}
+      war_manage:
+        title: Quản Lý Chiến Tranh
+        content: |
+          Cho phép vai trò này tuyên bố và quản lý các cuộc chiến cho đất của bạn?
+             &8• &rMở khóa: {unlocked}
+      attack_player:
+        title: Tấn Công Người Chơi
+        content: |
+          Cho phép vai trò này tấn công người chơi?
+             &8• &rGán chiến: Có thể vẫn có thể chiến đấu trong khu vực của bạn, nếu một người chơi tấn công người chơi khác bên ngoài khu vực.
+             &8• &rCờ tương hỗ: Họ chỉ có thể tấn công những người chơi cũng có thể tấn công họ.
+             &8• &rMở khóa: {unlocked}
+      trample_farmland:
+        title: Dẫm Lên Đất Nông
+        content: |
+          Cho phép vai trò này dẫm lên đất nông?
+             &8• &rMở khóa: {unlocked}
+      elytra:
+        title: Sử Dụng Elytra
+        content: |
+          Cho phép vai trò này sử dụng elytra để bay trong khu vực này?
+             &8• &rMở khóa: {unlocked}
+      interact_villager:
+        title: Giao Dịch Với Dân Làng
+        content: |
+          Cho phép vai trò này giao dịch với dân làng?
+             &8• &rMở khóa: {unlocked}
+      player_setrole:
+        title: Cài Đặt Vai Trò
+        content: |
+          Cho phép vai trò này cài đặt vai trò cho các người chơi tin cậy?
+             &8• &rHọ sẽ không thể chỉnh sửa vai trò có ưu tiên cao hơn vai trò của họ.
+             &8• &rMở khóa: {unlocked}
+      interact_general:
+        title: Tương Tác Chung
+        content: |
+          Cho phép vai trò này tương tác với các khối không được phủ bởi các cờ khác?
+             &8• &rMở khóa: {unlocked}
+      interact_mechanism:
+        title: Sử Dụng Cơ Chế Đỏ Đá
+        content: |
+          Cho phép vai trò này sử dụng các cơ chế đỏ đá, như công tắc v.v.?
+             &8• &rMở khóa: {unlocked}
+land_claim_border:
+  content: |
+    Cho phép vai trò này yêu cầu các chunk cho vùng đất của họ ngay tại ranh giới của vùng đất này.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Yêu Cầu Đất tại Ranh Giới
+spawn_set:
+  content: |
+    Cho phép vai trò này chỉnh sửa điểm spawn của vùng đất này?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Đặt Spawn
+player_ban:
+  content: "Cho phép vai trò này cấm hoặc bỏ cấm người chơi? \n   &8• &rHọ sẽ không\
+    \ thể cấm người chơi có vai trò cao hơn.\n   &8• &rĐã mở khóa: {unlocked}\n"
+  title: Quản Lý Cấm Người Chơi
+item_pickup:
+  content: |
+    Cho phép vai trò này nhặt các vật phẩm từ mặt đất?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Nhặt Vật Phẩm
+block_place:
+  content: |
+    Cho phép vai trò này đặt các khối?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Đặt Khối
+setting_edit_land:
+  content: |
+    Cho phép vai trò này chỉnh sửa Cờ tự nhiên?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Bật/Tắt Cờ Tự Nhiên
+interact_container:
+  content: |
+    Cho phép vai trò này mở các hộp chứa?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Mở Hộp Chứa
+block_break:
+  content: |
+    Cho phép vai trò này phá hủy các khối?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Phá Hủy Khối
+setting_edit_role:
+  content: |
+    Cho phép vai trò này chỉnh sửa cài đặt vai trò, cờ và Tạo vai trò mới?
+       &8• &rHọ sẽ không thể chỉnh sửa cờ vai trò của chính họ.
+       &8• &rBạn chỉ nên giao cờ này cho những người chơi đáng tin cậy.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Bật/Tắt Cờ và Cài Đặt Vai Trò
+interact_trapdoor:
+  content: |
+    Cho phép vai trò này mở cửa sập?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Mở Cửa Sập
+setting_edit_taxes:
+  content: |
+    Cho phép vai trò này chỉnh sửa thuế?
+       &8• &rBạn chỉ nên giao quyền này cho những người chơi đáng tin cậy.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Chỉnh Sửa Thuế
+attack_animal:
+  content: |
+    Cho phép vai trò này tấn công động vật?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Tấn Công Động Vật
+spawn_teleport:
+  content: |
+    Cho phép vai trò này dịch chuyển đến điểm spawn của vùng đất này.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Dịch Chuyển đến Spawn
+vehicle_use:
+  content: |
+    Cho phép vai trò này sử dụng phương tiện?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Sử Dụng Phương Tiện
+area_assign:
+  content: |
+    &rCho phép vai trò này tạo và chỉnh sửa kích thước khu vực?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Tạo Khu Vực
+general_player:
+  content: |
+    &8• &rMô tả:
+      {desc}
+    &8• &rĐã mở khóa: {unlocked}
+  title: '{flag}'
+interact_door:
+  content: |
+    Cho phép vai trò này mở cửa?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Mở Cửa
+phantom_spawn:
+  content: |
+    Cho phép phantom xuất hiện theo lý do tự nhiên.
+       &8• &rSpawner không bị ảnh hưởng bởi cờ này.
+       &8• &rĐã mở khóa: {unlocked}'
+  title: Phantom Xuất Hiện
+monster_spawn:
+  content: |
+    Cho phép quái vật xuất hiện theo lý do tự nhiên.
+       &8• &rSpawner không bị ảnh hưởng bởi cờ này.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Quái Vật Xuất Hiện
+entity_griefing:
+  content: |
+    Cho phép các thực thể phá hủy khối?
+       &8• &rNếu bật: Creeper sẽ có thể phá hủy các công trình của bạn, tia sét sẽ gây sát thương, v.v.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Thực Thể Phá Hủy
+snow_melt:
+  content: |
+    Tuyết và băng có nên tan chảy không?
+       &8• &rNếu tắt: Cơn bão tuyết và người tuyết sẽ không phủ kín mặt đất bằng tuyết.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Tuyết Tan
+wither_attack_animal:
+  content: |
+    Wither có nên gây sát thương cho động vật không?
+       &8• &rChúng luôn có thể tấn công các quái vật khác.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Wither Tấn Công Động Vật
+piston_griefing:
+  content: "Cho phép piston từ khu hoang dã đẩy vào vùng đất của bạn?\n   &8•\
+    \ &rNếu bật: Người chơi sẽ có thể phá hủy vùng đất của bạn bằng cách sử dụng piston\
+    \ đặt trong khu hoang dã. \n   &8• &rĐã mở khóa: {unlocked}\n"
+  title: Piston từ Khu Hoang Dã
+block_spreading:
+  title: Lan Truyền Khối từ Đất
+  content: |
+    Cho phép các khối lan truyền vào khu vực này từ các khu vực khác của vùng đất này?
+       &8• &rĐiều này ảnh hưởng đến các khối như amethyst.
+       &8• &rCác khối từ khu hoang dã không bao giờ lan truyền vào khu vực này.
+fire_spread:
+  content: |
+    Cho phép lửa lan truyền trong vùng đất của bạn?
+       &8• &rLửa từ khu hoang dã lan truyền vào vùng đất của bạn.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Lửa Lan Truyền
+animal_spawn:
+  content: |
+    Cho phép động vật xuất hiện?
+       &8• &rSpawner không bị ảnh hưởng bởi cờ này.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Động Vật Xuất Hiện
+plant_growth:
+  content: |
+    Cây trồng có nên phát triển?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Cây Trồng Phát Triển
+tnt_griefing:
+  content: |
+    Cho phép TNT phá hủy các khối?
+       &8• &rNếu bật: Người chơi sẽ có thể bắn TNT vào vùng đất của bạn để phá hủy nó.
+       &8• &rĐã mở khóa: {unlocked}
+  title: TNT Gây Sát Thương
+leaf_decay:
+  content: |
+    Lá cây có nên rụng trong vùng đất của bạn?
+       &8• &rĐã mở khóa: {unlocked}
+  title: Lá Cây Rụng
+waterflow_allow:
+  content: |
+    Cho phép nước từ khu hoang dã hoặc các vùng đất khác chảy vào vùng đất của bạn?
+       &8• &rNếu bật: Người chơi sẽ có thể phá hủy vùng đất của bạn bằng cách đặt nước bên ngoài vùng đất của bạn.
+       &8• &rĐã mở khóa: {unlocked}
+  title: Dòng Chảy Nước
+
+  
+click-response:
+  title: '{title}'
+  content: '{content}'
+  values:
+    failure_cost:
+      title: Bạn không đủ tiền
+      content: Bạn cần {cost}.
+    mainblock:
+      failure_mainblock_claim:
+        title: Cần được đặt trong Đất
+        content: Mainblock phải được đặt trong vùng đất.
+      failure_mainblock_space:
+        title: Cần được đặt trong Đất
+        content: Không đủ không gian để đặt ở vị trí hiện tại của bạn.
+    spawn:
+      area:
+        failure_spawn_area:
+          title: Phải ở trong Khu vực
+          content: |
+            Điểm spawn phải được đặt trong khu vực.
+             &8• &rBạn hiện đang không đứng trong đó.
+        failure_spawn_none:
+          title: Chưa đặt Điểm Spawn
+          content: Khu vực này chưa có điểm spawn nào được đặt.
+        failure_spawn_cooldown:
+          title: Đang trong thời gian chờ
+          content: Bạn phải đợi thêm &5 {time} &rtrước khi có thể dịch chuyển đến bất kỳ điểm spawn nào khác.
+      failure_spawn_none:
+        title: Chưa đặt Điểm Spawn
+        content: |
+          Đất này chưa có điểm spawn nào được đặt.
+           &8• &rĐặt điểm spawn: &e/lands setspawn
+      failure_spawn_teleport:
+        title: Không được phép Dịch chuyển
+        content: "Bạn không được phép dịch chuyển đến điểm spawn của đất này.\
+          \ \n &8• &rChủ đất có thể cấp quyền cho bạn.\n"
+      failure_spawn_war:
+        title: Đang có chiến tranh
+        content: |
+          Hiện tại bạn không thể dịch chuyển đến điểm spawn của đất này.
+           &8• &rHọ đang trong cuộc chiến, sẽ kết thúc trong &5 {time} &r.
+      failure_spawn_cooldown:
+        title: Đang trong thời gian chờ
+        content: Bạn phải đợi thêm &5 {time} &rtrước khi có thể dịch chuyển đến bất kỳ điểm spawn nào khác.
+      failure_teleport_enter:
+        title: Không được phép vào
+        content: |
+          Bạn không được phép vào khu vực mà điểm đến nằm trong đó.
+           &8• &rChủ đất có thể cấp quyền cho bạn.
+      failure_spawn_cost:
+        title: Không đủ tiền
+        content: Bạn cần &c {cost}&r để trả cho việc dịch chuyển spawn.
+      success_spawn_set:
+        title: Đã đặt Điểm Spawn
+        content: Bạn đã đặt điểm spawn tại vị trí hiện tại của mình.
+    role:
+      flag:
+        failure_permission:
+          title: Thiếu quyền
+          content: '&cMáy chủ không cho phép bạn bật tắt cờ này trong bất kỳ đất nào.'
+        failure_allow-edit:
+          title: Cờ không thể bật tắt
+          content: '&cMáy chủ đã cấu hình cờ này không thể bật tắt đối với vai trò này.'
+        failure_blacklist:
+          title: Cờ được kiểm soát bởi Đất
+          content: "&cCờ này không thể bật tắt bởi quốc gia. \n &8• &rMỗi đất trong quốc gia này có thể cấu hình riêng lẻ.\n"
+        failure_edit_owner:
+          title: Vai trò Chủ sở hữu
+          content: |
+            &cBạn không thể bật tắt cờ này cho vai trò chủ sở hữu của mình.
+             &8• &rĐiều này ngăn bạn vô tình tước bỏ quyền của chính mình.
+    player:
+      untrust:
+        failure_edit:
+          content: |
+            &cBạn không thể chỉnh sửa người chơi này.
+               &8• &rVai trò của họ &6 {role}&r có mức độ ưu tiên cao hơn hoặc bằng với bạn.
+          title: Ưu tiên Vai trò
+        failure_max-players:
+          content: |
+            Đất này đã đạt tối đa số lượng thành viên &3 {max} &r.
+          title: Số lượng thành viên tin cậy tối đa
+        failure_priority:
+          content: |
+            Bạn không được phép chỉnh sửa cài đặt của vai trò này.
+               &8• &rNó có mức độ ưu tiên cao hơn bạn hoặc bạn là thành viên của cùng một vai trò.
+          title: Ưu tiên Vai trò
+        failure_access:
+          content: |
+            &cBạn không được phép hủy tin cậy người chơi.
+               &8• &rChủ đất có thể cấp quyền này cho vai trò của bạn.
+          name: Không được phép
+        failure_owner:
+          content: |
+            &cKhông thể hủy tin cậy Chủ sở hữu.
+              &8• &rMột chủ sở hữu mới có thể được đặt bằng cách thực hiện &e/{cmd}&r.
+          title: Chủ sở hữu
+        failure_tenant:
+          content: |
+            &cKhông thể hủy tin cậy người thuê hoặc thay đổi vai trò của họ.
+              &8• &rNgười thuê có thể được loại bỏ bằng cách thực hiện &e/{cmd}&r khi đứng trong khu vực này.
+          title: Người thuê
+        failure_setrole:
+          content: |
+            &cBạn không được phép đặt bất kỳ vai trò nào.
+               &8• &rChủ đất có thể cấp quyền này cho vai trò của bạn.
+          title: Không được phép
+        failure_rented:
+          content: |
+            &cBạn không thể hủy tin cậy người thuê &4 {player}&c khỏi khu vực &4{area}&c.
+               &8• &rĐể loại bỏ khu vực cho thuê, sử dụng &e/{cmd}&r trong khi đứng trong khu vực này.
+          title: Đã cho thuê
+        failure_self:
+          content: |
+            Để rời khỏi đất, sử dụng &e/{cmd}&r thay thế.
+          title: Không thể hủy tin cậy chính mình
+
+player-management:
+  title: Quản lý người chơi
+  items:
+    default:
+      members:
+        name: Thành viên
+        slot: 1
+      banned:
+        name: Người chơi bị cấm
+        slot: 2
+      invites:
+        name: Lời mời đã gửi
+        slot: 3
+      membership-requests:
+        name: Yêu cầu thành viên
+        slot: 4
+
+list_area_players:
+  title: '{area} > Người chơi tin cậy'
+  items:
+    default:
+      entry_player:
+        name: |-
+          {player}
+          {role}
+      trust:
+        name: |-
+          Tin cậy
+          {players} /&c {max}
+        slot: 2
+      toggle:
+        name: |-
+          Chỉ xem khu vực
+          {current}
+        slot: 1
+
+toggle:
+  title: '{title}'
+  content: '{content}'
+  values:
+    area_players_display:
+      title: Chế độ hiển thị
+      content: |
+        Hiển thị chỉ những người chơi được tin cậy trong khu vực này &8(&6{area}&8)&r?
+           &8• &rNếu tắt:
+             Nó hiển thị người chơi của toàn bộ đất. Cũng cho phép bạn tin cậy hoặc hủy tin cậy người chơi từ toàn bộ đất.
+
+area_players_player:
+  title: '{player}'
+  items:
+    default:
+      role:
+        name: |-
+          Vai trò
+          {role}
+        slot: 1
+      info:
+        name: Thông tin
+        slot: 2
+      untrust:
+        name: '&cHủy tin cậy'
+        slot: 3
+
+player_info:
+  title: Thông tin
+  items:
+    default:
+      max-chunks:
+        name: |-
+          Hỗ trợ đất với
+          {chunks} mảnh
+      lands:
+        name: |-
+          Đất
+          {amount}
+      areas:
+        name: |-
+          Tin cậy trong {amount}
+          khu vực của đất
+      time:
+        name: |-
+          Lần cuối online: {seen}
+          Offline từ: {offline}
+
+area_players_player_role:
+  title: Vai trò
+  values:
+    input:
+      role: Vai trò
+
+input:
+  title: Nhập văn bản
+  values:
+    input: Văn bản
+
+common_sounds:
+  # Phát âm thanh khi vật phẩm được đặt trong menu.
+  set:
+    # Mỗi vật phẩm bắt đầu với [item_type]_failure_<name> sẽ có âm thanh này.
+    # Bạn vẫn có thể ghi đè "sound_set" cho bất kỳ vật phẩm nào trong các phần của chúng.
+    failure: ENTITY_VILLAGER_NO
+

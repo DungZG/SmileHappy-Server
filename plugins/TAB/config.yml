@@ -12,8 +12,8 @@ header-footer:
       - ''
       footer:
       - ''
-      - '&8&oWhen the world is nearing its end day, only the bravest'
-      - '&8&osoul and strongest mind can save it. Be that hero.'
+      - '&8&oKhi thế giới sắp đến ngày tận cùng, chỉ những người dũng cảm nhất'
+      - '&8&ocó thể cứu nó. Hãy trở thành anh hùng đó.'
 tablist-name-formatting:
   enabled: true
   disable-condition: '%world%=disabledworld'
@@ -138,8 +138,8 @@ layout:
   layouts:
     default:
       fixed-slots:
-      - 1|&f&l ᴘʟᴀʏᴇʀꜱ|mineskin:1105851698
-      - 61|&6&l ᴀᴅᴠᴇɴᴛᴜʀᴇʀ ᴘʀᴏꜰɪʟᴇ&7               |mineskin:1074335506
+      - 1|&f&l ᴘʟᴀʏᴇʀꜱ|
+      - 61|&6&l ᴀᴅᴠᴇɴᴛᴜʀᴇʀ ᴘʀᴏꜰɪʟᴇ&7               |
       - 63|&8> &#A7C7E7&lPROFILE
       - '64|&fRank: %luckperms_highest_inherited_group_by_weight%'
       - '65|&fPurse: &6%vault_eco_balance_commas%&f௣'
