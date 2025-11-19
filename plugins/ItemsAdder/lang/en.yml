@@ -117,8 +117,8 @@ tree-not-found: <color:#ff4d4d>✘ Tree '<color:#4dd2ff>{item}</color>' doesn't 
 max-furnitures-vehicles-reached: <color:#ff4d4d>✘ Chunk limit reached (<color:#4dd2ff>{value}</color>). Remove entities first.</color>
 tripwires-disabled: <color:#ff4d4d>✘ Tripwires are disabled on this server.</color>
 
-max-crops-reached-no-directions: "<color:#ff4d4d>✘ Crop limit reached for this area. Remove some crops or find another location, far from here.</color>"
-max-crops-reached-directions: "<color:#ff4d4d>✘ Crop limit reached for this area. Next available location: <color:#ffe14d>{distance}</color> blocks <color:#4dd2ff>{direction}</color>.</color>"
+max-crops-reached-no-directions: <color:#ff4d4d>✘ Crop limit reached for this area. Remove some crops or find another location, far from here.</color>
+max-crops-reached-directions: '<color:#ff4d4d>✘ Crop limit reached for this area. Next available location: <color:#ffe14d>{distance}</color> blocks <color:#4dd2ff>{direction}</color>.</color>'
 # ─────────────────────────────────────────────────────────────
 # ✔ LIQUIDS & ANALYZER
 # ─────────────────────────────────────────────────────────────
@@ -218,7 +218,7 @@ fuel-item: '    <aqua>{type}</aqua> <gray>+{amount}</gray>'
 
 nbt-rule: '<white>{rule}: <gray>{value}</gray></white>'
 
-warning-crafter-broken-hopper: '<color:#ff4d4d>✘ Removed Crafter. A hopper attempted to move a custom item (not permitted).</color>'
+warning-crafter-broken-hopper: <color:#ff4d4d>✘ Removed Crafter. A hopper attempted to move a custom item (not permitted).</color>
 
 font-image-chat-hover: |
   <white>Emoji: {font_image}
@@ -244,17 +244,16 @@ external-pack-host-guide: |
 no-host-pack-guide: |
   <color:#ff4d4d>Warning: '<color:#ffe14d>no-host</color>' selected in config.yml.
   <color:#ff4d4d>You have to handle the pack upload and apply manually or using another plugin.</color>
-dropped-item-coords: "&aDropped &e{item} &aat coords {coords}"
-dropped-item-player: "&aDropped &e{item} &aat player {player}"
-ia-model-id: "&fModel ID"
-ia-vanilla-type: "&fVanilla type"
-no-host-selected: "<color:#ff4d4d>Warning: you selected <color:#ffe14d>no-host <color:#ff4d4d>in config.yml. The resourcepack is not hosted anywhere.
-  <color:#ff4d4d>Please enable one of the different options in config.yml."
+dropped-item-coords: '&aDropped &e{item} &aat coords {coords}'
+dropped-item-player: '&aDropped &e{item} &aat player {player}'
+ia-model-id: '&fModel ID'
+ia-vanilla-type: '&fVanilla type'
+no-host-selected: '<color:#ff4d4d>Warning: you selected <color:#ffe14d>no-host <color:#ff4d4d>in config.yml. The resourcepack is not hosted anywhere. <color:#ff4d4d>Please enable one of the different options in config.yml.'
 
-send-again-to-confirm: "<color:#4dd2ff>Send the <color:#ffe14d>/{alias}</color> command again to confirm. <color:#bfbfbf>(automatically cancelled in 5 seconds)</color>"
-skin-changed: "<color:#4dff4d>Skin changed successfully!"
-unknown-category: "&cUnknown category {name}"
-world-not-found: "<color:#ff4d4d>World not found: <color:#4dd2ff>{world}</color>"
-custom-blocks-type-disabled: "<color:#ff4d4d>Custom blocks of type <color:#ffe14d>{type}</color> are disabled in <color:#4dd2ff>config.yml</color>.</color>"
-crops-view-enabled: "<color:#4dff4d>✔ Crops view enabled.</color>"
-crops-view-disabled: "<color:#ff4d4d>✘ Crops view disabled.</color>"
+send-again-to-confirm: <color:#4dd2ff>Send the <color:#ffe14d>/{alias}</color> command again to confirm. <color:#bfbfbf>(automatically cancelled in 5 seconds)</color>
+skin-changed: <color:#4dff4d>Skin changed successfully!
+unknown-category: '&cUnknown category {name}'
+world-not-found: '<color:#ff4d4d>World not found: <color:#4dd2ff>{world}</color>'
+custom-blocks-type-disabled: <color:#ff4d4d>Custom blocks of type <color:#ffe14d>{type}</color> are disabled in <color:#4dd2ff>config.yml</color>.</color>
+crops-view-enabled: <color:#4dff4d>✔ Crops view enabled.</color>
+crops-view-disabled: <color:#ff4d4d>✘ Crops view disabled.</color>

@@ -1,0 +1,30 @@
+teleportenabled: true
+teleportauto: false
+godmode: false
+muted: false
+jailed: false
+ip-address: 127.0.0.1
+afk: false
+socialspy: false
+npc: false
+powertoolsenabled: true
+accepting-pay: true
+baltop-exempt: false
+timestamps:
+  lastteleport: 0
+  lastheal: 0
+  mute: 0
+  jail: 0
+  onlinejail: 0
+  logout: 1763290727444
+  login: 1763289277506
+money: '0'
+last-account-name: PopCatUnion
+logoutlocation:
+  world: a8d1d239-0e34-4657-8915-fc4328029c8f
+  world-name: world
+  x: 555.5177890908026
+  y: 68.0
+  z: 356.07861182387387
+  yaw: -36.0
+  pitch: 10.613824844360352
