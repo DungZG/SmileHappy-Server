@@ -7,29 +7,29 @@
 #######################################################################################
 
 victim_messages:
-  downed: '&#ff3333You have been seriously injured!'
-  downed_for_player: '&#cc0000<enemy> &#ff3333has seriously injured you!'
-  start_reliving: '&#00e6e6<reviver> &#b3ffffis reviving you.'
-  stop_reliving: '&#808080<reviver> &#a6a6a6has stopped reviving you.'
-  revived: '&#80ff80You have been revived!'
-  revived_for_player: '&#80ff80You have been revived by &#53ff1a<reviver>&#80ff80!'
+  downed: '&#ff3333Bạn đã bị thương nặng!'
+  downed_for_player: '&#cc0000<enemy> &#ff3333đã làm bạn bị thương nặng!'
+  start_reliving: '&#00e6e6<reviver> &#b3ffffđang hồi sinh bạn.'
+  stop_reliving: '&#808080<reviver> &#a6a6a6đã dừng hồi sinh bạn.'
+  revived: '&#80ff80Bạn đã được hồi sinh!'
+  revived_for_player: '&#80ff80Bạn đã được hồi sinh bởi &#53ff1a<reviver>&#80ff80!'
 
 enemy_messages:
-  downed: '&#ff3333You have seriously injured &#cc0000<victim>'
+  downed: '&#ff3333Bạn đã làm &#cc0000<victim> bị thương nặng'
   
 reviver_messages:
-  start_reliving: '&#b3ffffYou are reviving &#00e6e6<victim>'
-  stop_reliving: '&#a6a6a6You stopped reviving &#808080<victim>'
-  sucess_reliving: '&#80ff80You have successfully revived &#53ff1a<victim>'
+  start_reliving: '&#b3ffffBạn đang hồi sinh &#00e6e6<victim>'
+  stop_reliving: '&#a6a6a6Bạn đã dừng hồi sinh &#808080<victim>'
+  sucess_reliving: '&#80ff80Bạn đã hồi sinh thành công &#53ff1a<victim>'
 
 command_messages:
-  downed: '&#ff3333You have seriously injured &#cc0000<victim>'
-  revived: '&#80ff80You have successfully revived &#53ff1a<victim>'
-  kill: '&#ff3333You killed &#cc0000<victim>'
-  dont_permission: '&#ff3333You dont have permission'
-  blocked_command: '&#ff3333You re too hurt to use this command!'
-  player_no_downed: '&#ff3333This player is not down!'
-  player_no_online: '&#ff3333This player is not online!'
+  downed: '&#ff3333Bạn đã làm &#cc0000<victim> bị thương nặng'
+  revived: '&#80ff80Bạn đã hồi sinh thành công &#53ff1a<victim>'
+  kill: '&#ff3333Bạn đã giết &#cc0000<victim>'
+  dont_permission: '&#ff3333Bạn không có quyền'
+  blocked_command: '&#ff3333Bạn bị thương quá để sử dụng lệnh này!'
+  player_no_downed: '&#ff3333Người chơi này không bị thương!'
+  player_no_online: '&#ff3333Người chơi này không trực tuyến!'
 
 plugin_messages:
   config_reloaded: '&#ffbf00Configuration reloaded successfully!'
@@ -37,14 +37,14 @@ plugin_messages:
 disable_death_message: false
 
 status_messages:
-  waiting: 'Waiting'
-  reliving: 'Reliving'
-  no_downed: 'No downed'
+  waiting: 'Đang chờ'
+  reliving: 'Đang hồi sinh'
+  no_downed: 'Không ai bị thương'
   
 time_messages:
-  second: 'second:seconds'
-  minute: 'minute:minutes'
-  hour: 'hour:hours'
+  second: 'giây:giây'
+  minute: 'phút:phút'
+  hour: 'giờ:giờ'
 
 action_bar_messages:
   enabled: true
@@ -55,15 +55,14 @@ action_bar_messages:
   
 suicide_bar_message:
   enabled: true
-  text: '&#ff3333Death in <suicideBar>'
+  text: '&#ff3333Chết trong <suicideBar>'
   
 
 scoreboard_messages:
   enabled: true
   receives: 'downed,reviver,picker'
-  #firsh line is title
   waiting_score_board:
-    - '&#b3ffff&oWaiting...'
+    - '&#b3ffff&oĐang chờ...'
     - ''
     - '&#cc0000☠&#ff3333 » <death_delay_time>'
     - ''
@@ -72,7 +71,7 @@ scoreboard_messages:
     - '<bar1>'
       
   reliving_score_board:
-    - '&#b3ffff&oReliving...'
+    - '&#b3ffff&oĐang hồi sinh...'
     - ''
     - '&#cc0000☠&#ff3333 » <death_delay_time>'
     - ''
@@ -80,7 +79,7 @@ scoreboard_messages:
     - ''
     - '<bar1>'
     - ''
-    - '&#b3ffffReliving: &#00e6e6<reviver>'
+    - '&#b3ffffĐang hồi sinh: &#00e6e6<reviver>'
 
 #Valid bossbar colors: BLUE, GREEN, PINK, PURPLE, RED, WHITE, YELLOW
 #Valid bossbar styles: SOLID, SEGMENTED_6, SEGMENTED_10, SEGMENTED_12, SEGMENTED_20
@@ -89,13 +88,13 @@ boss_bar_messages:
   receives: 'downed,reviver,picker'
   waiting_boss_bar:
     progress_type: BossBarDeathDelay
-    text: '&#ff3333Waiting for relive...'
+    text: '&#ff3333Chờ được hồi sinh...'
     color: red
     style: solid
     
   reliving_boss_bar:
     progress_type: BossBarRelivingCount
-    text: '&#b3ffffReliving for &#00e6e6<reviver>'
+    text: '&#b3ffffĐang hồi sinh cho &#00e6e6<reviver>'
     color: blue
     style: solid
 
@@ -132,56 +131,55 @@ bar_messages:
     holder: '<suicideBar>'
     bar_mode: SuicideCount
 
-#Messages that are sent in the title and subtitle of the screen
 title_messages:
   enabled: false
   receives: 'downed,reviver,picker'
-  waiting_title: '&#ff3333&oWaiting for reliving...'
-  waiting_subtitle: '&#cc0000Death in <death_delay_time>'
-  reliving_title: '&#b3ffffReliving for &#00e6e6<reviver>'
+  waiting_title: '&#ff3333&oĐang chờ để được hồi sinh...'
+  waiting_subtitle: '&#cc0000Chết trong <death_delay_time>'
+  reliving_title: '&#b3ffffĐang hồi sinh cho &#00e6e6<reviver>'
   reliving_subtitle: '<bar1>'
   
 price_messages:
-  no_has_pay: '&#ff3333You need &#cc0000<amount> <type> &#ff3333to do this!'
+  no_has_pay: '&#ff3333Bạn cần &#cc0000<amount> <type> &#ff3333để làm điều này!'
 
 zone_messages:
-  arg_error: '&#ff3333[Error] &7Use &#ff3333/rm zone help &7to get help.'
-  help_list_top: '&#ffbf00----Revive zones----'
+  arg_error: '&#ff3333[Lỗi] &7Sử dụng &#ff3333/rm zone help &7để được trợ giúp.'
+  help_list_top: '&#ffbf00----Khu vực hồi sinh----'
   help_list_format: '&f- &e<name>'
-  help_item: '&#ffbf00/rm zone item &e- &7Gets the item to mark the zone.'
-  help_create: '&#ffbf00/rm zone create &#ffd24d<name> &e- &7Create a zone.'
-  help_list: '&#ffbf00/rm zone list &e- &7List of created zones.'
-  help_remove: '&#ffbf00/rm zone remove &#ffd24d<name> &e- &7Delete a zone.'
-  help_speed: '&#ffbf00/rm zone speed &#ffd24d<name> <value> &e- &7Change revive speed.'
-  command_item: '&#ffbf00Left click: select pos #1; Right click: select pos #2'
-  pos1: '&#ff3333First position set to &#cc0000<pos>&#ff3333.'
-  pos2: '&#ff3333Second position set to &#cc0000<pos>&#ff3333.'
-  no_pos1: '&#ff3333You have not set the first position'
-  no_pos2: '&#ff3333You have not set the second position'
-  need_mark: '&#ff3333You must mark the zone with &#cc0000/rm item'
-  already_exist: '&#ff3333An zone with this name already exists'
-  no_exist: '&#ff3333There is no zone with that name'
-  different_world: '&#ff3333The positions are in different worlds'
-  only_player: '&#ff3333Only players can use this command'
-  sucess_created: '&#ff3333The zone has been created successfully'
-  removed_zone: '&#ff3333The area has been removed'
-  no_number: '&#ff3333The entered value is not a number'
-  succes_change_speed: '&#80ff80Changed revive speed successfully'
-  particle_enable: '&#80ff80The particles have been activated!'
-  particle_disable: '&#ff3333Particles have been disabled!'
-  particle_changed: '&#80ff80The color of the particles has been changed!'
-  particle_type_changed: '&#80ff80Particle type changed!'
+  help_item: '&#ffbf00/rm zone item &e- &7Lấy vật phẩm để đánh dấu khu vực.'
+  help_create: '&#ffbf00/rm zone create &#ffd24d<name> &e- &7Tạo khu vực.'
+  help_list: '&#ffbf00/rm zone list &e- &7Danh sách các khu vực được tạo.'
+  help_remove: '&#ffbf00/rm zone remove &#ffd24d<name> &e- &7Xóa khu vực.'
+  help_speed: '&#ffbf00/rm zone speed &#ffd24d<name> <value> &e- &7Thay đổi tốc độ hồi sinh.'
+  command_item: '&#ffbf00Nhấp chuột trái: chọn vị trí #1; Nhấp chuột phải: chọn vị trí #2'
+  pos1: '&#ff3333Vị trí đầu tiên được đặt thành &#cc0000<pos>&#ff3333.'
+  pos2: '&#ff3333Vị trí thứ hai được đặt thành &#cc0000<pos>&#ff3333.'
+  no_pos1: '&#ff3333Bạn chưa đặt vị trí thứ nhất'
+  no_pos2: '&#ff3333Bạn chưa đặt vị trí thứ hai'
+  need_mark: '&#ff3333Bạn phải đánh dấu khu vực bằng &#cc0000/rm item'
+  already_exist: '&#ff3333Khu vực có tên này đã tồn tại'
+  no_exist: '&#ff3333Không có khu vực nào có tên đó'
+  different_world: '&#ff3333Các vị trí ở các thế giới khác nhau'
+  only_player: '&#ff3333Chỉ những người chơi có thể sử dụng lệnh này'
+  sucess_created: '&#ff3333Khu vực đã được tạo thành công'
+  removed_zone: '&#ff3333Khu vực đã bị loại bỏ'
+  no_number: '&#ff3333Giá trị được nhập không phải là một số'
+  succes_change_speed: '&#80ff80Đã thay đổi tốc độ hồi sinh thành công'
+  particle_enable: '&#80ff80Các hạt đã được kích hoạt!'
+  particle_disable: '&#ff3333Các hạt đã bị tắt!'
+  particle_changed: '&#80ff80Màu của các hạt đã được thay đổi!'
+  particle_type_changed: '&#80ff80Loại hạt đã được thay đổi!'
 
 gps_messages:
-  gui_title: "Downed's Players"
+  gui_title: "Các Người Chơi Bị Thương"
   
 help_messaages:
-  revive: '&#ffbf00/<label> revive &#ffd24d<player> &e- &7revive downed player.'
-  down: '&#ffbf00/<label> down &#ffd24d<player> &e- &7down player.'
-  kill: '&#ffbf00/<label> kill &#ffd24d<player> &e- &7kill player.'
-  reload: '&#ffbf00/<label> reload &e- &7reload all configuratios.'
-  suicide: '&#ffbf00/<label> suicide &e- &7commit suicide instantly.'
-  setprice: '&#ffbf00/<label> setprice revive &#ffd24d<item/xp/money> <amount> &e- &7price to revive.'
-  zone: '&#ffbf00/<label> zone help &e- &7Revive zones command list.'
-  verify: '&#ffbf00/<label> verify &e- &7Premium verification codes.'
+  revive: '&#ffbf00/<label> revive &#ffd24d<player> &e- &7hồi sinh người chơi bị thương.'
+  down: '&#ffbf00/<label> down &#ffd24d<player> &e- &7làm người chơi bị thương.'
+  kill: '&#ffbf00/<label> kill &#ffd24d<player> &e- &7giết người chơi.'
+  reload: '&#ffbf00/<label> reload &e- &7tải lại tất cả cấu hình.'
+  suicide: '&#ffbf00/<label> suicide &e- &7tự sát ngay lập tức.'
+  setprice: '&#ffbf00/<label> setprice revive &#ffd24d<item/xp/money> <amount> &e- &7giá để hồi sinh.'
+  zone: '&#ffbf00/<label> zone help &e- &7Danh sách lệnh khu vực hồi sinh.'
+  verify: '&#ffbf00/<label> verify &e- &7Mã xác minh cao cấp.'
 # majG9TZwQR6t5u/zLJj4BTzuZ3gg2AoA7bs0Ghfl/1YBo+xuxkQmQjoh5Oq7yqp/fJ1MIK4XsduRW0q8qN7CWBLImyokF8A83i/vy0U02Ps=

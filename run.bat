@@ -1,3 +1,7 @@
 @echo off
 title SmileHappy Server
+<<<<<<< HEAD
 java -Xms4G -Xmx4G -jar paper.jar --nogui
+=======
+java -Xms3G -Xmx3G -XX:+UseG1GC -XX:+ParallelRefProcEnabled -XX:MaxGCPauseMillis=50 -XX:+UnlockExperimentalVMOptions -XX:+UnlockDiagnosticVMOptions -XX:+DisableExplicitGC -XX:+AlwaysPreTouch -XX:G1NewSizePercent=30 -XX:G1MaxNewSizePercent=40 -XX:G1HeapRegionSize=8M -XX:G1ReservePercent=20 -XX:G1HeapWastePercent=10 -XX:G1MixedGCCountTarget=3 -XX:G1MixedGCLiveThresholdPercent=90 -XX:InitiatingHeapOccupancyPercent=12 -XX:G1RSetUpdatingPauseTimePercent=5 -XX:MaxTenuringThreshold=1 -XX:ReservedCodeCacheSize=300M -XX:+UseFastUnorderedTimeStamps -XX:+PerfDisableSharedMem -XX:+EnableDynamicAgentLoading -jar paper.jar --nogui
+>>>>>>> experimental

@@ -1,9 +1,9 @@
 schedules:
   world:
     days: 5
-    chance: 100.0
+    chance: 80.0
     broadcast: true
-    days-left-message: '&fin &e%days-left% &fdays there will be a possible bloodmoon!'
-    tonight-message: '&fThere is a &e%chance%% &fchance that Tonight will be a bloodmoon!'
+    days-left-message: '&fin &e%days-left% &fngày nữa sẽ có khả năng xảy ra trăng máu!'
+    tonight-message: '&fCó &e%chance%% &fkhả năng đêm nay sẽ là trăng máu!'
     random-days: true
     repeating: true

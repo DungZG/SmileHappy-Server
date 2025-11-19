@@ -1,0 +1,598 @@
+# Use a YAML editor like NotepadPlusPlus to edit this file.  
+# After editing, back up your changes before reloading the server in case you made a syntax error.  
+# Use dollar signs ($) for formatting codes, which are documented here: http://minecraft.gamepedia.com/Formatting_codes
+
+Messages:
+  RespectingClaims:
+    Text: Bây giờ tôn trọng
+  IgnoringClaims:
+    Text: Bây giờ bỏ qua claim.
+  SuccessfulAbandon:
+    Text: Claim đã bị xoá. Bây giờ bạn có {0} khối claim.
+    Notes: 'Còn lại: 0 khối'
+  RestoreNatureActivate:
+    Text: Sẵn sàng khôi phục lại! Nhấp chuột phải để khôi phục và sử dụng /basicclaims
+      để dừng lại.
+  RestoreNatureAggressiveActivate:
+    Text: Chế độ hung hăng được kích hoạt. KHÔNG sử dụng chế độ này bên dưới bất kỳ
+      thứ gì bạn muốn giữ lại! Nhấp chuột phải để khôi phục thiên nhiên một cách hung
+      hăng và sử dụng /basicclaims để dừng lại.
+  FillModeActive:
+    Text: Chế độ lấp đầy được kích hoạt với bán kính {0}. Nhấp chuột phải vào một
+      vùng để lấp đầy.
+    Notes: 'Bán kính lấp đầy: 0'
+  TransferClaimPermission:
+    Text: Lệnh đó yêu cầu quyền quản trị claim.
+  TransferClaimMissing:
+    Text: Không có claim nào ở đây. Hãy đứng vào claim thị trường mà bạn muốn chuyển.
+  TransferClaimAdminOnly:
+    Text: Chỉ những claim thị trường mới có thể được chuyển cho người chơi.
+  PlayerNotFound2:
+    Text: Không có người chơi nào có tên đó đăng nhập gần đây.
+  TransferTopLevel:
+    Text: Chỉ những claim cấp cao nhất (không phải phân khu) mới có thể được chuyển
+      nhượng. Đứng bên ngoài phân khu và thử lại.
+  TransferSuccess:
+    Text: Claim đã được chuyển giao.
+  TrustListNoClaim:
+    Text: Đứng bên trong nơi bạn được trust.
+  ClearPermsOwnerOnly:
+    Text: Chỉ có chủ sở hữu claim mới có thể xóa tất cả các quyền.
+  UntrustIndividualAllClaims:
+    Text: Đã thu hồi quyền truy cập của {0} vào TẤT CẢ các claim của bạn. Để thiết
+      lập quyền cho một claim duy nhất, hãy đứng bên trong claim đó.
+    Notes: 'Người chơi untrust: 0'
+  UntrustEveryoneAllClaims:
+    Text: Đã xóa quyền trong TẤT CẢ các claim của bạn. Để thiết lập quyền cho một
+      claim duy nhất, hãy đứng bên trong claim đó.
+  NoPermissionTrust:
+    Text: Bạn không có quyền quản lý ở đây của {0}.
+    Notes: 'Chủ claim: 0'
+  ClearPermissionsOneClaim:
+    Text: Đã xóa quyền trong claim này. Để thiết lập quyền cho TẤT CẢ các claim của
+      bạn, hãy đứng ngoài các claim đó.
+  UntrustIndividualSingleClaim:
+    Text: Đã thu hồi quyền truy cập của {0} vào claim này. Để thiết lập quyền cho
+      TẤT CẢ các claim của bạn nằm ngoài chúng.
+    Notes: 'Người chơi untrust: 0'
+  OnlySellBlocks:
+    Text: Khối claim chỉ có thể được bán chứ không thể được mua.
+  BlockPurchaseCost:
+    Text: Mỗi khối claim có giá là {0}. Số dư hiện có {1}.
+    Notes: 'Giá một khối: 0 | Số dư: 1'
+  ClaimBlockLimit:
+    Text: Bạn đã đạt đến giới hạn khối claim. Bạn không thể mua thêm.
+  InsufficientFunds:
+    Text: Bạn không có đủ tiền. Bạn cần {0}, nhưng bạn chỉ có {1}.
+    Notes: 'Tổng chi phí: 0 | Số dư: 1'
+  MaxBonusReached:
+    Text: Không thể mua thêm {0} khối claim. Máy chủ có giới hạn {1} khối claim.
+    Notes: 'Số lượng 0 | Giới hạn: 1'
+  PurchaseConfirmation:
+    Text: Đã rút {0} khỏi tài khoản của bạn. Bây giờ bạn có {1} khối claim.
+    Notes: 'Tổng chi phí: 0 | Còn lại: 1 khối'
+  OnlyPurchaseBlocks:
+    Text: Các khối claim chỉ có thể được mua chứ không thể được bán.
+  BlockSaleValue:
+    Text: Mỗi khối claim có giá trị là {0}. Bạn có {1} khối có sẵn để bán.
+    Notes: 'Giá trị khối: 0 | Có sẵn: 1 khối'
+  NotEnoughBlocksForSale:
+    Text: Bạn không có nhiều khối claim để bán.
+  BlockSaleConfirmation:
+    Text: Đã gửi {0} vào tài khoản của bạn. Bây giờ bạn có {1} khối claim.
+    Notes: 'Số tiền đã gửi: 0 | Còn lại: 1 khối'
+  AdminClaimsMode:
+    Text: Chế độ claim hành chính đang hoạt động. Bất kỳ claim nào được tạo ra đều
+      miễn phí và có thể được chỉnh sửa bởi các quản trị viên khác.
+  BasicClaimsMode:
+    Text: Trở về chế độ tạo claim cơ bản.
+  SubdivisionMode:
+    Text: Chế độ phân khu. Sử dụng xẻng của bạn để phân khu các claim hiện có của
+      bạn. Sử dụng /basicclaims để thoát.
+  SubdivisionVideo2:
+    Text: 'Click để Xem Trợ Giúp Phân Khu: {0}'
+    Notes: Video URL [₪ 0]
+  DeleteClaimMissing:
+    Text: Không có claim nào ở đây.
+  DeletionSubdivisionWarning:
+    Text: Claim này bao gồm các phân khu. Nếu bạn chắc chắn muốn xóa, hãy sử dụng
+      /deleteclaim một lần nữa.
+  DeleteSuccess:
+    Text: Claim đã bị xóa.
+  CantDeleteAdminClaim:
+    Text: Bạn không có quyền xóa claim hành chính.
+  DeleteAllSuccess:
+    Text: Đã xóa tất cả các claim của {0}.
+    Notes: 'Chủ claim: 0'
+  NoDeletePermission:
+    Text: Bạn không có quyền xóa claim.
+  AllAdminDeleted:
+    Text: Đã xóa tất cả các claim hành chính.
+  AdjustBlocksSuccess:
+    Text: 'Điều chỉnh khối claim của {0} bằng {1}. Tổng khối claim mới: {2}.'
+    Notes: 'Người chơi: 0 | Điều chỉnh: 1 | Tổng: 2'
+  NotTrappedHere:
+    Text: Bạn có thể xây dựng ở đây. Hãy tự cứu mình.
+  RescuePending:
+    Text: Nếu bạn ở yên trong 10 giây, bạn sẽ được dịch chuyển ra ngoài. Vui lòng
+      đợi.
+  NonSiegeWorld:
+    Text: Chế độ bao vây bị vô hiệu hóa ở đây.
+  AlreadySieging:
+    Text: Bạn đã tham gia vào một cuộc bao vây rồi.
+  NotSiegableThere:
+    Text: '{0} không được bảo vệ ở đó.'
+    Notes: 'Người phòng thủ: 0'
+  SiegeTooFarAway:
+    Text: Bạn ở quá xa để có thể bao vây.
+  NoSiegeYourself:
+    Text: Bạn không thể tự bao vây mình, đừng ngốc nghếch thế
+  NoSiegeDefenseless:
+    Text: Người chơi đó không có khả năng phòng thủ. Hãy đi bắt nạt người khác đi.
+  AlreadyUnderSiegePlayer:
+    Text: '{0} đã bị bao vây. Hãy tham gia bữa tiệc nào!'
+    Notes: 'Người phòng thủ: 0'
+  AlreadyUnderSiegeArea:
+    Text: Khu vực đó đã bị bao vây rồi. Hãy tham gia bữa tiệc nào!
+  NoSiegeAdminClaim:
+    Text: Khu vực này không thể bao vây.
+  SiegeOnCooldown:
+    Text: Bạn vẫn đang trong thời gian hồi của cuộc bao vây đối với người bảo vệ hoặc
+      claim này. Hãy tìm một nạn nhân khác.
+  SiegeAlert:
+    Text: Bạn đang bị bao vây! Nếu bạn đăng xuất ngay bây giờ, bạn sẽ chết. Bạn phải
+      đánh bại {0}, đợi anh ta đầu hàng hoặc trốn thoát.
+    Notes: 'Kẻ tấn công: 0'
+  SiegeConfirmed:
+    Text: Cuộc vây hãm đã bắt đầu! Nếu bạn đăng xuất ngay bây giờ, bạn sẽ chết. Bạn
+      phải đánh bại {0}, đuổi hắn đi hoặc đầu hàng và bỏ đi.
+    Notes: 'Nguời phòng thủ: 0'
+  AbandonClaimMissing:
+    Text: Đứng ở vị trí claim mà bạn muốn xóa hoặc cân nhắc /abandonallclaims.
+  NotYourClaim:
+    Text: Đây không phải là claim của bạn.
+  DeleteTopLevelClaim:
+    Text: Để xóa một phân khu, hãy đứng bên trong phân khu đó. Nếu không, hãy sử dụng
+      /abandontoplevelclaim để xóa claim này và tất cả các phân khu.
+  AbandonSuccess:
+    Text: Claim đã bị xoá. Bây giờ bạn có {0} khối claim.
+    Notes: 'Còn lại: 0 khối'
+  ConfirmAbandonAllClaims:
+    Text: Bạn có chắc chắn muốn xoá TẤT CẢ các claim của mình không? Vui lòng xác
+      nhận bằng /abandonallclaims confirm
+  CantGrantThatPermission:
+    Text: Bạn không thể cấp quyền nếu bạn không có quyền đó.
+  GrantPermissionNoClaim:
+    Text: Đứng bên trong claim mà bạn muốn cấp quyền.
+  GrantPermissionConfirmation:
+    Text: Đã cấp quyền {0} cho {1} {2}.
+    Notes: 'Người chơi được đánh dấu: 0 | Mô tả quyền: 1 | Phạm vi: 2 (claim đã thay
+      đổi)'
+  ManageUniversalPermissionsInstruction:
+    Text: Để quản lý quyền cho TẤT CẢ các claim của bạn, hãy bên đứng ngoài các claim
+      đó.
+  ManageOneClaimPermissionsInstruction:
+    Text: Để quản lý quyền cho một claim cụ thể, hãy đứng bên trong claim đó.
+  CollectivePublic:
+    Text: công chúng
+    Notes: đã cấp phép công khai cho...
+  BuildPermission:
+    Text: xây dựng
+  ContainersPermission:
+    Text: mở thùng và động vật
+  AccessPermission:
+    Text: sử dụng nút và level
+  PermissionsPermission:
+    Text: quản lý quyền
+  LocationCurrentClaim:
+    Text: trong claim này
+  LocationAllClaims:
+    Text: trong tất cả các claim của bạn
+  PvPImmunityStart:
+    Text: Bạn được bảo vệ khỏi sự tấn công của người chơi khác miễn là túi đồ của
+      bạn trống.
+  SiegeNoDrop:
+    Text: Bạn không thể tặng vật phẩm khi tham gia cuộc bao vây.
+  DonateItemsInstruction:
+    Text: Để tặng vật phẩm trên tay, hãy nhấp chuột trái vào rương một lần nữa.
+  ChestFull:
+    Text: Chiếc rương này đã đầy.
+  DonationSuccess:
+    Text: Vật phẩm đã được chuyển vào rương!
+  PlayerTooCloseForFire2:
+    Text: Bạn không thể đốt lửa ở gần người chơi khác.
+  TooDeepToClaim:
+    Text: Không thể bảo vệ được chiếc rương này vì nó nằm quá sâu dưới lòng đất. Hãy
+      cân nhắc việc di chuyển nó.
+  ChestClaimConfirmation:
+    Text: Chiếc rương này được bảo vệ.
+  AutomaticClaimNotification:
+    Text: Chiếc rương này và các khối đồ vật gần đó được bảo vệ khỏi phá hoại và trộm
+      cắp.
+  AutomaticClaimOtherClaimTooClose:
+    Text: Không thể tạo claim cho rương của bạn, có một claim khác quá gần!
+  UnprotectedChestWarning:
+    Text: Chiếc rương này KHÔNG được bảo vệ. Hãy cân nhắc sử dụng xẻng vàng để mở
+      rộng claim hiện có hoặc tạo claim mới.
+  ThatPlayerPvPImmune:
+    Text: Bạn không thể gây sát thương cho người chơi không có khả năng phòng vệ.
+  CantFightWhileImmune:
+    Text: Bạn không thể chiến đấu với ai đó khi bạn được bảo vệ khỏi PvP.
+  NoDamageClaimedEntity:
+    Text: Thuộc về {0}.
+    Notes: 'Chủ sở hữu: 0'
+  ShovelBasicClaimMode:
+    Text: Shovel đã trở lại chế độ claim cơ bản.
+  RemainingBlocks:
+    Text: Bạn có thể claim thêm tối đa {0} khối.
+    Notes: 'Còn lại: 0 khối'
+  CreativeBasicsVideo2:
+    Text: 'Click để Xem Cách Claim Đất: {0}'
+    Notes: Video URL [₪ {0}]
+  SurvivalBasicsVideo2:
+    Text: 'Click để Xem Cách Claim Đất: {0}'
+    Notes: Video URL [₪ {0}]
+  TrappedChatKeyword:
+    Text: trapped;stuck
+    Notes: Khi được nhắc đến trong cuộc trò chuyện, người chơi sẽ nhận được thông
+      tin về lệnh /trapped (nhiều từ có thể được phân tách bằng dấu chấm phẩy)
+  TrappedInstructions:
+    Text: Bạn có bị mắc kẹt trong claim đất của ai đó không? Hãy thử lệnh /trapped.
+  PvPNoDrop:
+    Text: Bạn không thể vất vật phẩm khi đang PvP.
+  SiegeNoTeleport:
+    Text: Bạn không thể dịch chuyển ra khỏi khu vực bị bao vây.
+  BesiegedNoTeleport:
+    Text: Bạn không thể dịch chuyển vào khu vực bị bao vây.
+  SiegeNoContainers:
+    Text: Bạn không thể mở thùng khi đang tham gia cuộc bao vây.
+  PvPNoContainers:
+    Text: Bạn không thể mở thùng trong khi PvP.
+  PvPImmunityEnd:
+    Text: Bây giờ bạn có thể chiến đấu với những người chơi khác.
+  NoBedPermission:
+    Text: '{0} chưa cấp cho bạn quyền ngủ ở đây.'
+    Notes: 'Chủ claim: 0'
+  NoWildernessBuckets:
+    Text: Bạn chỉ được phép đổ xô bên trong khu vực bạn claim hoặc dưới lòng đất.
+  NoLavaNearOtherPlayer:
+    Text: Bạn không thể đặt dung nham gần {0} như thế này.
+    Notes: 'Nguời chơi ở gần: 0'
+  TooFarAway:
+    Text: Quá xa rồi.
+  BlockNotClaimed:
+    Text: Chưa có ai claim khối này.
+  BlockClaimed:
+    Text: Khối đó đã được {0} claim.
+    Notes: 'Chủ claim: 0'
+  SiegeNoShovel:
+    Text: Bạn không thể sử dụng xẻng khi đang tham gia cuộc bao vây.
+  RestoreNaturePlayerInChunk:
+    Text: Không thể khôi phục. {0} nằm trong khối đó.
+    Notes: 'Người chơi ở gần: 0'
+  NoCreateClaimPermission:
+    Text: Bạn không có quyền claim đất.
+  ResizeNeedMoreBlocks:
+    Text: Bạn không có đủ khối cho kích thước này. Bạn cần thêm {0} nữa.
+    Notes: 'Cần thêm: 0'
+  NoCreativeUnClaim:
+    Text: Bạn không thể hủy claim ở vùng đất này. Bạn chỉ có thể mở rộng claim này
+      hoặc tạo thêm claim.
+  ClaimResizeSuccess:
+    Text: Đã thay đổi kích thước claim. Còn {0} khối claim.
+    Notes: 'Còn lại: 0 khối'
+  ResizeFailOverlap:
+    Text: Không thể thay đổi kích thước ở đây vì nó sẽ chồng lên một claim khác ở
+      gần đó.
+  ResizeStart:
+    Text: Thay đổi kích thước. Sử dụng xẻng của bạn một lần nữa tại vị trí góc mới
+      để thay đổi kích thước claim.
+  ResizeFailOverlapSubdivision:
+    Text: Bạn không thể tạo phân khu ở đây vì nó sẽ chồng lên phân khu khác. Hãy cân
+      nhắc /abandonclaim để xóa phân khu đó hoặc sử dụng xẻng ở góc để thay đổi kích
+      thước.
+  SubdivisionStart:
+    Text: Đã thiết lập góc của phân khu! Sử dụng xẻng của bạn tại vị trí góc đối diện
+      của phân khu mới này.
+  CreateSubdivisionOverlap:
+    Text: Khu vực bạn chọn chồng lên một phân khu khác.
+  SubdivisionSuccess:
+    Text: Đã tạo phân khu! Sử dụng /trust để thêm bạn bè vào claim.
+  CreateClaimFailOverlap:
+    Text: Bạn không thể tạo claim ở đây vì nó sẽ chồng lên claim khác của bạn. Sử
+      dụng /abandonclaim để xóa claim hoặc sử dụng xẻng ở góc để thay đổi kích thước.
+  CreateClaimFailOverlapOtherPlayer:
+    Text: Bạn không thể tạo claim ở đây vì nó sẽ chồng lên claim của {0}.
+    Notes: 'Chủ claim khác: 0'
+  ClaimsDisabledWorld:
+    Text: Claim đã bị vô hiệu hoá ở thế giới này.
+  ClaimStart:
+    Text: Đã thiết lập góc! Sử dụng xẻng một lần nữa ở góc đối diện để claim một hình
+      chữ nhật. Để hủy, hãy cất xẻng đi.
+  NewClaimTooNarrow:
+    Text: Claim này quá nhỏ. Claim nào cũng phải rộng ít nhất {0} khối.
+    Notes: 'Chiều rộng tối thiểu: 0'
+  CreateClaimInsufficientBlocks:
+    Text: Bạn không có đủ khối để claim toàn bộ khu vực đó. Bạn cần thêm {0} khối
+      nữa.
+    Notes: 'Cần thêm: 0 khối'
+  AbandonClaimAdvertisement:
+    Text: Để xóa claim khác và giải phóng một số khối, hãy sử dụng /abandonclaim.
+  CreateClaimFailOverlapShort:
+    Text: Khu vực bạn đã chọn chồng lên một claim hiện có.
+  CreateClaimSuccess:
+    Text: Đã tạo claim! Sử dụng /trust để thêm bạn bè vào claim.
+  SiegeWinDoorsOpen:
+    Text: Chúc mừng! Các nút và cần gạt đã được mở khóa tạm thời.
+  RescueAbortedMoved:
+    Text: Bạn đã di chuyển! Cuộc giải cứu đã bị hủy.
+  SiegeDoorsLockedEjection:
+    Text: Đã hết thời gian cướp! Bị đuổi khỏi claim.
+  NoModifyDuringSiege:
+    Text: Không thể thay đổi claim khi đang bị bao vây.
+  OnlyOwnersModifyClaims:
+    Text: Chỉ {0} mới có thể chỉnh sửa claim này.
+    Notes: 'Chủ sở hữu: 0'
+  NoBuildUnderSiege:
+    Text: Claim này đang bị {0} bao vây. Không ai có thể xây dựng ở đây.
+    Notes: 'Kẻ tấn công: 0'
+  NoBuildPvP:
+    Text: Bạn không thể xây dựng ở claim trong khi PvP.
+  NoBuildPermission:
+    Text: Bạn không có quyền xây dựng ở {0}.
+    Notes: 'Chủ sở hữu: 0'
+  NonSiegeMaterial:
+    Text: Vật liệu đó quá cứng để có thể phá.
+  NoOwnerBuildUnderSiege:
+    Text: Bạn không thể thực hiện thay đổi khi đang bị bao vây.
+  NoAccessPermission:
+    Text: Bạn không có quyền xem thông tin của {0}.
+    Notes: 'Chủ sở hữu: 0. Quyền truy cập điều khiển các nút, cần gạt và giường'
+  NoContainersSiege:
+    Text: Claim này đang bị {0} bao vây. Hiện tại không ai có thể mở thùng ở đây.
+    Notes: 'Kẻ tấn công: 0'
+  NoContainersPermission:
+    Text: Bạn không có quyền xem thông tin của {0}.
+    Notes: 'Chủ sở hữu: 0. Thùng chứa cũng bao gồm các khối chế tạo'
+  OwnerNameForAdminClaims:
+    Text: một người quản lý
+    Notes: như trong 'Bạn không có quyền quản trị để xây dựng ở đây.'
+  ClaimTooSmallForEntities:
+    Text: Claim này không đủ lớn cho việc đó. Hãy thử mở rộng nó.
+  TooManyEntitiesInClaim:
+    Text: Claim này đã có quá nhiều thực thể. Hãy thử mở rộng claim hoặc loại bỏ một
+      số động vật, quái vật, tranh vẽ hoặc xe đẩy.
+  YouHaveNoClaims:
+    Text: Bạn không có bất kỳ claim nào.
+  ConfirmFluidRemoval:
+    Text: Việc xoá claim này sẽ xóa dung nham bên trong claim. Nếu bạn chắc chắn,
+      hãy sử dụng /abandonclaim một lần nữa.
+  AutoBanNotify:
+    Text: Tự động cấm {0}({1}). Xem nhật ký để biết chi tiết.
+  AdjustGroupBlocksSuccess:
+    Text: 'Điều chỉnh khối claim nhận được cho người chơi có quyền {0} của {1}. Tổng
+      số mới: {2}.'
+    Notes: 'Quyền: 0 | Số tiền điều chỉnh 1 | Tổng tiền thưởng mới: 2'
+  InvalidPermissionID:
+    Text: Vui lòng chỉ định tên người chơi hoặc quyền trong [ngoặc vuông].
+  HowToClaimRegex:
+    Text: (^|.*\W)how\W.*\W(claim|protect|lock)(\W.*|$)
+    Notes: Đây là Java Regular Expression. Hãy tra cứu trước khi chỉnh sửa! Nó được
+      dùng để cho người chơi biết về video demo khi họ hỏi cách claim đất.
+  NoBuildOutsideClaims:
+    Text: Bạn không thể xây dựng ở đây trừ khi bạn claim một số đất trước.
+  PlayerOfflineTime:
+    Text: '  Đăng nhập gần nhất: {0} ngày trước.'
+    Notes: 'Ngày đăng nhập lần cuối: 0'
+  BuildingOutsideClaims:
+    Text: Những người chơi khác có thể xây dựng ở đây. Hãy cân nhắc việc tạo claim
+      để bảo vệ công trình của bạn!
+  TrappedWontWorkHere:
+    Text: Rất tiếc, không tìm được vị trí an toàn để dịch chuyển bạn đến. Hãy liên
+      hệ với quản trị viên.
+  CommandBannedInPvP:
+    Text: Bạn không thể sử dụng lệnh đó khi đang PvP.
+  UnclaimCleanupWarning:
+    Text: Bạn đã xoá claim ở vùng đất này và người chơi khác có thể claim hoặc được
+      quản trị viên dọn dẹp. Nếu bạn đã xây dựng thứ gì ở đó và muốn giữ lại, bạn
+      nên claim lại.
+  BuySellNotConfigured:
+    Text: Rất tiếc, tính năng mua và bán khối claim đã bị vô hiệu hóa.
+  NoTeleportPvPCombat:
+    Text: Bạn không thể dịch chuyển khi đang chiến đấu với người chơi khác.
+  NoTNTDamageAboveSeaLevel:
+    Text: 'Cảnh báo: TNT sẽ không phá hủy các khối ở trên mực nước biển.'
+  NoTNTDamageClaims:
+    Text: 'Cảnh báo: TNT sẽ không phá hủy các khối đã claim.'
+  IgnoreClaimsAdvertisement:
+    Text: Để ghi đè, hãy sử dụng /ignoreclaims.
+  NoPermissionForCommand:
+    Text: Bạn không có quyền làm điều đó.
+  ClaimsListNoPermission:
+    Text: Bạn không được phép xem thông tin về quyền sở hữu claim của người chơi khác.
+  ExplosivesDisabled:
+    Text: Claim này đã được bảo vệ khỏi các vụ nổ. Sử dụng /claimexplosions một lần
+      nữa để vô hiệu hóa.
+  ExplosivesEnabled:
+    Text: Claim này dễ bị phát nổ. Sử dụng /claimexplosions một lần nữa để bật chế
+      độ bảo vệ.
+  ClaimExplosivesAdvertisement:
+    Text: Để cho phép thuốc nổ phá hủy các khối trong claim này, hãy sử dụng /claimexplosions.
+  PlayerInPvPSafeZone:
+    Text: Người chơi đó đang ở trong vùng an toàn của PvP.
+  NoPistonsOutsideClaims:
+    Text: 'Cảnh báo: Piston không thể đẩy các khối bên ngoài khu vực claim.'
+  SoftMuted:
+    Text: Tạm thời cấm chat {0}.
+    Notes: '0: Tên của người chơi đã thay đổi.'
+  UnSoftMuted:
+    Text: Không cấm chat {0}.
+    Notes: '0: Tên của người chơi đã thay đổi.'
+  DropUnlockAdvertisement:
+    Text: Người chơi khác không thể nhặt được vật phẩm bạn đánh rơi trừ khi bạn sử
+      dụng /unlockdrops trước.
+  PickupBlockedExplanation:
+    Text: Bạn không thể nhận được vật phẩm này trừ khi {0} sử dụng /unlockdrops.
+    Notes: 'Chủ vật phẩm: 0'
+  DropUnlockConfirmation:
+    Text: Đã mở khóa vật phẩm rơi của bạn. Người chơi khác giờ có thể nhặt chúng (cho
+      đến khi bạn chết lần nữa).
+  DropUnlockOthersConfirmation:
+    Text: Mở khóa vật phẩm rơi ra của {0}.
+    Notes: '0: Người sở hữu vật phẩm chưa được mở khóa.'
+  AdvertiseACandACB:
+    Text: Bạn có thể sử dụng /acb để nhận được nhiều khối claim hơn hoặc /adminclaims
+      để tạo claim quản trị miễn phí.
+  AdvertiseAdminClaims:
+    Text: Thay vào đó, bạn có thể tạo claim hành chính bằng cách sử dụng /adminclaims,
+      rồi chia sẻ với những người quản trị khác.
+  AdvertiseACB:
+    Text: Bạn có thể sử dụng /acb để nhận được nhiều khối claim hơn.
+  NotYourPet:
+    Text: Nó thuộc về {0} cho đến khi nó được tặng cho bạn thông qua /givepet.
+    Notes: 'Tên chủ sở hữu: 0'
+  PetGiveawayConfirmation:
+    Text: Đã chuyển thú cưng.
+  PetTransferCancellation:
+    Text: Hủy bỏ việc tặng thú cưng.
+  ReadyToTransferPet:
+    Text: Sẵn sàng chuyển nhượng! Nhấp chuột phải vào thú cưng bạn muốn tặng hoặc
+      hủy bằng lệnh /givepet cancel.
+  AvoidGriefClaimLand:
+    Text: Ngăn ngừa phá hoại! Nếu bạn claim, bạn sẽ không bị phá nữa.
+  BecomeMayor:
+    Text: Phân chia đất đai của bạn và trở thành thị trưởng!
+  ClaimCreationFailedOverClaimCountLimit:
+    Text: Bạn đã đạt đến giới hạn claim. Sử dụng /abandonclaim để xóa một claim trước
+      khi tạo claim mới.
+  CreateClaimFailOverlapRegion:
+    Text: Bạn không thể claim tất cả vì bạn không được quyền xây dựng ở đây.
+  ResizeFailOverlapRegion:
+    Text: Bạn không có quyền xây dựng ở đó nên bạn không thể claim ở đó.
+  ShowNearbyClaims:
+    Text: Đã tìm thấy {0} claim.
+    Notes: 'Số claim được tìm thấy: 0'
+  NoChatUntilMove:
+    Text: Xin lỗi, nhưng bạn phải di chuyển thêm một chút nữa trước khi có thể trò
+      chuyện. Chúng tôi có rất nhiều bot spam ở đây. :)
+  SiegeImmune:
+    Text: Người chơi đó miễn nhiễm với /siege.
+  SetClaimBlocksSuccess:
+    Text: Đã cập nhật khối claim tích lũy.
+  IgnoreConfirmation:
+    Text: Bây giờ bạn đang phớt lờ trò tin nhắn chuyện từ người chơi đó.
+  NotIgnoringPlayer:
+    Text: Bạn không hề phớt lờ người chơi đó.
+  UnIgnoreConfirmation:
+    Text: Bạn không còn phớt lờ tin nhắn trò chuyện từ người chơi đó nữa.
+  SeparateConfirmation:
+    Text: Những người chơi đó bây giờ sẽ không còn quan tâm đến nhau trong trò chuyện
+      nữa.
+  UnSeparateConfirmation:
+    Text: Những người chơi đó sẽ không phớt lờ nhau trong trò chuyện nữa.
+  NotIgnoringAnyone:
+    Text: Bạn không hề phớt lờ ai cả.
+  TrustListHeader:
+    Text: 'Quyền rõ ràng ở đây:'
+    Notes: 'Chủ claim: 0'
+  Manage:
+    Text: Quản lý
+  Build:
+    Text: Xây dựng
+  Containers:
+    Text: Container
+  Access:
+    Text: Cho phép
+  HasSubclaimRestriction:
+    Text: Claim phụ này không nhận được quyền từ claim chính
+  StartBlockMath:
+    Text: '{0} khối từ lượt chơi + {1} khối thưởng = tổng cộng {2}.'
+  ClaimsListHeader:
+    Text: 'Claim:'
+  ContinueBlockMath:
+    Text: ' (-{0} khối)'
+  EndBlockMath:
+    Text: ' = {0} khối còn lại'
+  NoClaimDuringPvP:
+    Text: Bạn không thể chiếm đất trong khi PvP.
+  UntrustAllOwnerOnly:
+    Text: Chỉ có chủ sở hữu claim mới có thể xóa tất cả các quyền của mình.
+  ManagersDontUntrustManagers:
+    Text: Chỉ có chủ sở hữu claim mới có thể sa thải quản lý.
+  BookAuthor:
+    Text: Đáng sợ
+  BookTitle:
+    Text: Làm thế nào để Claim Đất
+  BookIntro:
+    Text: Claim đất để bảo vệ tài sản của bạn! Nhấp vào link ở trên để tìm hiểu về
+      claim trong 3 phút hoặc ít hơn. :)
+  BookDisabledChestClaims:
+    Text: '  Trên máy chủ này, việc đặt rương sẽ KHÔNG claim đất cho bạn.'
+  BookUsefulCommands:
+    Text: 'Các lệnh hữu ích:'
+  BookLink:
+    Text: 'Click: {0}'
+    Notes: Video URL [₪ {0}]
+  BookTools:
+    Text: Công cụ claim của chúng tôi là {0} và {1}.
+    Notes: 'Công cụ chỉnh sửa: 0 | Công cụ claim: 1'
+  ResizeClaimTooNarrow:
+    Text: Kích thước mới này quá nhỏ. Claim phải rộng ít nhất {0} khối.
+    Notes: 'Kích thước tối thiểu: 0'
+  ResizeClaimInsufficientArea:
+    Text: Claim này quá nhỏ. Claim phải sử dụng ít nhất {0} khối.
+    Notes: 'Claim tối thiểu: 0'
+  NoProfanity:
+    Text: Chú ý ngôn từ của bạn.
+  PlayerNotIgnorable:
+    Text: Bạn không thể phớt lờ người chơi đó.
+  NoEnoughBlocksForChestClaim:
+    Text: Vì bạn không có bất kỳ khối claim nào, nên không có bất kỳ claim nào được
+      tạo cho bạn. Bạn có thể sử dụng /claimslist để xem tổng khối claim hiện có của
+      mình.
+  IsIgnoringYou:
+    Text: Người chơi đó đang phớt lờ bạn.
+  MustHoldModificationToolForThat:
+    Text: Bạn cần có xẻng vàng để làm điều đó.
+  StandInClaimToResize:
+    Text: Đứng bên trong claim bạn muốn thay đổi kích thước.
+  ClaimsExtendToSky:
+    Text: Claim sẽ mở rộng đến giới hạn chiều cao cho phép xây dựng.
+  ClaimsAutoExtendDownward:
+    Text: Claim sẽ tự động mở rộng sâu hơn khi bạn đặt các khối bên dưới chúng.
+  MinimumRadius:
+    Text: Bán kính tối thiểu là {0}.
+    Notes: 'Bán kính tối thiểu: 0'
+  RadiusRequiresGoldenShovel:
+    Text: Bạn phải cầm xẻng vàng để chỉ định bán kính.
+  ClaimTooSmallForActiveBlocks:
+    Text: Claim này không đủ lớn để hỗ trợ các loại khối như (hoppers, spawner, beacon...).
+      Trước tiên, hãy mở rộng claim.
+  TooManyActiveBlocksInClaim:
+    Text: Claim này đã đạt đến giới hạn cho phép của các loại khối như (hoppers, spawner,
+      beacon...). Hãy mở rộng claim hoặc loại bỏ các khối đó.
+  ConsoleOnlyCommand:
+    Text: Lệnh đó chỉ có thể được thực hiện từ bảng điều khiển máy chủ.
+  WorldNotFound:
+    Text: Không tìm thấy thế giới.
+  AdjustBlocksAllSuccess:
+    Text: Đã điều chỉnh tất cả các claim block nhận được sau mỗi giờ của người chơi
+      thành {0}.
+    Notes: 'Claim nhận được sau mỗi giờ: 0'
+  TooMuchIpOverlap:
+    Text: Xin lỗi, có quá nhiều người chơi đăng nhập bằng địa chỉ IP của bạn.
+  StandInSubclaim:
+    Text: Bạn cần phải đứng trong claim phụ để hạn chế nó
+  SubclaimRestricted:
+    Text: Quyền của claim phụ này sẽ không còn nhận được quyền từ claim chính nữa
+  SubclaimUnrestricted:
+    Text: Quyền của claim phụ này đã nhận được quyền từ claim chính
+  NetherPortalTrapDetectionMessage:
+    Text: Có vẻ như bạn đang bị kẹt bên trong cổng Địa Ngục. Chúng tôi sẽ giải cứu
+      bạn trong vài giây!
+    Notes: Gửi đến người chơi khi tham gia, nếu họ rời đi khi đang ở bên trong cổng
+      địa ngục.
+  UnknownPlayerName:
+    Text: someone
+    Notes: 'Name used for unknown players. UUID will be appended if available: "someone
+      (01234567-0123-0123-0123-0123456789ab)"'
