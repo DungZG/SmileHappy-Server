@@ -1,48 +1,159 @@
+############################
+# 
+# ITSME.TO - Configuration for EssentialsX
+# https://itsme.to/discord/
+#
+############################
 # EssentialsX kit configuration.
-# If no kits are defined in this file, the plugin will attempt to copy them from 'config.yml'.
+# If you don't have any kits defined in this file, the plugin will try to copy them from the config.yml
 
-# All items MUST be followed by a quantity.
-# Kit names should be in lowercase and will be treated as such in permissions and costs.
-# Syntax: - item[:durability] amount [enchantment:level]... [itemmeta:value]...
-# For detailed information on item meta, visit https://wiki.ess3.net/wiki/Item_Meta
+# Note: All items MUST be followed by a quantity!
+# All kit names should be lower case, and will be treated as lower in permissions/costs.
+# Syntax: - name[:durability] amount [enchantment:level]... [itemmeta:value]...
+# For Item Meta information visit http://wiki.ess3.net/wiki/Item_Meta
+# To make the kit execute a command, add /<command> to the items list. Use {USERNAME} to specify the player receiving the kit.
+# {PLAYER} will show the player's displayname instead of username.
+# 'delay' refers to the cooldown between how often you can use each kit, measured in seconds.
+# Set delay to -1 for a one time kit.
 #
-# To make a kit execute a command, add '/<command>' to the item list. Use {USERNAME} to reference the player receiving the kit.
-# Use {PLAYER} to display the player's display name instead of the username.
-# 'delay' refers to the cooldown between how often you can use each kit, measured in seconds. Set to -1 for a one-time kit.
-#
-# You can also organize kits into separate files within the 'kits' subdirectory.
-# Essentials will treat all '.yml' files in the subdirectory as valid kit files and add them along with those in here.
-# Each file in the 'kits' subdirectory must be formatted the same as this file.
-#
-# For more information, refer to https://wiki.ess3.net/wiki/Kits
-
+# In addition, you can also organize your kits into separate files under the `kits` subdirectory.
+# Essentials will treat all .yml files in the `kits` subdirectory as kits files, and will add any kits from those files along with the kits in `kits.yml`.
+# Any file in the `kits` subdirectory must be formatted in the same way as this file. This allows you to define multiple kits in each file.
+# For more information, visit http://wiki.ess3.net/wiki/Kits
 kits:
-  tools:
-    delay: 10
+  Member:
+    delay: 86400
     items:
-      - stonesword 1
-      - stoneshovel 1
-      - stonepickaxe 1
-      - stoneaxe 1
-  dtools:
-    delay: 600
+    - ihelmet 1
+    - ichestplate 1
+    - ileggings 1
+    - iboots 1
+    - dsword 1
+    - dpickaxe 1
+    - iaxe 1
+    - ishovel 1
+    - ihoe 1
+    - bread 16
+  I:
+    delay: 86400
     items:
-      - dpickaxe 1 efficiency:1 durability:1 fortune:1 name:&4Gigadrill lore:The_drill_that_&npierces|the_heavens
-      - dshovel 1 digspeed:3 name:Dwarf lore:Diggy|Diggy|Hole
-      - lhelm 1 color:255,255,255 name:Top_Hat lore:Good_day,_Good_day
-      - daxe:780 1
-      - /broadcast {USERNAME} just got some fancy tools!
-  notch:
-    delay: 6000
+    - dhelmet 1
+    - ichestplate 1
+    - ileggings 1
+    - dboots 1
+    - dsword 1
+    - dpickaxe 1
+    - iaxe 1
+    - ishovel 1
+    - ihoe 1
+    - bread 32
+  II:
+    delay: 86400
     items:
-      - playerhead 1 player:Notch
-  color:
-    delay: 6000
+    - dhelmet 1
+    - dchestplate 1
+    - dleggings 1
+    - dboots 1
+    - dsword 1
+    - dpickaxe 1
+    - iaxe 1
+    - ishovel 1
+    - ihoe 1
+    - bread 32
+  III:
+    delay: 86400
     items:
-      - writtenbook 1 title:&4Book_&9o_&6Colors author:KHobbits lore:Ingame_color_codes book:Colors
-  firework:
-    delay: 6000
+    - dhelmet 1
+    - dchestplate 1
+    - dleggings 1
+    - dboots 1
+    - dsword 1
+    - dpickaxe 1
+    - daxe 1
+    - dshovel 1
+    - dhoe 1
+    - cooked_beef 32
+  IV:
+    delay: 86400
     items:
-      - fireworkrocket 1 name:Angry_Creeper color:red fade:green type:creeper power:1
-      - fireworkrocket 1 name:Starry_Night color:yellow,orange fade:blue type:star effect:trail,twinkle power:1
-      - fireworkrocket 2 name:Solar_Wind color:yellow,orange fade:red shape:large effect:twinkle color:yellow,orange fade:red shape:ball effect:trail color:red,purple fade:pink shape:star effect:trail power:1
+    - dhelmet 1 protection_environmental:1
+    - dchestplate 1
+    - dleggings 1
+    - dboots 1 protection_environmental:1
+    - dsword 1
+    - dpickaxe 1
+    - daxe 1
+    - dshovel 1
+    - dhoe 1
+    - cooked_beef 32
+  V:
+    delay: 86400
+    items:
+    - dhelmet 1 protection_environmental:1
+    - dchestplate 1 protection_environmental:1
+    - dleggings 1 protection_environmental:1
+    - dboots 1 protection_environmental:1
+    - dsword 1
+    - dpickaxe 1
+    - daxe 1
+    - dshovel 1
+    - dhoe 1
+    - cooked_beef 64
+  VIP:
+    delay: 604800
+    items:
+    - dhelmet 1 protection_environmental:2 durability:2
+    - dchestplate 1 protection_environmental:2 durability:2
+    - dleggings 1 protection_environmental:2 durability:2
+    - dboots 1 protection_environmental:2 durability:2 feather_falling:1
+    - dsword 1 damage_all:2 fire_aspect:2 durability:2
+    - dshovel 1 dig_speed:2 durability:2 loot_bonus_blocks:1
+    - dpickaxe 1 dig_speed:2 durability:2 loot_bonus_blocks:1
+    - daxe 1 dig_speed:2 durability:2 loot_bonus_blocks:1
+    - dhoe 1 durability:2
+    - goldenapple 4
+    - enchantedgoldenapple 1
+    - cooked_beef 32
+    - dblock 8
+    - eblock 8
+    - experiencebottle 8
+  VIP+:
+    delay: 604800
+    items:
+    - dhelmet 1 protection_environmental:3 durability:2
+    - dchestplate 1 protection_environmental:3 durability:2
+    - dleggings 1 protection_environmental:3 durability:2
+    - dboots 1 protection_environmental:3 durability:2
+    - dsword 1 damage_all:3 fire_aspect:2 durability:2
+    - dshovel 1 dig_speed:3 durability:2 loot_bonus_blocks:2
+    - dpickaxe 1 dig_speed:3 durability:2 loot_bonus_blocks:2
+    - daxe 1 dig_speed:3 durability:2 loot_bonus_blocks:2
+    - dhoe 1 durability:2
+    - goldenapple 8
+    - enchantedgoldenapple 2
+    - cooked_beef 48
+    - dblock 12
+    - eblock 12
+    - gblock 8
+    - iblock 8
+    - experiencebottle 16
+  MVP:
+    delay: 604800
+    items:
+    - dhelmet 1 protection_environmental:4 durability:3
+    - dchestplate 1 protection_environmental:4 durability:3
+    - dleggings 1 protection_environmental:4 durability:3
+    - dboots 1 protection_environmental:4 durability:3
+    - dsword 1 damage_all:4 fire_aspect:2 durability:3
+    - dshovel 1 dig_speed:4 durability:3 loot_bonus_blocks:3
+    - dpickaxe 1 dig_speed:4 durability:3 loot_bonus_blocks:3
+    - daxe 1 dig_speed:4 durability:3 loot_bonus_blocks:3
+    - dhoe 1 durability:3 
+    - goldenapple 16
+    - enchantedgoldenapple 4
+    - cooked_beef 64
+    - dblock 18
+    - eblock 18
+    - gblock 16
+    - iblock 16
+    - experiencebottle 32

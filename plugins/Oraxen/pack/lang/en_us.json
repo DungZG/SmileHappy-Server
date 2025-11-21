@@ -1,0 +1,9 @@
+{
+  "connect.joining": "",
+  "menu.disconnect": "<shift:-256><gray>Tạm biệt..<shift:-142><glyph:menu_banner><shift:-327>",
+  "menu.returnToGame": "Quay lại máy chủ",
+  "menu.game": "<glyph:logo>",
+  "item.dyed": "",
+  "container.inventory": " Inventory",
+  "resourcePack.server.name": "Vanilla Mod"
+}

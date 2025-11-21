@@ -1,4 +1,8 @@
-&6Welcome, {PLAYER}&6!
-&6Type &c/help&6 for a list of commands.
-&6Type &c/list&6 to see who else is online.
-&6Players online:&c {ONLINE} &6- World time:&c {WORLDTIME12}
+$<br> <p:server-name>
+$<br>   <p:primary-color><bold>CHÀO MỪNG
+$      <p:text-color>Rất vui khi có bạn trở lại với chúng tôi!
+$      <p:text-color>Liên hệ với <p:primary-color>nhân viên</p> nếu bạn gặp vấn đề.
+$<br>   <p:secondary-color><bold>CẬP NHẬT MỚI NHẤT
+$      <p:text-color>Khám phá bản cập nhật <p:secondary-color>trang phục</p> của chúng tôi,
+$      <p:text-color>rất nhiều trang phục mới đã được thêm vào.
+$<br>    <click:open_url:'https://<p:store>'><p:primary-color>[➥ Cửa hàng]</p></click> ▪ <click:open_url:'https://<p:discord>'><#8198FB>[➥ Discord]</click>

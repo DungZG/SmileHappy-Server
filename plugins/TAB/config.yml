@@ -1,19 +1,41 @@
 header-footer:
   enabled: true
   designs:
+    world-world1:
+      display-condition: '%world%=world1'
+      header:
+      - an example of world with custom
+      footer:
+      - header/footer and prefix/suffix
+    world-world2;world3:
+      display-condition: '%world%=world2|%world%=world3'
+      header:
+      - This is a shared header for
+      - world2 and world3
+      footer: []
+    server-server1:
+      display-condition: '%server%=server1'
+      header:
+      - an example of server with custom header
+      footer: []
     default:
       display-condition: '%world%!=disabledworld'
       header:
       - ''
       - ''
-      - '&fパ'
       - ''
+      - Ͼ
       - ''
+      - '<#8364e8>%oraxen_line%   '
       - ''
       footer:
       - ''
-      - '&8&oKhi thế giới sắp đến ngày tận cùng, chỉ những người dũng cảm nhất'
-      - '&8&ocó thể cứu nó. Hãy trở thành anh hùng đó.'
+      - '<#FBE9FF>ᴏɴʟɪɴᴇ&7: &f%online%'
+      - '&7%localtime_time%'
+      - '&7 ᴛʀᴜʏ ᴄập ᴡᴇʙ: <#FBE9FF>ᴄʀᴀғᴛsᴍɪʟᴇʜᴀᴘᴘʏ.xʏᴢ '
+      - ''
+      - '<#8364e8>%oraxen_line%   '
+      - ''
 tablist-name-formatting:
   enabled: true
   disable-condition: '%world%=disabledworld'
@@ -22,7 +44,7 @@ scoreboard-teams:
   enable-collision: true
   invisible-nametags: false
   sorting-types:
-  - GROUPS:owner,admin,mod,helper,builder,vip,default
+  - GROUPS:owner,admin,dev,staff,builder,default
   - PLACEHOLDER_A_TO_Z:%player%
   case-sensitive-sorting: true
   can-see-friendly-invisibles: false
@@ -37,16 +59,111 @@ belowname-objective:
 prevent-spectator-effect:
   enabled: false
 bossbar:
-  enabled: true
+  enabled: false
   toggle-command: /bossbar
   remember-toggle-choice: false
   hidden-by-default: false
   bars:
     ServerInfo:
       style: PROGRESS
-      color: WHITE
+      color: '%animation:barcolors%'
       progress: '100'
-      text: '&fン &f%javascript_location%    &fヲ &#e0daceᴘᴜʀꜱᴇ: &#edc679%vault_eco_balance_formatted%'
+      text: '&fWebsite: &bwww.domain.com'
+scoreboard:
+  enabled: true
+  toggle-command: /sb
+  remember-toggle-choice: false
+  hidden-by-default: false
+  use-numbers: false
+  static-number: 0
+  delay-on-join-milliseconds: 0
+  scoreboards:
+    scoreboard1:
+      title: Ͽ
+      lines:
+      - ' '
+      - '<#8364e8>%oraxen_line% '
+      - ' '
+      - '&f%player_name% &8| &7%ping%ms'
+      - '%oraxen_rank% <#FBE9FF>ʀᴀɴᴋ&7: &r%luckperms_prefix%'
+      - '%oraxen_coin% <#FBE9FF>ᴛiềɴ&7: &f%vault_eco_balance_formatted%$'
+      - ' '
+      - '&fꜱᴛᴀᴛɪꜱᴛɪᴄꜱ:'
+      - '%oraxen_kill% <#FBE9FF>ɢɪết&7: &f%statistic_player_kills%'
+      - '%oraxen_death% <#FBE9FF>ᴄʜếᴛ&7: &f%statistic_deaths%'
+      - '%oraxen_playtime% <#FBE9FF>ᴛʜờɪ ɢɪᴀɴ ᴄʜơɪ&7: &f%statistic_time_played%'
+      - ' '
+      - '<#8364e8>%oraxen_line% '
+      - ' '
+      - '    <#FBE9FF>ᴄʀᴀғᴛsᴍɪʟᴇʜᴀᴘᴘʏ.xʏᴢ</#ffffff>'
+layout:
+  enabled: false
+  direction: COLUMNS
+  default-skin: mineskin:1753261242
+  enable-remaining-players-text: true
+  remaining-players-text: '... and %s more'
+  empty-slot-ping-value: 1000
+  layouts:
+    default:
+      fixed-slots:
+      - '1|&3Website&f:'
+      - 2|&bmyserver.net
+      - '3|&8&m                       '
+      - '4|&3Name&f:'
+      - 5|&b%player%
+      - '7|&3Rank&f:'
+      - '8|Rank: %group%'
+      - '10|&3World&f:'
+      - 11|&b%world%
+      - '13|&3Time&f:'
+      - 14|&b%time%
+      - '21|&3Teamspeak&f:'
+      - 22|&bts.myserver.net
+      - '23|&8&m                       '
+      - '41|&3Store&f:'
+      - 42|&bshop.myserver.net
+      - '43|&8&m                       '
+      groups:
+        staff:
+          condition: permission:tab.staff
+          slots:
+          - 24-40
+        players:
+          slots:
+          - 44-80
+placeholders:
+  date-format: dd.MM.yyyy
+  time-format: '[HH:mm:ss / h:mm a]'
+  time-offset: 0
+  register-tab-expansion: false
+placeholder-output-replacements:
+  '%essentials_vanished%':
+    'yes': '&7| Vanished'
+    'no': ''
+  '%essentials_nickname%':
+    '%essentials_nickname%': '%player%'
+conditions:
+  nick:
+    conditions:
+    - '%player%=%essentials_nickname%'
+    true: '%player%'
+    false: ~%essentials_nickname%
+assign-groups-by-permissions: false
+primary-group-finding-list:
+- owner
+- admin
+- dev
+- staff
+- builder
+- default
+debug: false
+mysql:
+  enabled: false
+  host: 127.0.0.1
+  port: 3306
+  database: tab
+  username: user
+  password: password
 per-world-playerlist:
   enabled: false
   allow-bypass-permission: false
@@ -60,108 +177,24 @@ per-world-playerlist:
     minigames:
     - paintball
     - bedwars
-scoreboard:
-  enabled: false
-  toggle-command: /sb
-  remember-toggle-choice: false
-  hidden-by-default: false
-  use-numbers: false
-  static-number: 1
-  delay-on-join-milliseconds: 0
-  scoreboards:
-    default:
-      title: '&fパ'
-      lines:
-      - '&a'
-      - '&a'
-      - ''
-      - '&f%javascript_location%'
-      - ''
-      - '&fɪᴅ: &7%player_name%'
-      - '&fᴘᴜʀꜱᴇ: &6%vault_eco_balance_formatted%&f௣'
-      - '&fʟᴀɴᴅ: &#aec6cf%griefprevention_claims%'
-      - '&fꜱ.ᴘᴏᴡᴇʀ: &3%javascript_power%✯'
-      - ''
-      - '&8⌛&#C0C0C0 %localtime_time_dd/LL/yyyy%'
-      - '&8⌚&#C0C0C0 %localtime_time_HH:mma%'
-placeholders:
-  date-format: dd.MM.yyyy
-  time-format: '[HH:mm:ss / h:mm a]'
-  time-offset: 0
-  register-tab-expansion: false
-placeholder-output-replacements:
-  '%essentials_vanished%':
-    'yes': '&7| Vanished'
-    'no': ''
-  '%afk%':
-    true: ' &o[AFK]&r'
-    false: ''
-  '%essentials_nickname%':
-    '%essentials_nickname%': '%player%'
-conditions:
-  nick:
-    conditions:
-    - '%player%=%essentials_nickname%'
-    true: '%player%'
-    false: ~%essentials_nickname%
-assign-groups-by-permissions: false
-primary-group-finding-list:
-- owner
-- admin
-- mod
-- helper
-- emerald
-- diamond
-- redstone
-- gold
-- iron
-- default
-debug: false
-mysql:
-  enabled: false
-  host: 127.0.0.1
-  port: 3306
-  database: tab
-  username: user
-  password: password
-use-online-uuid-in-tablist: true
 global-playerlist:
   enabled: false
+  display-others-as-spectators: false
+  display-vanished-players-as-spectators: true
+  isolate-unlisted-servers: false
   update-latency: false
-layout:
-  enabled: true
-  direction: COLUMNS
-  default-skin: mineskin:1753261242
-  enable-remaining-players-text: true
-  remaining-players-text: '... and %s more'
-  empty-slot-ping-value: 1
-  layouts:
-    default:
-      fixed-slots:
-      - 1|&f&l ᴘʟᴀʏᴇʀꜱ|
-      - 61|&6&l ᴀᴅᴠᴇɴᴛᴜʀᴇʀ ᴘʀᴏꜰɪʟᴇ&7               |
-      - 63|&8> &#A7C7E7&lPROFILE
-      - '64|&fRank: %luckperms_highest_inherited_group_by_weight%'
-      - '65|&fPurse: &6%vault_eco_balance_commas%&f௣'
-      - '66|&fSkill Power: &3%javascript_power%✯'
-      - '67|&fDeaths: &c%statistic_deaths%☠'
-      - '68|&fTime Played: &a%statistic_time_played:days%d %statistic_time_played:hours%h'
-      - 70|&8> &#C2B280&lREAL ESTATE
-      - '71|&fOwned Lands: &6%griefprevention_claims%'
-      - '72|&fRemaining Blocks: &c%griefprevention_remainingclaims%'
-      groups:
-        players:
-          slots:
-          - 2-60
-playerlist-objective:
-  enabled: false
-  value: '%ping%'
-  disable-condition: '%world%=disabledworld'
-  fancy-value: '&7Ping: %ping%'
-  title: TAB
-  render-type: INTEGER
-ping-spoof:
-  enabled: false
+  spy-servers:
+  - spyserver1
+  - spyserver2
+  server-groups:
+    lobbies:
+    - lobby1
+    - lobby2
+    group2:
+    - server1
+    - server2
+use-bukkit-permissions-manager: false
+use-online-uuid-in-tablist: true
 permission-refresh-interval: 1000
 proxy-support:
   enabled: true
@@ -169,6 +202,13 @@ proxy-support:
   plugin:
     name: RedisBungee
 compensate-for-packetevents-bug: false
+playerlist-objective:
+  enabled: true
+  value: '%ping%'
+  disable-condition: '%world%=disabledworld'
+  fancy-value: '&7Ping: %ping%'
+  title: TAB
+  render-type: INTEGER
 placeholder-refresh-intervals:
   default-refresh-interval: 500
   '%server_uptime%': 1000
@@ -182,3 +222,5 @@ config-version: 2
 components:
   minimessage-support: true
   disable-shadow-for-heads: true
+ping-spoof:
+  enabled: false

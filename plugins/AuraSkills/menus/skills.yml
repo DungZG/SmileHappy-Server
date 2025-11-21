@@ -1,38 +1,204 @@
-title: '{{skills_title}}'
-size: 5
+title: '&0{{skills_title}}'
+size: 6
 fill:
   enabled: true
-  material: black_stained_glass_pane
+  material: gray_stained_glass_pane
 items:
+  fill1:
+    pos: 0,0
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill1111:
+    pos: 0,8
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill3:
+    pos: 1,2
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill4:
+    pos: 1,3
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill5:
+    pos: 1,4
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill6:
+    pos: 1,5
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill7:
+    pos: 1,6
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill9:
+    pos: 4,0
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill10:
+    pos: 4,1
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill11:
+    pos: 4,2
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill12:
+    pos: 4,3
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill13:
+    pos: 4,4
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill14:
+    pos: 4,5
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill15:
+    pos: 4,6
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill166:
+    pos: 4,7
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill16666:
+    pos: 4,8
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill16:
+    pos: 0,1
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill17:
+    pos: 0,2
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill18:
+    pos: 0,3
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill1888:
+    pos: 0,4
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill19:
+    pos: 0,5
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill20:
+    pos: 0,6
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill21:
+    pos: 0,7
+    material: black_stained_glass_pane
+    display_name: ' '
+  fill26:
+    pos: 5,1
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill27:
+    pos: 5,2
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill28:
+    pos: 5,3
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill29:
+    pos: 5,5
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill30:
+    pos: 5,6
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill31:
+    pos: 5,7
+    material: gray_stained_glass_pane
+    display_name: ' '
+  fill32:
+    pos: 1,0
+    material: green_stained_glass_pane
+    display_name: ' '
+  fill33:
+    pos: 2,0
+    material: green_stained_glass_pane
+    display_name: ' '
+  fill34:
+    pos: 3,0
+    material: green_stained_glass_pane
+    display_name: ' '
+  fill36:
+    pos: 1,8
+    material: green_stained_glass_pane
+    display_name: ' '
+  fill37:
+    pos: 2,8
+    material: green_stained_glass_pane
+    display_name: ' '
+  fill38:
+    pos: 3,8
+    material: green_stained_glass_pane
+    display_name: ' '
+  fill39:
+    pos: 1,2
+    material: yellow_stained_glass_pane
+    display_name: ' '
+  fill40:
+    pos: 1,6
+    material: yellow_stained_glass_pane
+    display_name: ' '
+  fill41:
+    pos: 3,2
+    material: yellow_stained_glass_pane
+    display_name: ' '
+  fill42:
+    pos: 3,6
+    material: yellow_stained_glass_pane
+    display_name: ' '
   your_skills:
     pos: 0,0
     material: player_head
     skull_meta:
       base64: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjcwNWZkOTRhMGM0MzE5MjdmYjRlNjM5YjBmY2ZiNDk3MTdlNDEyMjg1YTAyYjQzOWUwMTEyZGEyMmIyZTJlYyJ9fX0=
-    display_name: '<aqua>{{your_skills}} - <gold>{player}'
+    display_name: <#448ee3>{{your_skills}}
     lore:
     - text: '{{your_skills_desc}}'
       wrap: true
-      style: '<gray>'
+      style: <gray>
     - ' '
     - text: '{{your_skills_hover}}'
       wrap: true
-      style: '<yellow>'
+      style: <yellow>
     - text: '{{your_skills_click}}'
       wrap: true
-      style: '<yellow>'
+      style: <yellow>
+  atras:
+    pos: 5,0
+    material: arrow
+    display_name: <yellow>↓ Quay lại
+    on_click:
+    - type: command
+      executor: player
+      command: menu
   close:
-    pos: 4,8
+    pos: 5,8
     material: barrier
-    display_name: '<red>{{close}}'
+    display_name: <red>{{close}}
   stats:
-    pos: 0,8
+    pos: 5,4
     material: player_head
-    display_name: '<aqua>{{stats}}'
+    display_name: <#448ee3>{{stats}}
     lore:
-    - '<gray>{{stats_desc}}'
-    - ' '
-    - '<yellow>{{stats_click}}'
+    - '&8Dòng nội tại bí ẩn'
+    - ''
+    - <white>{{stats_desc}}
+    - ''
+    - <#448ee3>▶ Ấn để xem thêm!
 templates:
   skill:
     contexts:
@@ -45,7 +211,7 @@ templates:
         order: 2
         material: iron_sword
         flags:
-          - hide_attributes
+        - hide_attributes
       defense:
         group: first_row
         order: 3
@@ -60,19 +226,19 @@ templates:
         order: 1
         material: iron_hoe
         flags:
-          - hide_attributes
+        - hide_attributes
       foraging:
         group: second_row
         order: 2
         material: iron_axe
         flags:
-          - hide_attributes
+        - hide_attributes
       mining:
         group: second_row
         order: 3
         material: iron_pickaxe
         flags:
-          - hide_attributes
+        - hide_attributes
       fishing:
         group: second_row
         order: 4
@@ -82,7 +248,7 @@ templates:
         order: 5
         material: iron_shovel
         flags:
-          - hide_attributes
+        - hide_attributes
       agility:
         group: third_row
         order: 1
@@ -94,7 +260,7 @@ templates:
         potion_data:
           type: regen
         flags:
-          - hide_potion_effects
+        - hide_potion_effects
       enchanting:
         group: third_row
         order: 3
@@ -110,7 +276,7 @@ templates:
         potion_data:
           type: instant_heal
         flags:
-          - hide_potion_effects
+        - hide_potion_effects
       forging:
         group: third_row
         order: 6
@@ -128,11 +294,13 @@ templates:
         start: 3,0
         end: 3,8
         align: center
-    display_name: '<aqua>{skill} <dark_aqua>{level}'
+    display_name: '<white>Kĩ năng: <dark_gray>[<aqua>{skill}<dark_gray>] <dark_gray>[<color:#FFBF00>{level}<dark_gray>]'
     lore:
-    - text: '{desc}'
+    - '&8Thông tin chi tiết'
+    - ''
+    - text: '<color:#dde254>✧ <color:#D3D3D3>Mô tả: <color:#40E0D0>{desc}'
       wrap: true
-      style: '<gray>'
+      style: <gray>
     - component: stats_leveled
     - component: ability_levels
     - component: mana_ability_info
@@ -141,43 +309,47 @@ templates:
     - component: max_level
     - component: skill_job_active
     - ' '
-    - '<yellow>{{skill_click}}'
+    - <yellow>{{skill_click}}
 components:
   stats_leveled:
     context: Skill
     lore:
     - ' '
-    - '<gray>{{stats_leveled}}: {entries[<gray>, ]}'
+    - '<color:#dde254>✧ <color:#D3D3D3>{{stats_leveled}}:'
+    - '{entries}'
   ability_levels:
     context: Skill
     lore:
     - ' '
-    - '<gray>{{ability_levels}}: {entries[]}'
+    - '<color:#dde254>✧ <color:#D3D3D3>{{ability_levels}}:'
+    - '{entries[]}'
   mana_ability_info:
     context: Skill
     lore:
-    - ' '
-    - '<light_purple><bold>{{mana_ability}}</bold> <blue>{name} {level}'
-    - '  {entries[\n  ](3)}'
+    - '    &8• <#9bea4c>{name} <dark_gray>[<gold>{level}<dark_gray>]'
   progress:
     context: Skill
     lore:
-    - '<gray>{{progress_to_level}} {next_level}: <yellow>{percent}%'
-    - '{bar}'
-    - '<gray>{current_xp}/{level_xp} {xp_unit}'
+    - <color:#dde254>✧ <color:#D3D3D3>Lên cấp
+    - '    &8• <color:#40E0D0>Kinh nghiệm: <yellow>{current_xp}<color:#D3D3D3>/{level_xp}'
+    - '    &8• <color:#40E0D0>{{progress_to_level}}: <yellow>{percent}%'
   max_level:
     context: Skill
     lore:
-    - '<gold>{{max_level}}'
+    - |2-
+
+      <color:#e22938>{{max_level}}
   skill_job_active:
     context: Skill
     lore:
     - ' '
-    - '<dark_gray>▶ <green>{{active_job}}'
+    - <dark_gray>▶ <green>{{active_job}}
 formats:
-  stat_leveled_entry: '{color}{stat}<gray>'
-  unlocked_ability_entry: '\n  <gold>{name} {level} <dark_gray>({info})'
-  locked_ability_entry: '\n  <dark_gray><strikethrough>{name}'
+  stat_leveled_entry: |2-
+
+        &8+ {color}{stat}
+  unlocked_ability_entry: \n    &8• <color:#F9CD40>{name} &8[&6{level}&8]
+  locked_ability_entry: \n    &8• <color:#7393B3><strikethrough>{name}
   duration_entry: '<gray>{{duration}}: <green>{duration}s '
   mana_cost_entry: '<gray>{{mana_cost}}: <aqua>{mana_cost} '
   cooldown_entry: '<gray>{{cooldown}}: <yellow>{cooldown}s '
@@ -185,9 +357,9 @@ formats:
   damage_per_mana_entry: '<gray>{{damage}}: <red>+{value}% / Mana '
   max_mana_cost_entry: '<gray>{{max_mana_cost}}: <aqua>{mana_cost} '
   attack_speed_entry: '<gray>{{attack_speed}}: <red>+{value}% '
-  bar_completed: '<green>■'
-  bar_current: '<yellow>■'
-  bar_remaining: '<gray>■'
+  bar_completed: <green>■
+  bar_current: <yellow>■
+  bar_remaining: <gray>■
 options:
   bar_length: 20
   percent_format: '#.##'

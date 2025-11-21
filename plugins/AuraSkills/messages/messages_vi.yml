@@ -771,7 +771,7 @@ sources:
   units:
     damage: Sát thương
     meter: Mét
-    100_jumps: Nhảy 100
+    100_jumps: Nhảy 100 lần
     mana: Mana đã dùng
     combine_level: Phí XP dùng đe
     grindstone_level: Cấp độ phù phép trên vật phẩm

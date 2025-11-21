@@ -66,7 +66,7 @@ change-tab-complete-name: false
 # This setting is ignored if EssentialsChat.jar is used, and defaults to true.
 # The value of 'change-displayname' above must be true.
 # Do not edit this setting unless you know what you are doing!
-#add-prefix-suffix: false
+#   add-prefix-suffix: false
 
 # When this option is enabled, the (tab) player list will be updated with the display name.
 # The value of 'change-displayname' above must be true.
@@ -455,7 +455,7 @@ debug: false
 # For example, to set the language to English, set locale to 'en'. It will then use the file 'messages_en.properties'.
 # Don't forget to remove the # in front of the line.
 # For more information, visit https://essentialsx.net/wiki/Locale.html
-locale: en
+locale: vi
 
 # Should Essentials use the player's language instead of the server's when sending messages?
 # This is useful if you want to use a different language for your server than for your players.
@@ -951,7 +951,7 @@ chat:
   # Note: The {DISPLAYNAME} placeholder includes {PREFIX} and {SUFFIX} by default.
   # Using these together may result in double prefixes/suffixes in chat.
 
-  format: '<{DISPLAYNAME}> {MESSAGE}'
+  format: '{DISPLAYNAME}&7:&r {MESSAGE}'
   #format: '&7[{GROUP}]&r {DISPLAYNAME}&7:&r {MESSAGE}'
   #format: '&7{PREFIX}&r {NICKNAME}&r &7{SUFFIX}&r: {MESSAGE}'
 

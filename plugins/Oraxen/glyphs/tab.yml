@@ -1,0 +1,47 @@
+blogo:
+  texture: parallax_studios/tab/blogo
+  ascent: 35
+  height: 56
+  char: Ͼ
+
+slogo:
+  texture: parallax_studios/tab/slogo
+  ascent: 20
+  height: 45
+  char: Ͽ
+
+line:
+  texture: parallax_studios/tab/line
+  ascent: 7
+  height: 10
+  char: ϰ
+
+coin:
+  texture: parallax_studios/tab/coin
+  ascent: 11
+  height: 16
+  char: ꑇ
+
+rank:
+  texture: parallax_studios/tab/rank
+  ascent: 11
+  height: 16
+  char: ꑈ
+
+kill:
+  texture: parallax_studios/tab/kill
+  ascent: 11
+  height: 16
+  char: ꑉ
+
+death:
+  texture: parallax_studios/tab/death
+  ascent: 11
+  height: 16
+  char: ꑊ
+
+playtime:
+  texture: parallax_studios/tab/playtime
+  ascent: 11
+  height: 16
+  char: ꑋ

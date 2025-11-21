@@ -1,0 +1,59 @@
+owner:
+  texture: parallax_studios/prefix/owner
+  ascent: 8
+  height: 16
+  chat:
+    placeholders:
+    - ':owner:'
+    permission: admin.oraxen.owner
+  char: ꐟ
+
+admin:
+  texture: parallax_studios/prefix/admin
+  ascent: 8
+  height: 16
+  chat:
+    placeholders:
+    - ':admin:'
+    permission: admin.oraxen.admin
+  char: ϵ
+
+dev:
+  texture: parallax_studios/prefix/dev
+  ascent: 8
+  height: 16
+  chat:
+    placeholders:
+    - ':dev:'
+    permission: admin.oraxen.dev
+  char: ꑌ
+
+builder:
+  texture: parallax_studios/prefix/builder
+  ascent: 8
+  height: 16
+  chat:
+    placeholders:
+    - ':builder:'
+    permission: admin.oraxen.builder
+  char: ϱ
+
+staff:
+  texture: parallax_studios/prefix/staff
+  ascent: 8
+  height: 16
+  chat:
+    placeholders:
+    - ':staff:'
+    permission: admin.oraxen.staff
+  char: ϸ
+
+member:
+  texture: parallax_studios/prefix/member
+  ascent: 8
+  height: 16
+  chat:
+    placeholders:
+    - ':member:'
+    permission: admin.oraxen.member
+  char: Ϻ

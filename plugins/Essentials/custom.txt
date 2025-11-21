@@ -1,0 +1,10 @@
+#discord
+$<br> <#8198FB><bold>Discord
+$   <p:text-color>Cập nhật tất cả các <p:primary-color>tin tức</p> mới nhất,
+$   <p:text-color>trò chuyện với <p:primary-color>cộng đồng</p>, và theo dõi các <p:primary-color>thông báo</p> của chúng tôi!
+$<br>   <click:open_url:'https://<p:discord>'><#8198FB>[➥ Tham gia discord]</click><br>
+#store
+$<br> <p:primary-color><bold>Cửa hàng
+$   <p:text-color>Hỗ trợ máy chủ, xem cửa hàng của chúng tôi
+$   <p:text-color>và mua <p:secondary-color>cấp bậc tiếp theo</p> của bạn!
+$<br>   <click:open_url:'https://<p:store>'><p:primary-color>[➥ Truy cập cửa hàng]</p></click><br>
