@@ -1,0 +1,7 @@
+air:
+  itemname: <white>
+  material: GOLD_INGOT
+  Pack:
+    generate_model: false
+    model: ah/icons/air
+    custom_model_data: 9991

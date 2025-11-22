@@ -1,0 +1,45 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  smelting:
+    type: "smeltingcertain"
+    amount: 64
+    item: COOKED_BEEF
+display:
+  name: "&cNhiệm Vụ Nung Chảy • Thịt bò sống"
+  lore-normal:
+  - "%imc_dark-color_c%Nung số lượng mặt hàng đã chỉ định"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Nấu 64 Thịt bò sống"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{smelting:progress}%imc_dark-color_c%/64 Thịt bò sống"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_75}%"
+  - ""
+  type: "BEEF"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:75>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_75%"
+vaultreward: "%imc_price-modifier_75%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:75>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "smelting"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 180
+placeholders:
+  description: "Nấu 64 Thịt bò sống"
+  progress: '{smelting:progress}'
+  max: '64'

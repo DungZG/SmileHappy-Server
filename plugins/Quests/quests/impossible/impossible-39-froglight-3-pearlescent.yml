@@ -1,0 +1,49 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  collect:
+    type: "inventory"
+    item: PEARLESCENT_FROGLIGHT
+    amount: 2304
+    allow-partial-completion: true
+display:
+  name: "&4Nhiệm Vụ Không Thể • Đèn ếch tím ngọc trai"
+  lore-normal:
+  - "%imc_dark-color_c%Thu thập số lượng tài nguyên"
+  - "%imc_dark-color_c%yêu cầu để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Thu thập 2304 Đèn ếch tím ngọc trai"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{collect:progress}%imc_dark-color_c%/2304 Đèn ếch tím ngọc trai"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_5000}%"
+  - ""
+  - "&c&nChú ý!!!"
+  - "&c&oCác vật phẩm của bạn sẽ bị lấy ra khỏi kho đồ"
+  - ""
+  type: "PEARLESCENT_FROGLIGHT"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:5000>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_5000%"
+vaultreward: "%imc_price-modifier_5000%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:5000>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "impossible"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 392
+placeholders:
+  description: "Thu thập 2304 Đèn ếch tím ngọc trai"
+  progress: '{collect:progress}'
+  max: '2304'

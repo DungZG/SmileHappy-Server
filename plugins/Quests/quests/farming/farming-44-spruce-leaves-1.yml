@@ -1,0 +1,46 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  break:
+    type: "blockbreakcertain"
+    amount: 50
+    block: "SPRUCE_LEAVES"
+    reverse-if-placed: true
+display:
+  name: "&dNhiệm Vụ Canh Tác • Lá vân sam"
+  lore-normal:
+  - "%imc_dark-color_c%Phá vỡ một số lượng"
+  - "%imc_dark-color_c%khối để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Phá 50 Lá vân sam"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{break:progress}%imc_dark-color_c%/50 Lá vân sam"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_200}%"
+  - ""
+  type: "SPRUCE_LEAVES"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:200>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_200%"
+vaultreward: "%imc_price-modifier_200%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:200>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "farming"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 440
+placeholders:
+  description: "Phá 50 Lá vân sam"
+  progress: '{break:progress}'
+  max: '50'

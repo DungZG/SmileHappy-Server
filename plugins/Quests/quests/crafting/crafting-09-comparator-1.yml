@@ -1,0 +1,45 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  crafting:
+    type: "crafting"
+    item: COMPARATOR
+    amount: 16
+display:
+  name: "&fNhiệm Vụ Chế Tạo • Mạch so sánh Redstone"
+  lore-normal:
+  - "%imc_dark-color_c%Chế tạo số lượng vật phẩm"
+  - "%imc_dark-color_c%cần thiết để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Chế tạo 16 Mạch so sánh Redstone"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{crafting:progress}%imc_dark-color_c%/16 Mạch so sánh Redstone"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_350}%"
+  - ""
+  type: "COMPARATOR"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:350>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_350%"
+vaultreward: "%imc_price-modifier_350%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:350>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "crafting"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 90
+placeholders:
+  description: "Chế tạo 16 Mạch so sánh Redstone"
+  progress: '{crafting:progress}'
+  max: '16'

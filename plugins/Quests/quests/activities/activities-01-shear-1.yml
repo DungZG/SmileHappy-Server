@@ -1,0 +1,44 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  activity:
+    type: "shearing"
+    amount: 15
+display:
+  name: "&9Nhiệm Vụ Hoạt Động • Cắt lông"
+  lore-normal:
+  - "%imc_dark-color_c%Hoàn thành một hoạt động cụ thể"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Cắt lông 15 con cừu"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{activity:progress}%imc_dark-color_c%/15 lần"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_250}%"
+  - ""
+  type: "SHEARS"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:250>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_250%"
+vaultreward: "%imc_price-modifier_250%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:250>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "activities"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 10
+placeholders:
+  description: "Cắt lông 15 con cừu"
+  progress: '{activity:progress}'
+  max: '15'

@@ -1,0 +1,145 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+confirm:
+  enabled: true
+  name: "confirm"
+  title: "&fᵩけ"
+  size: 54
+  open-actions: []
+  close-actions: []
+  slot-buying: 22
+  default-amount: 64
+  open-previous: true
+  show-needed-amount-items: false
+
+  enter:
+    enabled: true
+    lines:
+      - "%search%"
+      - "----------------"
+      - "Please enter"
+      - "an amount."
+
+    item:
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      name: "&6 "
+      lore:
+        - "&6               ɴʜậᴘ số ʟượɴɢ "
+        - "&7     ᴄʜᴀ̣ᴍ ᴠàᴏ để ɴʜậᴘ số ʟượɴɢ ᴍᴜᴀ   "
+        - " "
+      slot: 40
+      amount: 1
+      glowing: false
+
+  clickable-items:
+    accept:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a         xáᴄ ɴʜậɴ ᴍᴜᴀ      "
+        - "&a           [amount]x&7 ᴠớɪ ɢɪá &a[price]"
+        - " "
+        - "&7        ᴄʜᴀ̣ᴍ ᴠàᴏ để ᴍᴜᴀ         "
+        - " "
+      slot: 39
+      amount: 1
+      glowing: false
+
+    deny:
+      name: "&c "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c             ʜᴜ̉ʏ ᴍᴜᴀ"
+        - "&7   ᴄʜᴀ̣ᴍ ᴠàᴏ để ʜᴜ̉ʏ ɢɪᴀᴏ ᴅɪ̣ᴄʜ   "
+        - " "
+      slot: 41
+      amount: 1
+      glowing: false
+
+    add-1:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a      ᴛʜêᴍ 1x &7(ʜɪệɴ ᴛᴀ̣ɪ: &a[amount]x)"
+        - "&7    ᴄʜᴀ̣ᴍ ᴠàᴏ để ᴛʜêᴍ 1x    "
+        - "&7      "
+      slot: 23
+      amount: 1
+      glowing: false
+
+    add-32:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a      ᴛʜêᴍ 32x &7(ʜɪệɴ ᴛᴀ̣ɪ: &a[amount]x)"
+        - "&7    ᴄʜᴀ̣ᴍ ᴠàᴏ để ᴛʜêᴍ 32x    "
+        - "&7      "
+      slot: 24
+      amount: 1
+      glowing: false
+
+    add-64:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a      ᴛʜêᴍ 64x &7(ʜɪệɴ ᴛᴀ̣ɪ: &a[amount]x)"
+        - "&7    ᴄʜᴀ̣ᴍ ᴠàᴏ để ᴛʜêᴍ 64x    "
+        - "&7      "
+      slot: 25
+      amount: 1
+      glowing: false
+
+    remove-1:
+      name: "&c "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c      ɢɪảᴍ 1x &7(ʜɪệɴ ᴛᴀ̣ɪ: &c[amount]x)"
+        - "&7    ᴄʜᴀ̣ᴍ ᴠàᴏ để ɢɪảᴍ 1x    "
+        - "&7      "
+      slot: 19
+      amount: 1
+      glowing: false
+
+    remove-32:
+      name: "&c "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c      ɢɪảᴍ 32x &7(ʜɪệɴ ᴛᴀ̣ɪ: &c[amount]x)"
+        - "&7    ᴄʜạᴍ ᴠàᴏ để ɢɪảᴍ 32x    "
+        - "&7      "
+      slot: 20
+      amount: 1
+      glowing: false
+
+    remove-64:
+      name: "&c "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c      ɢɪảᴍ 64x &7(ʜɪệɴ ᴛᴀ̣ɪ: &c[amount]x)"
+        - "&7    ᴄʜạᴍ ᴠàᴏ để ɢɪảᴍ 64x    "
+        - "&7      "
+      slot: 21
+      amount: 1
+      glowing: false
+
+  items:
+    1:
+      name: " "
+      material: AIR
+      data: 0
+      slot: 0
+      amount: 1
+      glowing: false

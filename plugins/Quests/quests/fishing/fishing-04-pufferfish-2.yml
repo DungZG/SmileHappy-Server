@@ -1,0 +1,46 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  pufferfish:
+    type: "fishingcertain"
+    item: PUFFERFISH
+    amount: 10
+display:
+  name: "&3Nhiệm Vụ Câu Cá • Cá nóc #2"
+  lore-normal:
+  - "%imc_dark-color_c%Câu số lượng cá đã chỉ định"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Bắt 10 Cá nóc"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{pufferfish:progress}%imc_dark-color_c%/10 Cá nóc"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_300}%"
+  - ""
+  type: "PUFFERFISH"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:300>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_300%"
+vaultreward: "%imc_price-modifier_300%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:300>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "fishing"
+  requires:
+  - "fishing-04-pufferfish-1"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82000
+  sort-order: 41
+placeholders:
+  description: "Bắt 10 Cá nóc"
+  progress: '{pufferfish:progress}'
+  max: '10'

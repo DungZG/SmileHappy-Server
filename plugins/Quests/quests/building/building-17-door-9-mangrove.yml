@@ -1,0 +1,46 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  build:
+    type: "blockplacecertain"
+    amount: 16
+    block: "MANGROVE_DOOR"
+    reverse-if-broken: true
+display:
+  name: "&2Nhiệm Vụ Xây Dựng • Cửa gỗ đước"
+  lore-normal:
+  - "%imc_dark-color_c%Đặt số lượng khối cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Đặt 16 Cửa gỗ đước"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{build:progress}%imc_dark-color_c%/16 Cửa gỗ đước"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_50}%"
+  - ""
+  type: "MANGROVE_DOOR"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:50>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_50%"
+vaultreward: "%imc_price-modifier_50%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:50>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "building"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82250
+  sort-order: 1708
+placeholders:
+  description: "Đặt 16 Cửa gỗ đước"
+  progress: '{build:progress}'
+  max: '16'

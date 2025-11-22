@@ -1,0 +1,45 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  place:
+    type: "blockplacecertain"
+    amount: 6
+    block: ANVIL
+display:
+  name: "&8Nhiệm Vụ Thợ Rèn Vũ Khí • Cái đe"
+  lore-normal:
+  - "%imc_dark-color_c%Đặt số lượng khối cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Đặt 6 Cái đe"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{place:progress}%imc_dark-color_c%/6 Cái đe"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_150}%"
+  - ""
+  type: "ANVIL"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:150>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_150%"
+vaultreward: "%imc_price-modifier_150%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:150>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "weaponsmith"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 120
+placeholders:
+  description: "Đặt 6 Cái đe"
+  progress: '{place:progress}'
+  max: '6'

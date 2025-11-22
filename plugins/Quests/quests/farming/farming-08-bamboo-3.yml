@@ -1,0 +1,49 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+blacklist: ['1.19']
+
+tasks:
+  harvest:
+    type: "blockbreakcertain"
+    amount: 576
+    block: "BAMBOO"
+    reverse-if-placed: true
+display:
+  name: "&dNhiệm Vụ Canh Tác • Cây tre #3"
+  lore-normal:
+  - "%imc_dark-color_c%Thu hoạch các nguồn tài nguyên cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Thu hoạch 576 Cây tre"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{harvest:progress}%imc_dark-color_c%/576 Cây tre"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_750}%"
+  - ""
+  type: "BAMBOO"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:750>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_750%"
+vaultreward: "%imc_price-modifier_750%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:750>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "farming"
+  requires:
+  - "farming-08-bamboo-2"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 82
+placeholders:
+  description: "Thu hoạch 576 Cây tre"
+  progress: '{harvest:progress}'
+  max: '576'

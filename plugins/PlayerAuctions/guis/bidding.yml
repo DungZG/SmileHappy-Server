@@ -1,0 +1,153 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them i will fix them :)
+# Made with love
+
+bidding:
+  # Có bật giao diện đấu giá (gui) không?
+  enabled: true
+  # Tên của GUI?
+  name: "bidding"
+  # Tiêu đề của GUI (hỗ trợ mã màu)
+  title: "&fᵩこ"
+  # Kích thước GUI (bội số của 9, tối đa 54)
+  size: 54
+  # Hành động khi mở menu
+  open-actions: []
+  # Hành động khi đóng menu
+  close-actions: []
+  # Slot chứa vật phẩm người chơi đang mua
+  slot-buying: 22
+  # Khi đóng menu, có mở lại menu trước đó không?
+  open-previous: true
+
+  # Nhập số tiền bid qua GUI
+  enter:
+    # Bật tính năng nhập số?
+    # Cần ProtocolLib để hoạt động.
+    enabled: true
+    # Các dòng hiển thị sẵn trên bảng (sign)
+    # %search% là phần người chơi phải nhập — KHÔNG được thêm ký tự khác trong dòng đó.
+    # Nếu dòng không chứa %search%, plugin sẽ coi dòng đầu tiên là input.
+    lines:
+      - "%search%"
+      - "----------------"
+      - "Hãy nhập"
+      - "một số tiền."
+
+    item:
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      name: "&6 "
+      lore:
+        - "&f            ɴʜậᴘ số ᴛɪềɴ "
+        - "&7   ɴʜấɴ ᴠàᴏ để ɴʜậᴘ số ᴛɪềɴ ᴍᴜốɴ ʙɪᴅ   "
+        - " "
+      slot: 40
+      glowing: false
+
+  clickable-items:
+    accept:
+      # Đặt material thành "AIR" để tắt nút này
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a                     xáᴄ ɴʜậɴ ʙɪᴅ"
+        - "&7  ɴʜấɴ ᴠàᴏ để xáᴄ ɴʜậɴ ɢɪá ᴍᴜᴀ ᴠớɪ ᴛổɴɢ ᴄʜɪ ᴘʜí &a[price]&b!  "
+        - "&7      ɢɪá ʙɪᴅ ᴄũ: &a[original] &7- ʙạɴ ᴛʜêᴍ: &a[added]  "
+      slot: 39
+      glowing: false
+      #texture: ...
+      #owner: Next
+    deny:
+      name: "&a"
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c             ᴅừɴɢ ʙɪᴅ"
+        - "&7   ɴʜấɴ ᴠàᴏ để ʜủʏ ʙɪᴅ   "
+        - " "
+      slot: 41
+      glowing: false
+
+    add-1:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a    ᴛʜêᴍ $1 &7(ʜɪệɴ ᴛạɪ: [price])"
+        - "&7      ɴʜấɴ ᴠàᴏ để ᴛʜêᴍ $1      "
+        - " "
+      slot: 23
+      glowing: false
+
+    add-10:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a    ᴛʜêᴍ $10 &7(ʜɪệɴ ᴛạɪ: [price])"
+        - "&7      ɴʜấɴ ᴠàᴏ để ᴛʜêᴍ $10     "
+        - " "
+      slot: 24
+      glowing: false
+
+    add-100:
+      name: "&a "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&a    ᴛʜêᴍ $100 &7(ʜɪệɴ ᴛạɪ: [price])"
+        - "&7      ɴʜấɴ ᴠàᴏ để ᴛʜêᴍ $100     "
+        - " "
+      slot: 25
+      glowing: false
+
+    remove-1:
+      name: "&c  "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c   ɢɪảᴍ $1 &7(ʜɪệɴ ᴛạɪ: [price])"
+        - "&7  ɴʜấɴ ᴠàᴏ để ɢɪảᴍ $1 ᴋʜỏɪ ʙɪᴅ   "
+        - "&7                                          &7"
+      slot: 19
+      glowing: false
+
+    remove-10:
+      name: "&c  "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c   ɢɪảᴍ $10 &7(ʜɪệɴ ᴛạɪ: [price])"
+        - "&7  ɴʜấɴ ᴠàᴏ để ɢɪảᴍ $10 ᴋʜỏɪ ʙɪᴅ   "
+        - "&7                                           &7"
+      slot: 20
+      glowing: false
+
+    remove-100:
+      name: "&c  "
+      material: GOLD_INGOT
+      custom-model-data: 9991
+      lore:
+        - "&c   ɢɪảᴍ $100 &7(ʜɪệɴ ᴛạɪ: [price])"
+        - "&7  ɴʜấɴ ᴠàᴏ để ɢɪảᴍ $100 ᴋʜỏɪ ʙɪᴅ    "
+        - "&7                                             &7"
+      slot: 21
+      glowing: false
+
+  items:
+    # Các item trang trí trong GUI
+    1:
+      name: " "
+      material: AIR
+      data: 0
+      # lore:
+      #   - "&bĐây là một ô trang trí."
+      slot: 0
+      amount: 1
+      glowing: false
+      #texture: ...
+      #owner: Glass

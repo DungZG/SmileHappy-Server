@@ -1,0 +1,46 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  build:
+    type: "blockplacecertain"
+    amount: 32
+    block: "DARK_OAK_FENCE"
+    reverse-if-broken: true
+display:
+  name: "&2Nhiệm Vụ Xây Dựng • Hàng rào gỗ sồi sẫm"
+  lore-normal:
+  - "%imc_dark-color_c%Đặt số lượng khối cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Đặt 32 Hàng rào gỗ sồi sẫm"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{build:progress}%imc_dark-color_c%/32 Hàng rào gỗ sồi sẫm"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_250}%"
+  - ""
+  type: "DARK_OAK_FENCE"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:250>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_250%"
+vaultreward: "%imc_price-modifier_250%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:250>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "building"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 304
+placeholders:
+  description: "Đặt 32 Hàng rào gỗ sồi sẫm"
+  progress: '{build:progress}'
+  max: '32'

@@ -1,0 +1,44 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  build:
+    type: "blockbreakcertain"
+    amount: 4
+    block: "REINFORCED_DEEPSLATE"
+display:
+  name: "&aNhiệm Vụ Kinh Nghiệm • Đá bảng sâu được gia cố"
+  lore-normal:
+  - "%imc_dark-color_c%Phá vỡ một số lượng"
+  - "%imc_dark-color_c%khối để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Phá 4 Đá bảng sâu được gia cố"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{build:progress}%imc_dark-color_c%/4 Đá bảng sâu được gia cố"
+  - "%imc_text-color_c% • Phần thưởng: %imc_exp-format_console_315%."
+  - ""
+  type: "REINFORCED_DEEPSLATE"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:exp-format:315>."
+rewards:
+- "xp give {player} 315"
+rewardstring:
+- "$<p:text-color> • <p:exp-format:315> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "expquests"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 610
+placeholders:
+  description: "Phá 4 Đá bảng sâu được gia cố"
+  progress: '{build:progress}'
+  max: '4'

@@ -1,0 +1,48 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  cut:
+    type: "blockbreakcertain"
+    amount: 512
+    block: OAK_LOG
+    reverse-if-placed: true
+display:
+  name: "&aNhiệm Vụ Kinh Nghiệm • Thân cây sồi"
+  lore-normal:
+  - "%imc_dark-color_c%Phá vỡ một số lượng"
+  - "%imc_dark-color_c%khối để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Cắt 512 Thân cây sồi"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{cut:progress}%imc_dark-color_c%/512 Thân cây sồi"
+  - "%imc_text-color_c% • Phần thưởng: %imc_exp-format_console_315%."
+  - ""
+  - "&c&nChú ý!!!"
+  - "&c&oCác vật phẩm của bạn sẽ bị lấy ra khỏi kho đồ"
+  - ""
+  type: "OAK_LOG"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:exp-format:315>."
+rewards:
+- "xp give {player} 315"
+rewardstring:
+- "$<p:text-color> • <p:exp-format:315> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "expquests"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 780
+placeholders:
+  description: "Cắt 512 Thân cây sồi"
+  progress: '{cut:progress}'
+  max: '512'

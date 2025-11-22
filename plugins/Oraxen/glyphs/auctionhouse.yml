@@ -1,0 +1,42 @@
+
+empty:
+  char: ᵩ
+  texture: ah/icons/empty.png
+  ascent: -32768
+  height: -10
+auction:
+  char: お
+  texture: ah/icons/auction
+  ascent: 8
+  height: 8
+
+
+
+
+######### PAGES #####
+
+ah:
+  char: か
+  texture: ah/auctionhouse
+  ascent: 24
+  height: 256
+myauctions:
+  char: き
+  texture: ah/myauctions
+  ascent: 24
+  height: 256
+expireditems:
+  char: く
+  texture: ah/expireditems
+  ascent: 24
+  height: 256
+confirmpurchase:
+  char: け
+  texture: ah/confirmpurchase
+  ascent: 24
+  height: 256
+bidding:
+  char: こ
+  texture: ah/bidding
+  ascent: 24
+  height: 256

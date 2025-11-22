@@ -1,0 +1,44 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  smelting:
+    type: "smelting"
+    amount: 1024
+display:
+  name: "&aNhiệm Vụ Kinh Nghiệm • Nung chảy #4"
+  lore-normal:
+  - "%imc_dark-color_c%Nung số lượng mặt hàng đã chỉ định"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Nung 1024 Vật phẩm"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{smelting:progress}%imc_dark-color_c%/1024 Vật phẩm"
+  - "%imc_text-color_c% • Phần thưởng: %imc_exp-format_console_1260%."
+  - ""
+  type: "FURNACE"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:exp-format:1260>."
+rewards:
+- "xp give {player} 1260"
+rewardstring:
+- "$<p:text-color> • <p:exp-format:1260> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "expquests"
+  requires:
+  - "expquests-91-smelt-3"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 913
+placeholders:
+  description: "Nung 1024 Vật phẩm"
+  progress: '{smelting:progress}'
+  max: '1024'

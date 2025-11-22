@@ -1,0 +1,47 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  mine:
+    type: "blockbreakcertain"
+    amount: 32
+    block: DEEPSLATE_EMERALD_ORE
+    reverse-if-placed: true
+display:
+  name: "&bNhiệm Vụ Khai Thác • Quặng ngọc lục bảo đá bảng sâu #2"
+  lore-normal:
+  - "%imc_dark-color_c%Khai thác các nguồn tài nguyên cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Khai thác 32 Quặng ngọc lục bảo đá bảng sâu"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{mine:progress}%imc_dark-color_c%/32 Quặng ngọc lục bảo đá bảng sâu"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_935}%"
+  - ""
+  type: "DEEPSLATE_EMERALD_ORE"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:935>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_935%"
+vaultreward: "%imc_price-modifier_935%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:935>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "mining"
+  requires:
+  - "mining-41-deepslate-emerald-ore-1"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 411
+placeholders:
+  description: "Khai thác 32 Quặng ngọc lục bảo đá bảng sâu"
+  progress: '{mine:progress}'
+  max: '32'

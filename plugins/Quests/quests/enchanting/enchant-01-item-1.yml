@@ -1,0 +1,45 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  enchant:
+    type: "enchanting"
+    amount: 5
+display:
+  name: "&5Nhiệm Vụ Phù Phép • Vật phẩm"
+  lore-normal:
+  - "%imc_dark-color_c%Phù phép số lượng yêu cầu"
+  - "%imc_dark-color_c%mặt hàng để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Phù phép 5 Vật phẩm"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{enchant:progress}%imc_dark-color_c%/5 Vật phẩm"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_500}%"
+  - ""
+  type: "ENCHANTED_BOOK"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+# Here you can list messages which will be sent to the player (if they are online) upon the quest starting.The
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:500>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_500%"
+vaultreward: "%imc_price-modifier_500%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:500>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "enchanting"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 10
+placeholders:
+  description: "Phù phép 5 Vật phẩm"
+  progress: '{enchant:progress}'
+  max: '5'

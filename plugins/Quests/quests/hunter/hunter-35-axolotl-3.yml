@@ -1,0 +1,46 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  kill:
+    type: "mobkillingcertain"
+    amount: 48
+    mob: AXOLOTL
+display:
+  name: "&cNhiệm Vụ Thợ Săn • Axolotl #3"
+  lore-normal:
+  - "%imc_dark-color_c%Đánh bại các thực thể đã chỉ định"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Giết 48 Axolotl"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{kill:progress}%imc_dark-color_c%/48 Axolotl"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_1000}%"
+  - ""
+  type: "AXOLOTL_SPAWN_EGG"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:1000>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_1000%"
+vaultreward: "%imc_price-modifier_1000%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:1000>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "hunter"
+  requires:
+  - "hunter-35-axolotl-2"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 352
+placeholders:
+  description: "Giết 48 Axolotl"
+  progress: '{kill:progress}'
+  max: '48'

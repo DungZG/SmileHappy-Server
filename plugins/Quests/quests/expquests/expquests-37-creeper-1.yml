@@ -1,0 +1,44 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  kill:
+    type: "mobkillingcertain"
+    amount: 200
+    mob: CREEPER
+display:
+  name: "&aNhiệm Vụ Kinh Nghiệm • Creeper"
+  lore-normal:
+  - "%imc_dark-color_c%Đánh bại các thực thể đã chỉ định"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Giết 200 Creeper"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{kill:progress}%imc_dark-color_c%/200 Creeper"
+  - "%imc_text-color_c% • Phần thưởng: %imc_exp-format_console_2045%."
+  - ""
+  type: "CREEPER_SPAWN_EGG"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:exp-format:2045>."
+rewards:
+- "xp give {player} 2045"
+rewardstring:
+- "$<p:text-color> • <p:exp-format:2045> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "expquests"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 370
+placeholders:
+  description: "Giết 200 Creeper"
+  progress: '{kill:progress}'
+  max: '200'

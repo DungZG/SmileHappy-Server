@@ -1,0 +1,46 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  place:
+    type: "blockplacecertain"
+    amount: 10
+    block: BEEHIVE
+    reverse-if-broken: true
+display:
+  name: "&dNhiệm Vụ Canh Tác • Tổ ong nhân tạo"
+  lore-normal:
+  - "%imc_dark-color_c%Đặt số lượng khối cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Đặt 10 Tổ ong nhân tạo"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{place:progress}%imc_dark-color_c%/10 Tổ ong nhân tạo"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_350}%"
+  - ""
+  type: "BEEHIVE"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:350>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_350%"
+vaultreward: "%imc_price-modifier_350%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:350>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "farming"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 640
+placeholders:
+  description: "Đặt 10 Tổ ong nhân tạo"
+  progress: '{place:progress}'
+  max: '10'

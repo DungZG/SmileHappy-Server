@@ -1,0 +1,47 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  cut:
+    type: "blockbreakcertain"
+    amount: 256
+    block: OAK_LOG
+    reverse-if-placed: true
+display:
+  name: "&6Nhiệm Vụ Đốn Củi • Thân cây sồi #4"
+  lore-normal:
+  - "%imc_dark-color_c%Cắt số lượng gỗ cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Cắt 256 Thân cây sồi"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{cut:progress}%imc_dark-color_c%/256 Thân cây sồi"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_1750}%"
+  - ""
+  type: "OAK_LOG"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:1750>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_1750%"
+vaultreward: "%imc_price-modifier_1750%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:1750>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "woodcutting"
+  requires:
+  - "woodcutting-00-oak-log-3"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 3
+placeholders:
+  description: "Cắt 256 Thân cây sồi"
+  progress: '{cut:progress}'
+  max: '256'

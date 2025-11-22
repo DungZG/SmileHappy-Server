@@ -1,0 +1,130 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+# If you want to disable any message just set it to nothing. by doing
+# list: "" <- This will no longer send a message.
+
+
+# every singe message in the plugin is here.
+# make sure you use "" to end of every string
+# Also you can use colour codes <3
+
+# To use hex color codes you will need to do
+# "{#HEX} text"
+
+lang:
+  cancel-chat-wait: "huỷ"
+  chat-wait-cancelled: "&cBạn đã huỷ yêu cầu của mình!"
+  friendly-max-auctions: "Không giới hạn" # If you want it to show the actual amount, use %amount%
+  prefix: "&fお" # Use %prefix% to add the prefix to any message!
+  auction-confirmation: "%prefix% &aĐang bán &e%item% x%amount%&a với giá &e%price%&a sẽ tốn &e%cost%&a, thực hiện lệnh lần nữa để xác nhận."
+  auction-sell: "\n %prefix% \n &aĐã bắt đầu bán &e%item% x%amount%&a với giá &e%price%&a trên phiên đấu giá!\n"
+  auction-added: "%prefix% &aBạn đã thêm &e%amount%&a vật phẩm vào phiên đấu giá tương tự của bạn trên thị trường, tổng giá cho vật phẩm đó hiện là &e%price%&a, đây là &e$%priceper%&a mỗi vật phẩm."
+  auction-bid: " \n %prefix% \n &aĐã bắt đầu đặt giá vật phẩm với &e%price%&a trên phiên đấu giá!\n"
+  reloaded: "%prefix% &aĐã tải lại thành công tất cả các tệp cấu hình!"
+  money-taken: " \n %prefix% \n &a%price% đã được lấy từ tài khoản ngân hàng của bạn.\n"
+  auctions-cancelled: "%prefix% &aPhiên đấu giá của bạn đã bị huỷ!"
+  auctions-collected: "%prefix% &aĐã thu thập thành công &e%items%&a vật phẩm đã hết hạn!"
+  bought-item: "\n %prefix% \n &aĐã mua thành công &e%item%&a với giá &e%price%&a!\n"
+  someone-purchased: "%prefix% &e%player%&a vừa mua &e%item% x%amount%&a với giá &e%price%&a!"
+  offline-title: "%prefix% &bKhi bạn ngoại tuyến..."
+  bidder: "%prefix% &e%player%&a vừa đặt giá cho &e%item%&a với giá &e%price%"
+  bidded: "\n %prefix% \n &aBạn vừa đặt giá cho &e%item%&a với giá &e%price%\n"
+  bid-success: "%prefix% &e%player%&a đã thắng phiên đấu giá của bạn với &e%item%&a với giá &e%price%"
+  bidder-success: "%prefix% &aBạn đã thắng phiên đấu giá của &e%item%&a với giá &e%price%&a Kiểm tra các phiên đấu giá đã hết hạn của bạn."
+  earned-offline: "%prefix% &aBạn đã kiếm được tổng cộng &e$%total%&a!"
+  given-more-auctions-success: "%prefix% &aĐã cấp thêm &e%extra%&a phiên đấu giá cho &e%player%&a và tổng cộng &e%total%&a!"
+  dbexec-successful: "%prefix% &aĐã cập nhật thành công &d%count%&a hàng. &aVui lòng thực hiện &d/%cmd% reload&a để cập nhật các thay đổi."
+  current-amount-of-auctions:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayerAuctions &7&l]&m----------"
+    - "%prefix% &bBạn hiện có tối đa &e%auctionsmax%&b (&e%staticauctions% tĩnh&b) phiên đấu giá."
+    - "%prefix% &bBạn hiện đã sử dụng &e%auctionsused%&b phiên đấu giá."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayerAuctions &7&l]&m----------"
+  current-amount-of-auctions-other:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayerAuctions &7&l]&m----------"
+    - "%prefix% &d%player%&b hiện có tối đa &e%auctionsmax%&b (&e%staticauctions% tĩnh&b) phiên đấu giá."
+    - "%prefix% &d%player%&b hiện đã sử dụng &e%auctionsused%&b phiên đấu giá."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayerAuctions &7&l]&m----------"
+  amount-auctions-others-alert: "&c%player% hiện đang ngoại tuyến, chỉ hiển thị số lượng phiên đấu giá tối đa của họ dưới dạng số tiền tĩnh."
+
+  # the help menu for a player
+  # The variable %cmd% is any command from the config.yml :)
+  help-player:
+    - "&7             &fお &7             "
+    - "&8 "
+    - "&e/%cmd% help &7&l- &fHiển thị menu này."
+    - "&e/%cmd% sell <price> [currency] [amount] &7&l- &fBán một vật phẩm."
+    - "&e/%cmd% bid <price> &7&l- &fĐặt giá cho một vật phẩm."
+    - "&e/%cmd% auction &7&l- &fPhiên đấu giá qua GUI."
+    - "&e/%cmd% cancel [id] [player] &7&l- &fHuỷ các vật phẩm đang đấu giá của bạn."
+    - "&e/%cmd% collect &7&l- &fThu thập các vật phẩm đã huỷ của bạn."
+    - "&e/%cmd% open [menu] [options] &7&l- &fMở GUI phiên đấu giá người chơi."
+    - "&e/%cmd% amount &7&l- &fKiểm tra bạn có bao nhiêu phiên đấu giá."
+    - "&e/%cmd% reload &7&l- &fTải lại tất cả các tệp cấu hình."
+    - "&8 "
+    - "&7             &fお &7             "
+
+  # the help menu for console
+  # The variable %cmd% is any command from the config.yml :)
+  help-console:
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayerAuctions &7&l]&m----------"
+    - "%prefix% &e/%cmd% help &7&l- &bHiển thị menu này."
+    - "%prefix% &e/%cmd% open [menu] [options] &7&l- &bMở GUI phiên đấu giá người chơi."
+    - "%prefix% &e/%cmd% reload &7&l- &bTải lại tất cả các tệp cấu hình."
+    - "%prefix% &e/%cmd% dbexec <query> &7&l- &bThực thi một truy vấn."
+    - "%prefix% &7&l&m----------&7&l[ &b&lPlayerAuctions &7&l]&m----------"
+
+  errors:
+    command-syntax: "%prefix% &cCú pháp không chính xác, sử dụng:\n%syntax%"
+    player-only: "%prefix%&c Bạn phải là một người chơi!"
+    console-only: "%prefix% &cLệnh này chỉ có thể được thực hiện từ console!"
+    not-a-number: "%prefix%&c Đó không phải là một số!"
+    no-permission: "%prefix%&c Bạn không có quyền &4%permission%&c để làm điều này! %reason%"
+    auction-dont-exist: "%prefix% &cPhiên đấu giá đó không tồn tại!"
+    too-many-auctions: "%prefix%&c Bạn không thể bán số lượng vật phẩm này, bạn chỉ có thể bán &4%amount%&c do quyền hạn/số lượng tĩnh của bạn!"
+    money-not-enough-sell: "%prefix%&c Bạn không có %price% để bán vật phẩm này!"
+    money-not-enough-buy: "%prefix%&c Bạn không có %price% để mua vật phẩm này!"
+    money-not-enough-bid: "%prefix%&c Bạn không có %price% để đặt giá vật phẩm này!"
+    disabled-world-sell: "%prefix%&c Bạn không thể bán vật phẩm trong thế giới này!"
+    invalid-item: "%prefix%&c Đó là một vật phẩm không hợp lệ để bán!"
+    damaged-item: "%prefix%&c Bạn không thể bán một vật phẩm bị hư hỏng!"
+    invalid-gamemode: "%prefix%&c Đó là một chế độ trò chơi không hợp lệ để bán!"
+    invalid-category: "%prefix%&c Đó là một danh mục không hợp lệ"
+    min-price: "%prefix%&c Bạn cần đặt giá ít nhất %min%!"
+    max-price: "%prefix%&c Bạn cần đặt giá dưới %max%!"
+    no-auctions: "%prefix%&c Bạn hiện không có phiên đấu giá nào!"
+    no-expired-auctions: "%prefix%&c Bạn hiện không có phiên đấu giá đã hết hạn nào để thu thập!"
+    purchase-own: "%prefix%&c Bạn không thể mua phiên đấu giá của chính mình!"
+    bid-own: "%prefix%&c Bạn không thể đặt giá phiên đấu giá của chính mình!"
+    sell-cooldown: "%prefix%&c Bạn hiện có thời gian chờ để đấu giá vật phẩm! (%cooldown% còn lại)"
+    bid-cooldown: "%prefix%&c Bạn hiện có thời gian chờ để đặt giá vật phẩm! (%cooldown% còn lại)"
+    offer-cooldown: "%prefix%&c Bạn hiện có thời gian chờ để đưa ra giá thầu! (%cooldown% còn lại)"
+    purchase-cooldown: "%prefix%&c Bạn hiện có thời gian chờ để mua vật phẩm! (%cooldown% còn lại)"
+    no-player-joined: "%prefix% &cNgười chơi đó không tồn tại!"
+    bidder-no-money: "%prefix% &c%player% không có đủ tiền cho &e%item%&c của bạn, lời đề nghị của họ đã bị loại bỏ."
+    bid-no-money: "%prefix% &cBạn không còn có đủ tiền cho giá thầu &e%item%&c, lời đề nghị của bạn đã bị loại bỏ."
+    min-bid: "%prefix% &cBạn không thể đặt giá nhiều như vậy! Giá thầu tối thiểu bạn có thể đặt là $1.000"
+    gui-cooldown: "%prefix% &cBạn sẽ cần chờ vài giây để sử dụng lại tính năng này."
+    not-enough-add-bid: "%prefix% &cBạn không có đủ tiền để thêm $%amount% vào $%bid%"
+    cancel-bid: "%prefix% &cBạn không thể huỷ phiên đấu giá này trong khi nó đã được đề nghị giá!"
+    auction-doesnt-exist: "%prefix% &cPhiên đấu giá đó không còn tồn tại nữa!"
+    dbexec-failed: "%prefix% &cCó lỗi khi thực thi truy vấn này. %error%"
+
+# Here you can specify different types of messages per no-permission message, using the specific permission node.
+# Or you may set it to blank to not send a message at all.
+# no-permission:
+#   pa.purchase: "You do not have permission to purchase auctions!"
+
+n/a:
+  no-seller: "N/A"
+  no-expire: "N/A"
+  no-category: "N/A"
+  no-displayname: "%player%" # show the players name instead
+
+# Here you can configure the item name formatting, please note that you will have to add the items below that you want to change
+# You can view the list of the items here: https://javadocs.olziedev.com/spigot/latest/org/bukkit/Material.html
+item-names:
+  ARMOR_STAND: "Giá đỡ Giáp"

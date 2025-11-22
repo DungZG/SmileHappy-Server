@@ -1,0 +1,155 @@
+shards:
+  name: "#444444sʜᴏᴘ - sʜᴀʀᴅ sʜᴏᴘ"
+  size: 27
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: 18
+  items:
+    1:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        quantity: 1
+        name: "&2ᴄᴏᴍᴍᴏɴ ᴋᴇʏ"
+      commands:
+        - "crate key give %PLAYER% example 1"
+      buyPrice: -1
+      sellPrice: -1
+      slot: 2
+    2:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        quantity: 1
+        name: "#0f9adfᴘʀɪᴍᴇ ᴋᴇʏ"
+      commands:
+        - "crate key give %PLAYER% example 1"
+      buyPrice: -1
+      sellPrice: -1
+      slot: 3
+    3:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        quantity: 1
+        name: "#edd90dɢᴏʟᴅ ᴋᴇʏ"
+      commands:
+        - "crate key give %PLAYER% example 1"
+      buyPrice: -1
+      sellPrice: -1
+      slot: 4
+    4:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        quantity: 1
+        name: "#6e00b9ᴀᴍᴇᴛʜʏsᴛ ᴋᴇʏ"
+      commands:
+        - "crate key give %PLAYER% example 1"
+      buyPrice: -1
+      sellPrice: -1
+      slot: 5
+    5:
+      type: command
+      item:
+        material: TRIPWIRE_HOOK
+        quantity: 1
+        name: "#de2404ᴄʀɪᴍsᴏɴ ᴋᴇʏ"
+      commands:
+        - "crate key give %PLAYER% example 1"
+      buyPrice: -1
+      sellPrice: -1
+      slot: 6
+    6:
+      type: item
+      item:
+        material: SPAWNER
+        mob: PIG
+        name: "&dPig spawner"
+        quantity: 1
+      buyPrice: -1
+      sellPrice: -1
+      slot: 9
+    7:
+      type: item
+      item:
+        material: SPAWNER
+        mob: COW
+        name: "&dCow spawner"
+        quantity: 1
+      buyPrice: -1
+      sellPrice: -1
+      slot: 10
+    8:
+      type: item
+      item:
+        material: SPAWNER
+        mob: ZOMBIE
+        name: "&dZombie spawner"
+        quantity: 1
+      buyPrice: -1
+      sellPrice: -1
+      slot: 11
+    9:
+      type: item
+      item:
+        material: SPAWNER
+        mob: SPIDER
+        name: "&dSpider spawner"
+        quantity: 1
+      buyPrice: -1
+      sellPrice: -1
+      slot: 12
+    10:
+      type: item
+      item:
+        material: SPAWNER
+        mob: SKELETON
+        name: "&dSkeleton spawner"
+        quantity: 1
+      buyPrice: -1
+      sellPrice: -1
+      slot: 13
+    11:
+      type: item
+      item:
+        material: SPAWNER
+        mob: CREEPER
+        name: "&dCreeper spawner"
+        quantity: 1
+      buyPrice: -1
+      sellPrice: -1
+      slot: 14
+    12:
+      type: item
+      item:
+        material: SPAWNER
+        mob: ZOMBIFIED_PIGLIN
+        name: "&dZombified Piglin spawner"
+        quantity: 1
+      buyPrice: -1
+      sellPrice: -1
+      slot: 15
+    13:
+      type: item
+      item:
+        material: SPAWNER
+        mob: BLAZE
+        name: "&dBlaze spawner"
+        quantity: 1
+      buyPrice: -1
+      sellPrice: -1
+      slot: 16
+    14:
+      type: item
+      item:
+        material: SPAWNER
+        mob: IRON_GOLEM
+        name: "&dIron Golem spawner"
+        quantity: 1
+      buyPrice: -1
+      sellPrice: -1
+      slot: 17

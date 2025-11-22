@@ -1,0 +1,45 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  kill:
+    type: "mobkillingcertain"
+    amount: 50
+    mob: SKELETON
+display:
+  name: "&cNhiệm Vụ Thợ Săn • Bộ xương"
+  lore-normal:
+  - "%imc_dark-color_c%Đánh bại các thực thể đã chỉ định"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Giết 50 Bộ xương"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{kill:progress}%imc_dark-color_c%/50 Bộ xương"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_500}%"
+  - ""
+  type: "SKELETON_SPAWN_EGG"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:500>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_500%"
+vaultreward: "%imc_price-modifier_500%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:500>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "hunter"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 280
+placeholders:
+  description: "Giết 50 Bộ xương"
+  progress: '{kill:progress}'
+  max: '50'

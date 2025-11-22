@@ -1,0 +1,45 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  fishing:
+    type: "fishing"
+    amount: 25
+display:
+  name: "&3Nhiệm Vụ Câu Cá • Câu cá #2"
+  lore-normal:
+  - "%imc_dark-color_c%Câu số lượng cá đã chỉ định"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Bắt 25 Cá"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{fishing:progress}%imc_dark-color_c%/25 Cá"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_750}%"
+  - ""
+  type: "FISHING_ROD"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:750>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_750%"
+vaultreward: "%imc_price-modifier_750%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:750>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "fishing"
+  requires:
+  - "fishing-00-fish-1"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 1
+placeholders:
+  description: "Bắt 25 Cá"
+  progress: '{fishing:progress}'
+  max: '25'

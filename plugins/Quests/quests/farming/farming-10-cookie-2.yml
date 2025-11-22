@@ -1,0 +1,46 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  bake:
+    type: "crafting"
+    item: COOKIE
+    amount: 400
+display:
+  name: "&dNhiệm Vụ Canh Tác • Bánh quy #2"
+  lore-normal:
+  - "%imc_dark-color_c%Nướng số lượng tài nguyên"
+  - "%imc_dark-color_c%yêu cầu để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Nướng 400 Bánh quy"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{bake:progress}%imc_dark-color_c%/400 Bánh quy"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_500}%"
+  - ""
+  type: "COOKIE"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:500>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_500%"
+vaultreward: "%imc_price-modifier_500%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:500>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "farming"
+  requires:
+  - "farming-10-cookie-1"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 101
+placeholders:
+  description: "Nướng 400 Bánh quy"
+  progress: '{bake:progress}'
+  max: '400'

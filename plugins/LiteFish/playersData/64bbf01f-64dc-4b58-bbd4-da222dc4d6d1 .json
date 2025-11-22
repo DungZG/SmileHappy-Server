@@ -1,0 +1,24 @@
+{
+  "uuid": "64bbf01f-64dc-4b58-bbd4-da222dc4d6d1",
+  "disableCustomDrop": false,
+  "monsterCatch": 0,
+  "bigLootCatch": 0,
+  "failedFish": 0,
+  "goodFish": 0,
+  "tournamentsWin": 0,
+  "dailyEarned": 0.0,
+  "lastReset": 0,
+  "boost": {
+    "exp": 1.0,
+    "luck": 1.0,
+    "money": 1.0,
+    "luck_rare": 1.0,
+    "time_exp": 0,
+    "time_luck": 0,
+    "time_money": 0,
+    "time_luck_rare": 0
+  },
+  "dropsMap": {},
+  "level": 0,
+  "experience": 0.0
+}

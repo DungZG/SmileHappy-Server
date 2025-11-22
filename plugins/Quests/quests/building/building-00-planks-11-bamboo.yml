@@ -1,0 +1,48 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+blacklist: ['1.19']
+
+tasks:
+  build:
+    type: "blockplacecertain"
+    amount: 256
+    block: "BAMBOO_PLANKS"
+    reverse-if-broken: true
+display:
+  name: "&2Nhiệm Vụ Xây Dựng • Ván gỗ tre"
+  lore-normal:
+  - "%imc_dark-color_c%Đặt số lượng khối cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Đặt 256 Ván gỗ tre"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{build:progress}%imc_dark-color_c%/256 Ván gỗ tre"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_300}%"
+  - ""
+  type: "BAMBOO_PLANKS"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:300>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_300%"
+vaultreward: "%imc_price-modifier_300%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:300>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "building"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 10
+placeholders:
+  description: "Đặt 256 Ván gỗ tre"
+  progress: '{build:progress}'
+  max: '256'

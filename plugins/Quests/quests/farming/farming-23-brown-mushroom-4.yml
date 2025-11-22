@@ -1,0 +1,46 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  break:
+    type: "blockbreakcertain"
+    amount: 200
+    block: "BROWN_MUSHROOM"
+display:
+  name: "&dNhiệm Vụ Canh Tác • Nấm nâu #4"
+  lore-normal:
+  - "%imc_dark-color_c%Phá vỡ một số lượng"
+  - "%imc_dark-color_c%khối để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Phá 200 Nấm nâu"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{break:progress}%imc_dark-color_c%/200 Nấm nâu"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_1000}%"
+  - ""
+  type: "BROWN_MUSHROOM"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:1000>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_1000%"
+vaultreward: "%imc_price-modifier_1000%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:1000>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "farming"
+  requires:
+  - "farming-23-brown-mushroom-3"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 233
+placeholders:
+  description: "Phá 200 Nấm nâu"
+  progress: '{break:progress}'
+  max: '200'

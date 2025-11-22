@@ -1,0 +1,75 @@
+# PlayerAuctions by Olzie-12
+# https://www.spigotmc.org/resources/83073
+# We also have a discord server for help: https://olziedev.com/discord or check docs https://docs.olziedev.com/projects/playerauctions
+# Also if you find any bugs be happy to report them I will fix them :)
+# Made with love
+
+backpack:
+  # Có bật giao diện ba lô không? (Vật phẩm rơi ra sẽ hiển thị trong GUI)
+  enabled: true
+  # Tên của GUI?
+  name: "backpack"
+  # Tiêu đề GUI (Hỗ trợ mã màu)
+  title: "&b&lBa lô ([page]/[pages])"
+  # Kích thước GUI? (Bội số của 9, tối đa 54)
+  size: 54
+  # Hành động khi mở menu
+  open-actions: []
+  # Hành động khi đóng menu
+  close-actions: []
+  # Có ẩn nút chuyển trang khi không có trang hợp lệ không?
+  show-needed-page-items: false
+  # Danh sách slot bị chặn — vật phẩm sẽ KHÔNG xuất hiện tại đây
+  blacklisted-slots: ["48", "50"]
+
+  icon-lore:
+    - "&bSố lượng: &e[item_amount]x"
+    - " "
+    - "&bNhấn để nhận vật phẩm."
+
+  clickable-items:
+    next-page:
+      # Tên nút sang trang tiếp theo
+      # Để tắt, đặt material thành "AIR"
+      name: "&bTrang tiếp"
+      # Material của nút chuyển trang
+      material: ARROW
+      data: 0
+      lore:
+        - "&eNhấn&b để sang trang tiếp theo."
+      slot: 50
+      amount: 1
+      glowing: false
+      # Các mục dưới chỉ hoạt động nếu là PLAYER_HEAD và data = 3
+      #texture: ...
+      #owner: Next
+    previous-page:
+      name: "&bTrang trước"
+      material: BARRIER
+      data: 0
+      lore:
+        - "&eNhấn&b để quay lại trang trước."
+      slot: 48
+      amount: 1
+      glowing: false
+
+  items:
+    1:
+      # Tên item
+      name: " "
+      # Material của item (đặt AIR để tắt)
+      material: LIGHT_BLUE_STAINED_GLASS_PANE
+      data: 3
+      # lore:
+      #   - "&bĐây là một ô kính."
+      slot: [45, 47, 49, 51, 53]
+      amount: 1
+      glowing: false
+      #texture: ...
+      #owner: Glass
+    2:
+      name: " "
+      material: YELLOW_STAINED_GLASS_PANE
+      data: 4
+      slot: [46, 52]
+      amount: 1

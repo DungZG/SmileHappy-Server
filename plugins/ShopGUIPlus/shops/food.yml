@@ -1,0 +1,87 @@
+
+# CONFIGURED BY CUBENIX_SERVICES!!
+# CONFIGURED BY CUBENIX_SERVICES!!
+# CONFIGURED BY CUBENIX_SERVICES!!
+
+food:
+  name: "#444444sʜᴏᴘ - ғᴏᴏᴅ"
+  size: 27
+  fillItem:
+    material: AIR
+    name: " "
+  buttons:
+    goBack:
+      slot: 18
+  items:
+    1:
+      type: item
+      item:
+        material: POTATO
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 9
+    2:
+      type: item
+      item:
+        material: SWEET_BERRIES
+        quantity: 1
+      buyPrice: 50
+      sellPrice: -1
+      slot: 10
+    3:
+      type: item
+      item:
+        material: MELON_SLICE
+        quantity: 1
+      buyPrice: 18
+      sellPrice: -1
+      slot: 11
+    4:
+      type: item
+      item:
+        material: CARROT
+        quantity: 1
+      buyPrice: 96
+      sellPrice: -1
+      slot: 12
+    5:
+      type: item
+      item:
+        material: APPLE
+        quantity: 1
+      buyPrice: 25
+      sellPrice: -1
+      slot: 13
+    6:
+      type: item
+      item:
+        material: COOKED_CHICKEN
+        quantity: 1
+      buyPrice: 48
+      sellPrice: -1
+      slot: 14
+    7:
+      type: item
+      item:
+        material: COOKED_BEEF
+        quantity: 1
+      buyPrice: 35
+      sellPrice: -1
+      slot: 15
+    8:
+      type: item
+      item:
+        material: GOLDEN_CARROT
+        quantity: 1
+      buyPrice: 120
+      sellPrice: -1
+      slot: 16
+    9:
+      type: item
+      item:
+        material: GOLDEN_APPLE
+        quantity: 1
+      buyPrice: 250
+      sellPrice: -1
+      slot: 17

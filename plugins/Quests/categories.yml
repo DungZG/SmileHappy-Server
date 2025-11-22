@@ -1,0 +1,284 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+# Categories are a way of grouping up quests.
+# When a player uses /quests, a menu of categories will be presented to them.
+# When a player clicks ona category, a list of quests under that category will show.
+# If categories are disabled, all quests will be shown under one big GUI.
+# Players can access specific categories by command using /quests c [category].
+# If a quest does not have a category, it will not be shown.
+categories:
+  farming:
+    display:
+      name: "&dNhiệm Vụ Canh Tác"
+      lore:
+        - "%imc_dark-color_c%Tham gia vào các nhiệm vụ tập trung vào"
+        - "&dtrồng trọt%imc_dark-color_c%. Bạn sẽ thu hoạch, phá vỡ,"
+        - "%imc_dark-color_c%và thu thập các loại cây trồng và các vật phẩm khác."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:farming_completed%%imc_dark-color_c%/%quests_category:farming_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:farming_started%"
+        - "%imc_text-color_c% • Độ Khó: &eTrung Bình %imc_dark-color_c%đến &cKhó"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "WHEAT"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  mining:
+    display:
+      name: "&bNhiệm Vụ Khai Thác"
+      lore:
+        - "%imc_dark-color_c%Đào sâu vào &bkhai thác"
+        - "%imc_dark-color_c%các nhiệm vụ yêu cầu bạn"
+        - "%imc_dark-color_c%phá vỡ các khối nhất định."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:mining_completed%%imc_dark-color_c%/%quests_category:mining_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:mining_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &cKhó"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "GOLDEN_PICKAXE"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  collecting:
+    display:
+      name: "&aNhiệm Vụ Thu Thập"
+      lore:
+        - "%imc_dark-color_c%Tham gia vào các nhiệm vụ yêu cầu"
+        - "&athu thập%imc_dark-color_c% nhiều loại vật phẩm và khối."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:collecting_completed%%imc_dark-color_c%/%quests_category:collecting_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:collecting_started%"
+        - "%imc_text-color_c% • Độ Khó: &eTrung Bình %imc_dark-color_c%đến &cKhó"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "HOPPER"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  hunter:
+    display:
+      name: "&cNhiệm Vụ Thợ Săn"
+      lore:
+        - "%imc_dark-color_c%Tham gia vào sự phấn khích của"
+        - "&csăn bắt%imc_dark-color_c%. Những nhiệm vụ này sẽ buộc bạn"
+        - "%imc_dark-color_c%truy lùng và tiêu diệt các đám quái vật khác nhau."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:hunter_completed%%imc_dark-color_c%/%quests_category:hunter_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:hunter_started%"
+        - "%imc_text-color_c% • Độ Khó: &eTrung Bình %imc_dark-color_c%đến &cKhó"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "GOLDEN_SWORD"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  enchanting:
+    display:
+      name: "&5Nhiệm Vụ Phù Phép"
+      lore:
+        - "%imc_dark-color_c%Mở khóa phép thuật của &5phù phép"
+        - "%imc_dark-color_c%thông qua các nhiệm vụ yêu cầu bạn"
+        - "%imc_dark-color_c%phù phép các vật phẩm khác nhau."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:enchanting_completed%%imc_dark-color_c%/%quests_category:enchanting_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:enchanting_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &eTrung Bình"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "ENCHANTING_TABLE"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  brewing:
+    display:
+      name: "&eNhiệm Vụ Pha Chế"
+      lore:
+        - "%imc_dark-color_c%Tham gia vào nghệ thuật &enấu"
+        - "%imc_dark-color_c%với các nhiệm vụ thách thức bạn"
+        - "%imc_dark-color_c%tạo ra các lọ thuốc đặc biệt."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:brewing_completed%%imc_dark-color_c%/%quests_category:brewing_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:brewing_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &eTrung Bình"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "BREWING_STAND"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  woodcutting:
+    display:
+      name: "&6Nhiệm Vụ Đốn Củi"
+      lore:
+        - "%imc_dark-color_c%Tham gia vào các nhiệm vụ tập trung vào"
+        - "&6chặt gỗ%imc_dark-color_c% nơi bạn sẽ cần phải"
+        - "%imc_dark-color_c%chặt các loại gỗ khác nhau."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:woodcutting_completed%%imc_dark-color_c%/%quests_category:woodcutting_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:woodcutting_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &eTrung Bình"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "GOLDEN_AXE"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  building:
+    display:
+      name: "&2Nhiệm Vụ Xây Dựng"
+      lore:
+        - "%imc_dark-color_c%Thể hiện sự sáng tạo của bạn qua các nhiệm vụ"
+        - "%imc_dark-color_c%tập trung vào &2xây dựng%imc_dark-color_c%. Hãy sẵn sàng để"
+        - "%imc_dark-color_c%đặt các khối để xây dựng các công trình."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:building_completed%%imc_dark-color_c%/%quests_category:building_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:building_started%"
+        - "%imc_text-color_c% • Độ Khó: &eTrung Bình %imc_dark-color_c%đến &cKhó"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "QUARTZ_BLOCK"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  crafting:
+    display:
+      name: "&fNhiệm Vụ Chế Tạo"
+      lore:
+        - "%imc_dark-color_c%Thử thách kỹ năng của bạn với những nhiệm vụ"
+        - "%imc_dark-color_c%tập trung vào &fchuẩn bị%imc_dark-color_c%. Bạn sẽ cần phải"
+        - "%imc_dark-color_c%tạo ra các vật phẩm cụ thể để thành công."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:crafting_completed%%imc_dark-color_c%/%quests_category:crafting_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:crafting_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &eTrung Bình"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "CRAFTING_TABLE"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  digging:
+    display:
+      name: "&eNhiệm Vụ Đào"
+      lore:
+        - "%imc_dark-color_c%Khám phá những nhiệm vụ liên quan đến"
+        - "&eđào bới%imc_dark-color_c%. Nhiệm vụ của bạn là"
+        - "%imc_dark-color_c%phá vỡ các khối nhất định."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:digging_completed%%imc_dark-color_c%/%quests_category:digging_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:digging_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &eTrung Bình"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "GOLDEN_SHOVEL"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  activities:
+    display:
+      name: "&9Nhiệm Vụ Hoạt Động"
+      lore:
+        - "%imc_dark-color_c%Tham gia vào các cuộc phiêu lưu với các nhiệm vụ xoay quanh"
+        - "%imc_dark-color_c%&9động vật%imc_dark-color_c%. Bạn sẽ cần"
+        - "%imc_dark-color_c%thuần hóa, nuôi, và cạo lông các sinh vật khác nhau."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:activities_completed%%imc_dark-color_c%/%quests_category:activities_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:activities_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &cKhó"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "LEAD"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  misc:
+    display:
+      name: "&6Nhiệm Vụ Khác"
+      lore:
+        - "%imc_dark-color_c%Khám phá nhiều loại &6nhiệm vụ khác nhau"
+        - "%imc_dark-color_c%thách thức bạn để"
+        - "%imc_dark-color_c%hoàn thành các công việc độc đáo khác nhau."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:misc_completed%%imc_dark-color_c%/%quests_category:misc_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:misc_started%"
+        - "%imc_text-color_c% • Độ Khó: &eTrung Bình %imc_dark-color_c%đến &cKhó"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "SADDLE"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  fishing:
+    display:
+      name: "&3Nhiệm Vụ Câu Cá"
+      lore:
+        - "%imc_dark-color_c%Trải nghiệm cảm giác hồi hộp của &3câu cá"
+        - "%imc_dark-color_c%với các nhiệm vụ thách thức bạn để"
+        - "%imc_dark-color_c%bắt các vật phẩm cụ thể."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:fishing_completed%%imc_dark-color_c%/%quests_category:fishing_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:fishing_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &eTrung Bình"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "FISHING_ROD"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  impossible:
+    display:
+      name: "&4Nhiệm Vụ Không Thể"
+      lore:
+        - "%imc_dark-color_c%Đối mặt với thử thách cuối cùng với"
+        - "&4nhiệm vụ không thể%imc_dark-color_c% yêu cầu bạn"
+        - "%imc_dark-color_c%hoàn thành các nhiệm vụ gần như không thể thực hiện."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:impossible_completed%%imc_dark-color_c%/%quests_category:impossible_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:impossible_started%"
+        - "%imc_text-color_c% • Độ Khó: &cKhó %imc_dark-color_c%đến &4Không Thể Thực Hiện"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "ENDER_EYE"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  weaponsmith:
+    display:
+      name: "&8Nhiệm Vụ Thợ Rèn Vũ Khí"
+      lore:
+        - "%imc_dark-color_c%Hóa thân thành %imc_darkest-color_c%thợ rèn vũ khí"
+        - "%imc_dark-color_c%trong các nhiệm vụ thách thức bạn để"
+        - "%imc_dark-color_c%chế tạo hoặc thu được các loại vũ khí và dụng cụ khác nhau."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:weaponsmith_completed%%imc_dark-color_c%/%quests_category:weaponsmith_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:weaponsmith_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &eTrung Bình"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "ANVIL"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  smelting:
+    display:
+      name: "&cNhiệm Vụ Nung Chảy"
+      lore:
+        - "%imc_dark-color_c%Làm chủ nghệ thuật &cnấu chảy"
+        - "%imc_dark-color_c%với các nhiệm vụ yêu cầu bạn"
+        - "%imc_dark-color_c%nấu chảy hoặc luyện các vật phẩm cụ thể."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:smelting_completed%%imc_dark-color_c%/%quests_category:smelting_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:smelting_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &eTrung Bình"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "BLAST_FURNACE"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+  expquests:
+    display:
+      name: "&aNhiệm Vụ Kinh Nghiệm"
+      lore:
+        - "%imc_dark-color_c%Kiếm điểm kinh nghiệm với các nhiệm vụ"
+        - "%imc_dark-color_c%đòi hỏi bạn phải hoàn thành"
+        - "%imc_dark-color_c%các nhiệm vụ và thử thách cụ thể."
+        - ""
+        - "%imc_darkest-color_c%Thông Tin:"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Hoàn Thành: %imc_primary-color_c%%quests_category:expquests_completed%%imc_dark-color_c%/%quests_category:expquests_all%"
+        - "%imc_text-color_c% • Nhiệm Vụ Đã Bắt Đầu: %imc_secondary-color_c%%quests_category:expquests_started%"
+        - "%imc_text-color_c% • Độ Khó: &aDễ %imc_dark-color_c%đến &cKhó"
+        - ""
+        - "%imc_dark-color_c%◆ %imc_primary-color_c%Nhấn:%imc_text-color_c% Xem danh mục này"
+      type: "EXPERIENCE_BOTTLE"
+      itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]

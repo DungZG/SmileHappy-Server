@@ -1,0 +1,45 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  tropicalfish:
+    type: "fishingcertain"
+    item: TROPICAL_FISH
+    amount: 16
+display:
+  name: "&3Nhiệm Vụ Câu Cá • Cá nhiệt đới"
+  lore-normal:
+  - "%imc_dark-color_c%Câu số lượng cá đã chỉ định"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Bắt 16 Cá nhiệt đới"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{tropicalfish:progress}%imc_dark-color_c%/16 Cá nhiệt đới"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_350}%"
+  - ""
+  type: "TROPICAL_FISH"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:350>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_350%"
+vaultreward: "%imc_price-modifier_350%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:350>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "fishing"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82350
+  sort-order: 30
+placeholders:
+  description: "Bắt 16 Cá nhiệt đới"
+  progress: '{tropicalfish:progress}'
+  max: '16'

@@ -1,0 +1,45 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  mine:
+    type: "blockbreakcertain"
+    amount: 352
+    block: SANDSTONE
+    reverse-if-placed: true
+display:
+  name: "&aNhiệm Vụ Kinh Nghiệm • Cát kết"
+  lore-normal:
+  - "%imc_dark-color_c%Khai thác các nguồn tài nguyên cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Khai thác 352 Cát kết"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{mine:progress}%imc_dark-color_c%/352 Cát kết"
+  - "%imc_text-color_c% • Phần thưởng: %imc_exp-format_console_160%."
+  - ""
+  type: "SANDSTONE"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:exp-format:160>."
+rewards:
+- "xp give {player} 160"
+rewardstring:
+- "$<p:text-color> • <p:exp-format:160> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "expquests"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 170
+placeholders:
+  description: "Khai thác 352 Cát kết"
+  progress: '{mine:progress}'
+  max: '352'

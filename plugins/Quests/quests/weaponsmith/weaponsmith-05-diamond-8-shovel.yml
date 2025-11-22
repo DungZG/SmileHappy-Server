@@ -1,0 +1,47 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  forge:
+    type: "inventory"
+    item: DIAMOND_SHOVEL
+    amount: 1
+    remove-items-when-complete: true
+    update-progress: true
+display:
+  name: "&8Nhiệm Vụ Thợ Rèn Vũ Khí • Xẻng kim cương"
+  lore-normal:
+  - "%imc_dark-color_c%Chế tạo số lượng vật phẩm"
+  - "%imc_dark-color_c%cần thiết để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Chế tạo 1 Xẻng kim cương"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{forge:progress}%imc_dark-color_c%/1 Xẻng kim cương"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_175}%"
+  - ""
+  type: "DIAMOND_SHOVEL"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:175>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_175%"
+vaultreward: "%imc_price-modifier_175%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:175>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "weaponsmith"
+  requires: []
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 57
+placeholders:
+  description: "Chế tạo 1 Xẻng kim cương"
+  progress: '{forge:progress}'
+  max: '1'

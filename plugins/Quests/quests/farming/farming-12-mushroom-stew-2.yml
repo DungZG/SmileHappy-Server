@@ -1,0 +1,46 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  cook:
+    type: "crafting"
+    item: MUSHROOM_STEW
+    amount: 16
+display:
+  name: "&dNhiệm Vụ Canh Tác • Súp nấm #2"
+  lore-normal:
+  - "%imc_dark-color_c%Nấu các tài nguyên yêu cầu"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Nấu 16 Súp nấm"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{cook:progress}%imc_dark-color_c%/16 Súp nấm"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_175}%"
+  - ""
+  type: "MUSHROOM_STEW"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:175>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_175%"
+vaultreward: "%imc_price-modifier_175%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:175>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "farming"
+  requires:
+  - "farming-12-mushroom-stew-1"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 121
+placeholders:
+  description: "Nấu 16 Súp nấm"
+  progress: '{cook:progress}'
+  max: '16'

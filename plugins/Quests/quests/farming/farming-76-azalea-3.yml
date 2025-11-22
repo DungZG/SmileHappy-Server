@@ -1,0 +1,47 @@
+############################
+# 
+# ITSMYSTUDIO - A configuration for quests
+# https://itsmy.studio/discord
+#
+############################
+tasks:
+  plant:
+    type: "blockplacecertain"
+    amount: 48
+    block: "AZALEA"
+    reverse-if-placed: true
+display:
+  name: "&dNhiệm Vụ Canh Tác • Đỗ quyên #3"
+  lore-normal:
+  - "%imc_dark-color_c%Trồng các nguồn tài nguyên cần thiết"
+  - "%imc_dark-color_c%để nhận phần thưởng của bạn."
+  - ""
+  - "%imc_darkest-color_c%Thông tin:"
+  - "%imc_text-color_c% • Mục tiêu: %imc_secondary-color_c%Trồng 48 Đỗ quyên"
+  - "%imc_text-color_c% • Tiến độ: %imc_primary-color_c%{plant:progress}%imc_dark-color_c%/48 Đỗ quyên"
+  - "%imc_text-color_c% • Phần thưởng: %imc_eco-format_console_{imc_price-modifier_550}%"
+  - ""
+  type: "AZALEA"
+  itemflags:  [ HIDE_ARMOR_TRIM, HIDE_ATTRIBUTES, HIDE_DESTROYS, HIDE_DYE, HIDE_ENCHANTS, HIDE_PLACED_ON, HIDE_POTION_EFFECTS, HIDE_UNBREAKABLE ]
+startstring:
+- "$<p:text-color> • Hoàn thành nhiệm vụ này để nhận <p:eco-format:'<p:price-modifier:550>'>."
+# rewards: 
+# - "eco give {player} %imc_price-modifier_550%"
+vaultreward: "%imc_price-modifier_550%"
+rewardstring:
+- "$<p:text-color> • <p:eco-format:'<p:price-modifier:550>'> đã được thêm vào số dư trong trò chơi của bạn."
+
+
+options:
+  category: "farming"
+  requires:
+  - "farming-76-azalea-2"
+  repeatable: false
+  cooldown:
+    enabled: true
+    time: 82600
+  sort-order: 762
+placeholders:
+  description: "Trồng 48 Đỗ quyên"
+  progress: '{plant:progress}'
+  max: '48'
