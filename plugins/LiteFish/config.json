@@ -8,7 +8,7 @@
     "drop_entity_from_egg": true,
     "delta_time": 100,
     "simple_weight": false,
-    "mini_game": true,
+    "mini_game": false,
     "price_based_weight": true,
     "game_length": 10,
     "disable_default_category": false,
@@ -23,7 +23,7 @@
     "base_speed": 500,
     "realistic_fishing": false,
     "additional_drop": true,
-    "player_health": 2,
+    "player_health": 6,
     "custom_drop": true,
     "switch_fishing_permission": ""
   }
